@@ -1,3 +1,2 @@
 # Frontend
-All front end files here. Organise ko later
-
+All front end files here

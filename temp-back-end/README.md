@@ -1,5 +1,4 @@
-# To Do
-- connect back with front
+# Backend
 - Firebase integration
   - database
   - authentication?

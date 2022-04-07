@@ -12,37 +12,6 @@ onAuthStateChanged(auth, user=> {
 		console.log('No user')
 	}
 });
-
-const signupForm = document.querySelector('.userRegister')
-
-signupForm.addEventListener('submit', (e)=>{
-	e.preventDefault()
-
-	const email = signupForm.userEmail.value
-	const password = signupForm.userPassword.value
-	createUserWithEmailAndPassword(auth, email, password)
-		.then((cred)=>{
-			console.log('User Created:', cred.user)
-			signupForm.reset()
-		})
-		.catch((err)=>{
-			console.log(err.message)
-		})
-})
-
-//logout
-const logoutButton = document.querySelector('.userLogout')
-
-logoutButton.addEventListener('click',()=>{
-	signOut(auth)
-		.then(()=>{
-			console.log('user signed out')
-		})
-		.catch((err)=>{
-			console.log(err.message)
-		})
-})
-
 //login
 const loginForm = document.querySelector('.userLogin')
 loginForm.addEventListener('submit', (e) => {
@@ -54,8 +23,8 @@ loginForm.addEventListener('submit', (e) => {
   signInWithEmailAndPassword(auth, email, password)
     .then(cred => {
       console.log('user logged in:', cred.user)
-      //loginForm.reset()
-			//window.open("./front-end/homepage.html", _self);
+      loginForm.reset()
+			window.open("./homepage.html", self);
     })
     .catch(err => {
       console.log(err.message)

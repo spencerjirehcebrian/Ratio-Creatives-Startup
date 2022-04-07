@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "./css/css.css"> 
+    <link rel = "stylesheet" href = "./css/css.css">
     <title>Log In</title>
 </head>
+
+
 <body>
     <div class="column">
         <div class="lleft">
@@ -20,13 +22,15 @@
         <div class="lright">
             <h1>Log In</h1><br>
             <h2>Welcome back! Log back in to continue.</h2>
-
-            <input type="text" placeholder="Username or Email" name="username or email" required>
-            <input type="password" placeholder="Password" name="password" required>
-            <input type="checkbox"><p>Stay signed in?</p>
-            <p2><img src="./assets/Icons/lock.svg" alt="lock icon" class="lockicon" width="25" height="20">Forgot Password?</p2>
-            <a href="homepage.html"><button><p3>Sign In</p3></button></a>
+            <form class="userLogin">
+              <input type="email" placeholder="Email" name="userEmail" required>
+              <input type="password" placeholder="Password" name="userPassword" required>
+              <!--<input type="checkbox"><p>Stay signed in?</p>-->
+              <p2><img src="./assets/Icons/lock.svg" alt="lock icon" class="lockicon" width="25" height="20">Forgot Password?</p2>
+              <button>login</button>
+            </form>
         </div>
     </div>
 </body>
+<script type="module" src="..\src\authenticationLogin.js"></script>
 </html>

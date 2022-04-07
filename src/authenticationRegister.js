@@ -29,35 +29,3 @@ signupForm.addEventListener('submit', (e)=>{
 			console.log(err.message)
 		})
 })
-
-//logout
-const logoutButton = document.querySelector('.userLogout')
-
-logoutButton.addEventListener('click',()=>{
-	signOut(auth)
-		.then(()=>{
-			console.log('user signed out')
-		})
-		.catch((err)=>{
-			console.log(err.message)
-		})
-})
-
-//login
-const loginForm = document.querySelector('.userLogin')
-loginForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-
-  const email = loginForm.userEmail.value
-	const password = loginForm.userPassword.value
-
-  signInWithEmailAndPassword(auth, email, password)
-    .then(cred => {
-      console.log('user logged in:', cred.user)
-      //loginForm.reset()
-			//window.open("./front-end/homepage.html", _self);
-    })
-    .catch(err => {
-      console.log(err.message)
-    })
-})

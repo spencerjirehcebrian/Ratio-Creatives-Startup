@@ -153,43 +153,128 @@
       <script type="module" src="./src/cartDelete.js"></script>
       <hr>
       <h2>Checkout</h2>
-      <form class="addOrderCommissions">
-         <label for="ocAddress">ocAddress:</label>
-         <input type="text" name="ocAddress" required><br>
-         <label for="ocDetails">ocDetails:</label>
-         <input type="text" name="ocDetails" required><br>
-         <label for="ocOrderDate">ocOrderDate:</label>
-         <input type="text" name="ocOrderDate" require><br>
-         <label for="ocUsername">ocUsername:</label>
-         <input type="number" name="ocUsername" required><br>
-         <label for="ocTrackingNumber">ocTrackingNumber:</label>
-         <input type="text" name="ocTrackingNumber" required><br>
-         <label for="ocType">ocType:</label>
-         <input type="text" name="ocType" required><br>
-         <button>Add Commision to Orders</button>
+      <form class="addOrder">
+         <label for="orderAddress">orderAddress:</label>
+         <input type="text" name="orderAddress" required><br>
+         <label for="orderDetails">orderDetails:</label>
+         <input type="text" name="orderDetails" required><br>
+         <label for="orderDate">orderDate:</label>
+         <input type="text" name="orderDate" require><br>
+         <label for="orderUsername">orderUsername:</label>
+         <input type="text" name="orderUsername" required><br>
+         <label for="orderTrackingNumber">orderTrackingNumber:</label>
+         <input type="number" name="orderTrackingNumber" required><br>
+         <label for="orderType">orderType:</label>
+         <input type="text" name="orderType" required><br>
+         <label for="orderPaymentMethod">orderPaymentMethod:</label>
+         <input type="text" name="orderPaymentMethod" required><br>
+         <label for="orderPayment">orderPayment:</label>
+         <input type="number" name="orderPayment" required><br>
+         <label for="isCommission">isCommission:</label>
+         <input type="checkbox" name="isCommission" required checked><br>
+         <button>Add Cart Item to Order</button>
+         <script type="module" src="./src/orderCreate.js"></script>
       </form><hr>
-      <form class="addOrderCommissions">
-         <label for="ocAddress">ocAddress:</label>
-         <input type="text" name="ocAddress" required><br>
-         <label for="ocDetails">ocDetails:</label>
-         <input type="text" name="ocDetails" required><br>
-         <label for="ocOrderDate">ocOrderDate:</label>
-         <input type="text" name="ocOrderDate" require><br>
-         <label for="ocUsername">ocUsername:</label>
-         <input type="number" name="ocUsername" required><br>
-         <label for="ocTrackingNumber">ocTrackingNumber:</label>
-         <input type="text" name="ocTrackingNumber" required><br>
-         <label for="ocType">ocType:</label>
-         <input type="text" name="ocType" required><br>
-         <button>Add Commision to Orders</button>
-      </form>
       <h2>Orders - Commissions</h2>
+      <table id="orderCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+        <thead>
+          <th>orderAddress</th>
+          <th>orderDate</th>
+          <th>orderDetails</th>
+          <th>orderPayment</th>
+          <th>orderPaymentMethod</th>
+          <th>orderTrackingNumber</th>
+          <th>orderType</th>
+          <th>orderUsername</th>
+        </thead>
+      </table>
+      <script type="module" src="./src/outputOrderCommissions.js"></script>
       <hr>
       <h2>Orders - Merchandise</h2>
+      <table id="orderMerchandiseList" border="1" cellpadding="10" style="border-collapse:collapse;">
+        <thead>
+          <th>orderAddress</th>
+          <th>orderDate</th>
+          <th>orderDetails</th>
+          <th>orderPayment</th>
+          <th>orderPaymentMethod</th>
+          <th>orderTrackingNumber</th>
+          <th>orderType</th>
+          <th>orderUsername</th>
+        </thead>
+      </table>
+      <script type="module" src="./src/outputOrderMerchandise.js"></script>
+      <hr>
+      <h2>Delivery Management</h2>
+      <form class="addDelivery">
+        <label for="dmAddress">dmAddress:</label>
+        <input type="text" name="dmAddress" required><br>
+        <label for="dmDueDate">dmDueDate:</label>
+        <input type="text" name="dmDueDate" required><br>
+        <label for="dmName">dmName:</label>
+        <input type="text" name="dmName" required><br>
+        <label for="dmOrderDetails">dmOrderDetails:</label>
+        <input type="text" name="dmOrderDetails" require><br>
+        <label for="dmPayment">dmPayment:</label>
+        <input type="number" name="dmPayment" required><br>
+        <label for="dmPaymentMethod">dmPaymentMethod:</label>
+        <input type="text" name="dmPaymentMethod" required><br>
+        <label for="dmStartDate">dmStartDate:</label>
+        <input type="text" name="dmStartDate" required><br>
+        <label for="dmStatus">dmStatus:</label>
+        <input type="text" name="dmStatus" required><br>
+        <label for="dmTrackingNumber">dmTrackingNumber:</label>
+        <input type="number" name="dmTrackingNumber" required><br>
+        <label for="isDmCommission">isDmCommission:</label>
+        <input type="checkbox" name="isDmCommission" required><br>
+        <button>Add Order Item to Delivery</button>
+        <script type="module" src="./src/deliveryCreate.js"></script>
+      </form><hr>
+      <form class="deleteOrder">
+         <label for="orderId">orderId:</label>
+         <input type="text" name="orderId" required>
+         <button>Delete Order</button>
+         <script type="module" src="./src/orderDelete.js"></script>
+      </form>
+      <hr>
+      <form class="deleteDelivery">
+         <label for="deliveryId">deliveryId:</label>
+         <input type="text" name="deliveryId" required>
+         <button>Delete Delivery</button>
+         <script type="module" src="./src/deliveryDelete.js"></script>
+      </form>
       <hr>
       <h2>Deliveries - Commissions</h2>
+      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+        <thead>
+          <th>dmAddress</th>
+          <th>dmDueDate</th>
+          <th>dmName</th>
+          <th>dmOrderDetails</th>
+          <th>dmPayment</th>
+          <th>dmPaymentMethod</th>
+          <th>dmStartDate</th>
+          <th>dmStatus</th>
+          <th>dmTrackingNumber</th>
+        </thead>
+      </table>
+      <script type="module" src="./src/outputDeliveryCommissions.js"></script>
       <hr>
       <h2>Deliveries - Merchandise</h2>
+      <table id="deliveryMerchandiseList" border="1" cellpadding="10" style="border-collapse:collapse;">
+        <thead>
+          <th>dmAddress</th>
+          <th>dmDueDate</th>
+          <th>dmName</th>
+          <th>dmOrderDetails</th>
+          <th>dmPayment</th>
+          <th>dmPaymentMethod</th>
+          <th>dmStartDate</th>
+          <th>dmStatus</th>
+          <th>dmTrackingNumber</th>
+        </thead>
+      </table>
+      <script type="module" src="./src/outputDeliveryMerchandise.js"></script>
       <hr>
       <script type="module" src="./src/firebaseConfig.js"></script>
    </body>

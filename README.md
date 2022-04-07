@@ -1,8 +1,7 @@
 # Ratio Creatives Startup Project
 In-development prototype website application for the Ratio Creatives Startup.
 <br><br>
-
-<a href = "https://flymetothesun.github.io/Ratio-Creatives-Startup/">Preview Deployment<a>
+<a href = "https://flymetothesun.github.io/Ratio-Creatives-Startup/">Click Here to Preview Deployment<a>
 
 ## Developed by
 Baje, Christian Ray <br>

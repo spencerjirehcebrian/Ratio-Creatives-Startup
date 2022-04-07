@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <title>Test</title>
 </head>
 
 <body>
   <h1>Temporary Navigation</h1>
   <a href=".\temp-front-end\Admin Pane v1 Design\index.html"><h4>Open Admin Dashboard</h4></a>
+      <h1>Backend Modules</h1>
+      <hr>
+      <h2>Authentication</h2>
+      <form class="userLogin">
+        <label for="userEmail">userEmail:</label>
+        <input type="email"name="userEmail"><br>
+        <label for="userPassword">userPassword:</label>
+        <input type="password" name="userPassword"><br>
+        <button>login</button>
+      </form>
+      <hr>
+      <h2>Register Account</h2>
+      <form class="userRegister">
+        <label for="userEmail">userEmail:</label>
+        <input type="email"name="userEmail"><br>
+        <label for="userPassword">userPassword:</label>
+        <input type="password" name="userPassword"><br>
+       <button>register</button>
+      </form>
+      <hr>
+      <h2>Profile Management</h2>
+        <button class="userLogout">userLogout</button>
+        <hr>
+
+      <script type="module" src="./src/authentication.js"></script>
+      <h2>Inventory</h2>
+        <form class="add">
+          <label for="itemName">itemName:</label>
+          <input type="text" name="itemName" required><br>
+          <label for="itemPrice">itemPrice:</label>
+          <input type="number" name="itemPrice" required><br>
+          <label for="itemStockQuantity">itemStockQuantity:</label>
+          <input type="text" name="itemStockQuantity" required><br>
+          <label for="itemPrice">itemPictureToken:</label>
+          <input type="itemPictureToken" name="itemPictureToken" required><br>
+          <label for="itemDetails" >itemDetails:</label>
+          <input type="text" name="itemDetails" required><br>
+          <button>Add Inventory Item</button>
+        </form>
+  <hr>
+        <form class="delete">
+          <label for="itemName">itemName:</label>
+          <input type="text" name="itemName" required><br>
+          <button>Delete Inventory Item</button>
+        </form>
+
+  <hr>
+      <form class="update">
+        <label for="itemName">itemName:</label>
+        <input type="text" name="itemName" required><br>
+        <label for="itemPrice">itemPrice:</label>
+        <input type="number" name="itemPrice" required><br>
+        <label for="itemStockQuantity">itemStockQuantity:</label>
+        <input type="text" name="itemStockQuantity" required><br>
+        <label for="itemPrice">itemPictureToken:</label>
+        <input type="itemPictureToken" name="itemPictureToken" required><br>
+        <label for="itemDetails" >itemDetails:</label>
+        <input type="text" name="itemDetails" required><br>
+        <button>Update Item</button>
+      </form>
+      <hr>
+      <h2>Commissions</h2>
+      <hr>
+      <h2>Orders</h2>
+      <hr>
+      <h2>Deliveries</h2>
+      <hr>
+      <h2>Products/Add To Cart</h2>
+      <hr>
+      <h2>Cart Management</h2>
+      <hr>
+      <h2>Add Commission to Cart</h2>
+  <script type="module" src="./src/firebaseConfig.js"></script>
 </body>
 </html

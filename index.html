@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href=".\adminModules\style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Test</title>
    </head>
    <body>
       <h1>Prototype Dashboard</h1>
-      <a href=".\front-end\Admin Pane v1.2 Design\index.html">
+      <a href=".\adminModules\index.html">
          <h4>Open Admin Dashboard</h4>
       </a>
       <a href=".\front-end\aboutus.html">
@@ -171,7 +172,7 @@
          <label for="orderPayment">orderPayment:</label>
          <input type="number" name="orderPayment" required><br>
          <label for="isCommission">isCommission:</label>
-         <input type="checkbox" name="isCommission" required checked><br>
+         <input type="checkbox" name="isCommission" checked><br>
          <button>Add Cart Item to Order</button>
          <script type="module" src="./src/orderCreate.js"></script>
       </form><hr>
@@ -226,7 +227,7 @@
         <label for="dmTrackingNumber">dmTrackingNumber:</label>
         <input type="number" name="dmTrackingNumber" required><br>
         <label for="isDmCommission">isDmCommission:</label>
-        <input type="checkbox" name="isDmCommission" required><br>
+        <input type="checkbox" name="isDmCommission"><br>
         <button>Add Order Item to Delivery</button>
         <script type="module" src="./src/deliveryCreate.js"></script>
       </form><hr>
@@ -245,7 +246,7 @@
       </form>
       <hr>
       <h2>Deliveries - Commissions</h2>
-      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+<!--      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
         <thead>
           <th>dmAddress</th>
           <th>dmDueDate</th>
@@ -257,24 +258,60 @@
           <th>dmStatus</th>
           <th>dmTrackingNumber</th>
         </thead>
-      </table>
-      <script type="module" src="./src/outputDeliveryCommissions.js"></script>
+      </table>-->
       <hr>
       <h2>Deliveries - Merchandise</h2>
-      <table id="deliveryMerchandiseList" border="1" cellpadding="10" style="border-collapse:collapse;">
-        <thead>
-          <th>dmAddress</th>
-          <th>dmDueDate</th>
-          <th>dmName</th>
-          <th>dmOrderDetails</th>
-          <th>dmPayment</th>
-          <th>dmPaymentMethod</th>
-          <th>dmStartDate</th>
-          <th>dmStatus</th>
-          <th>dmTrackingNumber</th>
-        </thead>
-      </table>
+      <section>
+         <ul class="tabs">
+            <li>Merchandise</li>
+            <li>Commissions</li>
+         </ul>
+         <div class="container">
+            <div class="content">
+               <table class="content-table" id="deliveryMerchandiseList">
+                  <thead>
+                     <tr>
+                        <th><input type="checkbox" id="checkbox" value="check"></th>
+                        <th>Order #</th>
+                        <th>Status</th>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Order Details</th>
+                        <th>Payment</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+               </table>
+            </div>
+            <div class="content">
+               <table class="content-table" id="deliveryCommissionList">
+                  <thead>
+                     <tr>
+                        <th><input type="checkbox" id="checkbox" value="check"></th>
+                        <th>Order #</th>
+                        <th>Status</th>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Order Details</th>
+                        <th>Payment</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </section>
       <script type="module" src="./src/outputDeliveryMerchandise.js"></script>
+      <script type="module" src="./src/outputDeliveryCommissions.js"></script>
+      <script src="./adminModules/script.js" ></script>
       <hr>
       <script type="module" src="./src/firebaseConfig.js"></script>
    </body>

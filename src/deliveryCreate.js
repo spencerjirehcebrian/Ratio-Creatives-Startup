@@ -34,15 +34,15 @@ const addDeliveryForm = document.querySelector('.addDelivery')
   e.preventDefault()
   let isCommissionBoolForm = trueOrFalse(addDeliveryForm.isDmCommission.value)
   addDoc(colRefDelivery, {
-    dmAddress: addDeliveryForm.dmAddress.create,
-    dmDueDate: addDeliveryForm.dmDueDate.create,
-    dmName: addDeliveryForm.dmName.create,
-    dmOrderDetails: addDeliveryForm.dmOrderDetails.create,
-    dmPayment: addDeliveryForm.dmPayment.create,
-    dmPaymentMethod: addDeliveryForm.dmPaymentMethod.create,
-    dmStartDate: addDeliveryForm.dmStartDate.create,
-    dmStatus: addDeliveryForm.dmStatus.create,
-    dmTrackingNumber: addDeliveryForm.dmTrackingNumber.create,
+    dmAddress: addDeliveryForm.dmAddress.value,
+    dmDueDate: addDeliveryForm.dmDueDate.value,
+    dmName: addDeliveryForm.dmName.value,
+    dmOrderDetails: addDeliveryForm.dmOrderDetails.value,
+    dmPayment: addDeliveryForm.dmPayment.value,
+    dmPaymentMethod: addDeliveryForm.dmPaymentMethod.value,
+    dmStartDate: addDeliveryForm.dmStartDate.value,
+    dmStatus: addDeliveryForm.dmStatus.value,
+    dmTrackingNumber: addDeliveryForm.dmTrackingNumber.value,
     isDmCommission: isCommissionBoolForm
   })
   .then(() => {

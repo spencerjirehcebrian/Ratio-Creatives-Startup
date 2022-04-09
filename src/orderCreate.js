@@ -34,14 +34,14 @@ const addOrderForm = document.querySelector('.addOrder')
   e.preventDefault()
   let isCommissionBoolForm = trueOrFalse(addOrderForm.isCommission.value)
   addDoc(colRefOrder, {
-    orderAddress:addOrderForm.orderAddress.value,
-    orderDetails:addOrderForm.orderDetails.value,
-    orderDate:addOrderForm.orderDate.value,
-    orderUsername:addOrderForm.orderUsername.value,
-    orderTrackingNumber:addOrderForm.orderTrackingNumber.value,
-    orderType:addOrderForm.orderType.value,
-    orderPaymentMethod:addOrderForm.orderPaymentMethod.value,
-    orderPayment:addOrderForm.orderPayment.value,
+    orderAddress: addOrderForm.orderAddress.value,
+    orderDetails: addOrderForm.orderDetails.value,
+    orderDate: addOrderForm.orderDate.value,
+    orderUsername: addOrderForm.orderUsername.value,
+    orderTrackingNumber: addOrderForm.orderTrackingNumber.value,
+    orderType: addOrderForm.orderType.value,
+    orderPaymentMethod: addOrderForm.orderPaymentMethod.value,
+    orderPayment: addOrderForm.orderPayment.value,
     isCommission:isCommissionBoolForm
   })
   .then(() => {

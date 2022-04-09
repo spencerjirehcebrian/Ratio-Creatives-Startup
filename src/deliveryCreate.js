@@ -14,7 +14,6 @@ updateDoc,
 limit,
 serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
-import { trueOrFalse } from "./functions.js";
 import { db } from "./firebaseConfig.js";
 
 const colRefDelivery = collection(db, 'deliveryMerchandise') //collection reference
@@ -32,7 +31,11 @@ onSnapshot(colRefDelivery, (snapshot)=>{
 const addDeliveryForm = document.querySelector('.addDelivery')
  addDeliveryForm.addEventListener('submit', (e) => {
   e.preventDefault()
-  let isCommissionBoolForm = trueOrFalse(addDeliveryForm.isDmCommission.value)
+
+
+  let isCommissionBoolForm = document.getElementById('isDeliveryCommissionCheckbox').checked;
+
+
   addDoc(colRefDelivery, {
     dmAddress: addDeliveryForm.dmAddress.value,
     dmDueDate: addDeliveryForm.dmDueDate.value,

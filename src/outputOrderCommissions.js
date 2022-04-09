@@ -28,34 +28,16 @@ onSnapshot(q, (snapshot)=>{
 
 const orderCommissionList = document.querySelector('#orderCommissionList') ;
 function renderAccount(doc){
-    let tr = document.createElement('tr');
-    let td_orderAddress = document.createElement('td');
-    let td_orderDate = document.createElement('td');
-    let td_orderDetails = document.createElement('td');
-    let td_orderPayment = document.createElement('td');
-    let td_orderPaymentMethod = document.createElement('td');
-    let td_orderTrackingNumber = document.createElement('td');
-    let td_orderType = document.createElement('td');
-    let td_orderUsername = document.createElement('td');
+    let div = document.createElement('div');
+    let td_orderDate = document.createElement('h6');
+    let td_orderType = document.createElement('h3');
 
-    tr.setAttribute('data-id', doc.id);
-    td_orderAddress.textContent =  doc.data().orderAddress;
+    div.setAttribute('data-id', doc.id);
+    div.setAttribute("class", "o-content");
     td_orderDate.textContent  =  doc.data().orderDate;
-    td_orderDetails.textContent =  doc.data().orderDetails;
-    td_orderPayment.textContent =  doc.data().orderPayment;
-    td_orderPaymentMethod.textContent =  doc.data().orderPaymentMethod;
-    td_orderTrackingNumber.textContent =  doc.data().orderTrackingNumber;
     td_orderType.textContent =  doc.data().orderType;
-    td_orderUsername.textContent =  doc.data().orderUsername;
 
-    tr.appendChild(td_orderAddress);
-    tr.appendChild(td_orderAddress);
-    tr.appendChild(td_orderDate);
-    tr.appendChild(td_orderDetails);
-    tr.appendChild(td_orderPayment);
-    tr.appendChild(td_orderPaymentMethod);
-    tr.appendChild(td_orderTrackingNumber);
-    tr.appendChild(td_orderType);
-    tr.appendChild(td_orderUsername);
-     orderCommissionList.appendChild(tr);
+    div.appendChild(td_orderDate);
+    div.appendChild(td_orderType);
+    orderCommissionList.appendChild(div);
 };

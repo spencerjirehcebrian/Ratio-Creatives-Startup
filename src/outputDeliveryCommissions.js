@@ -26,7 +26,7 @@ onSnapshot(q, (snapshot)=>{
   })
 })
 
-const deliveryMerchandiseList = document.querySelector('#deliveryMerchandiseList') ;
+const deliveryMerchandiseList = document.querySelector('#deliveryCommissionList') ;
 function renderDocument(doc){
     let tr = document.createElement('tr');
     let td_dmCheck = document.createElement('td');

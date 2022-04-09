@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-     <link rel="stylesheet" href=".\adminModules\style.css">
+     <!--<link rel="stylesheet" href=".\adminModules\style.css">-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Test</title>
    </head>
@@ -172,11 +172,11 @@
          <label for="orderPayment">orderPayment:</label>
          <input type="number" name="orderPayment" required><br>
          <label for="isCommission">isCommission:</label>
-         <input type="checkbox" name="isCommission" checked><br>
+         <input type="checkbox" name="isCommission" id="isOrderCommissionCheckbox"><br>
          <button>Add Cart Item to Order</button>
          <script type="module" src="./src/orderCreate.js"></script>
       </form><hr>
-      <h2>Orders - Commissions</h2>
+      <!--<h2>Orders - Commissions</h2>
       <table id="orderCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
         <thead>
           <th>orderAddress</th>
@@ -205,6 +205,38 @@
         </thead>
       </table>
       <script type="module" src="./src/outputOrderMerchandise.js"></script>
+      <hr>-->
+      <h2>Order</h2>
+            <section>
+         <ul class="tabs">
+            <li >Merchandise</li>
+            <li>Commissions</li>
+         </ul>
+         <div class="horizontal-line3"></div>
+
+         <div class="container">
+
+            <div class="content" id="orderMerchandiseList">
+              <h2>Order-Merchandise</h2>
+               <div class="o-content" >
+                  <h3>[Order tracking number]</h3>
+                  <h6>[Order date]</h6>
+               </div>
+               </div>
+            </div>
+            <div class="c-content">
+              <h2>Order-Commission</h2>
+               <div class="content" id="orderCommissionList">
+                  <div class="o-content">
+                     <h3>[Commission type]</h3>
+                     <h6>[Commissioned Date]</h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script type="module" src=".\src\outputOrderCommissions.js"></script>
+      <script type="module" src=".\src\outputOrderMerchandise.js"></script>
       <hr>
       <h2>Delivery Management</h2>
       <form class="addDelivery">
@@ -227,7 +259,7 @@
         <label for="dmTrackingNumber">dmTrackingNumber:</label>
         <input type="number" name="dmTrackingNumber" required><br>
         <label for="isDmCommission">isDmCommission:</label>
-        <input type="checkbox" name="isDmCommission"><br>
+        <input type="checkbox" name="isDmCommission" id="isDeliveryCommissionCheckbox"><br>
         <button>Add Order Item to Delivery</button>
         <script type="module" src="./src/deliveryCreate.js"></script>
       </form><hr>
@@ -244,8 +276,6 @@
          <button>Delete Delivery</button>
          <script type="module" src="./src/deliveryDelete.js"></script>
       </form>
-      <hr>
-      <h2>Deliveries - Commissions</h2>
 <!--      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
         <thead>
           <th>dmAddress</th>
@@ -260,13 +290,14 @@
         </thead>
       </table>-->
       <hr>
-      <h2>Deliveries - Merchandise</h2>
+      <h2>Deliveries</h2>
       <section>
          <ul class="tabs">
             <li>Merchandise</li>
             <li>Commissions</li>
          </ul>
          <div class="container">
+           <h3>Merchandise</h3>
             <div class="content">
                <table class="content-table" id="deliveryMerchandiseList">
                   <thead>
@@ -288,6 +319,7 @@
                </table>
             </div>
             <div class="content">
+              <h3>Commissions</h3>
                <table class="content-table" id="deliveryCommissionList">
                   <thead>
                      <tr>
@@ -311,7 +343,7 @@
       </section>
       <script type="module" src="./src/outputDeliveryMerchandise.js"></script>
       <script type="module" src="./src/outputDeliveryCommissions.js"></script>
-      <script src="./adminModules/script.js" ></script>
+      <!--<script src="./adminModules/script.js" ></script>-->
       <hr>
       <script type="module" src="./src/firebaseConfig.js"></script>
    </body>

@@ -40,7 +40,8 @@ function renderDocument(doc){
     let td_dmStatus = document.createElement('td');
     let td_dmTrackingNumber = document.createElement('td');
 
-    //tr.setAttribute();
+    tr.setAttribute('data-id', doc.id);
+    
     let z = document.createElement('input'); // is a node
     z.setAttribute("type","checkbox");
     z.setAttribute("id","checkbox");

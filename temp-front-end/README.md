@@ -6,4 +6,4 @@ Order & Pay missing slideshow<br>
 No highlights when hovered/click/eventactivated<br>
 Confirmation message design not yet added<br><br>
 
-cannot find the css stylesheet - cebrian
+cannot find the css stylesheet = <link rel = "stylesheet" href = "./css/css.css"> ?

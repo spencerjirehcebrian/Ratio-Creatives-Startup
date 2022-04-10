@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
    <head>
-     <!--<link rel="stylesheet" href=".\adminModules\style.css">-->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-       img{
+      <!--<link rel="stylesheet" href=".\adminModules\style.css">-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         img{
          height: 200px;
          width: 200px;
          border: 1px solid black;
-       }
-     </style>
+         }
+      </style>
       <title>Test</title>
    </head>
    <body>
@@ -44,8 +44,8 @@
       <a href=".\customerModules\product.html">
          <h4>product</h4>
       </a>
-      <a href=".\customerModules\productbusts.html">
-         <h4>productbusts</h4>
+      <a href=".\customerModules\productactionbusts.html">
+         <h4>productactionbusts</h4>
       </a>
       <a href=".\customerModules\productbobbleheads.html">
          <h4>productbobbleheads</h4>
@@ -112,9 +112,14 @@
          <label for="itemDescription" >itemDescription:</label>
          <input type="text" name="itemDescription" required><br>
          <label for="itemType" >itemType:</label>
-         <input type="text" name="itemType" required><br>
-
-        <label for="itemPicture">itemPicture:</label>
+         <select name="itemType" required>
+            <option value="actionbusts">actionbusts</option>
+            <option value="bobbleheads">bobbleheads</option>
+            <option value="genshinpets">genshinpets</option>
+            <option value="genshinphotocards">genshinphotocards</option>
+         </select>
+         <br>
+         <label for="itemPicture">itemPicture:</label>
          <input type="text" id="itemPictureName" name="itemPicture" required><br>
          <label id="extLab"></label><br>
          <img id="imgDemo"><label id="upProcess"></label>
@@ -122,47 +127,59 @@
          <br>
          <button type="button" id="selectBtn">Select Image</button>
          <!--<button type="button" id="uploadBtn">Upload Image</button>
-         <button type="button" id="retrieveBtn">Retrieve Image</button>-->
+            <button type="button" id="retrieveBtn">Retrieve Image</button>-->
          <br>
          <br>
          <button>Add Inventory Item</button>
-               </form>
-
-
+      </form>
       <hr>
       <form class="updateInventory">
-        <label for="itemId">Search itemId:</label>
-        <input type="text" name="itemId" required><br>
-        <label for="itemName">itemName:</label>
-        <input type="text" name="itemName"><br>
-        <label for="itemPrice">itemPrice:</label>
-        <input type="number" name="itemPrice"><br>
-        <label for="itemQuantity">itemQuantity:</label>
-        <input type="number" name="itemQuantity"><br>
-        <label for="itemDescription" >itemDescription:</label>
-        <input type="text" name="itemDescription"><br>
-        <label for="itemType" >itemType:</label>
-        <input type="text" name="itemType"><br>
+         <label for="itemId">Search itemId:</label>
+         <input type="text" name="itemId" required><br>
+         <label for="itemName">itemName:</label>
+         <input type="text" name="itemName"><br>
+         <label for="itemPrice">itemPrice:</label>
+         <input type="number" name="itemPrice"><br>
+         <label for="itemQuantity">itemQuantity:</label>
+         <input type="number" name="itemQuantity"><br>
+         <label for="itemDescription" >itemDescription:</label>
+         <input type="text" name="itemDescription"><br>
+         <label for="itemType" >itemType:</label>
+         <select name="itemType" required>
+            <option value="actionbusts">actionbusts</option>
+            <option value="bobbleheads">bobbleheads</option>
+            <option value="genshinpets">genshinpets</option>
+            <option value="genshinphotocards">genshinphotocards</option>
+         </select>
+         <br>
          <button type="submit" id="updateItemBtn">Update Item</button>
          <button type="submit" id="deleteItemBtn">Delete Inventory Item</button>
       </form>
       <script type="module" src="./src/inventoryCRUD.js"></script>
       <hr>
       <h2>Products/Commission - Add To Cart</h2>
-      <form class="addCart">
-         <label for="ucEmail">ucName:</label>
-         <input type="text" name="ucEmail" required><br>
-         <label for="ucName">ucName:</label>
-         <input type="text" name="ucName" required><br>
-         <label for="ucCommissionType">ucCommissionType:</label>
-         <input type="text" name="ucCommissionType" require><br>
-         <label for="ucQuantity">ucQuantity:</label>
-         <input type="number" name="ucQuantity" required><br>
-         <label for="ucDescription">ucDescription:</label>
-         <input type="text" name="ucDescription" required><br>
-         <button>Add Item To Cart</button>
-      </form>
-      <script type="module" src="./src/cartCreate.js"></script>
+      <h2>productactionbusts</h2>
+      <div id="productactionbustsList">
+      </div>
+      <hr>
+      <h2>productbobbleheads</h2>
+      <div id="productbobbleheadsList">
+      </div>
+      <hr>
+      <h2>productremoteheads</h2>
+      <div id="productremoteheadsList">
+      </div>
+      <hr>
+      <h2>productgenshinpets</h2>
+      <div id="productgenshinpetsList">
+      </div>
+      <hr>
+      <h2>productgenshinphotocards</h2>
+      <div id="productgenshinphotocardsList">
+      </div>
+      <hr>
+      <script type="module" src=".\src\outputInventory.js"></script>
+      <script type="module" src=".\src\cartAdd.js"></script>
       <hr>
       <h2>Cart Management</h2>
       <form class="deleteCart">
@@ -170,7 +187,7 @@
          <input type="text" name="cartId" required>
          <button>Delete Item</button>
       </form>
-      <script type="module" src="./src/cartDelete.js"></script>
+      <script type="module" src="./src/cartUpdate.js"></script>
       <hr>
       <h2>Checkout</h2>
       <form class="addOrder">
@@ -194,64 +211,63 @@
          <input type="checkbox" name="isCommission" id="isOrderCommissionCheckbox"><br>
          <button>Add Cart Item to Order</button>
          <script type="module" src="./src/orderCreate.js"></script>
-      </form><hr>
-      <!--<h2>Orders - Commissions</h2>
-      <table id="orderCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
-        <thead>
-          <th>orderAddress</th>
-          <th>orderDate</th>
-          <th>orderDetails</th>
-          <th>orderPayment</th>
-          <th>orderPaymentMethod</th>
-          <th>orderTrackingNumber</th>
-          <th>orderType</th>
-          <th>orderUsername</th>
-        </thead>
-      </table>
-      <script type="module" src="./src/outputOrderCommissions.js"></script>
+      </form>
       <hr>
-      <h2>Orders - Merchandise</h2>
-      <table id="orderMerchandiseList" border="1" cellpadding="10" style="border-collapse:collapse;">
-        <thead>
-          <th>orderAddress</th>
-          <th>orderDate</th>
-          <th>orderDetails</th>
-          <th>orderPayment</th>
-          <th>orderPaymentMethod</th>
-          <th>orderTrackingNumber</th>
-          <th>orderType</th>
-          <th>orderUsername</th>
-        </thead>
-      </table>
-      <script type="module" src="./src/outputOrderMerchandise.js"></script>
-      <hr>-->
+      <!--<h2>Orders - Commissions</h2>
+         <table id="orderCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+           <thead>
+             <th>orderAddress</th>
+             <th>orderDate</th>
+             <th>orderDetails</th>
+             <th>orderPayment</th>
+             <th>orderPaymentMethod</th>
+             <th>orderTrackingNumber</th>
+             <th>orderType</th>
+             <th>orderUsername</th>
+           </thead>
+         </table>
+         <script type="module" src="./src/outputOrderCommissions.js"></script>
+         <hr>
+         <h2>Orders - Merchandise</h2>
+         <table id="orderMerchandiseList" border="1" cellpadding="10" style="border-collapse:collapse;">
+           <thead>
+             <th>orderAddress</th>
+             <th>orderDate</th>
+             <th>orderDetails</th>
+             <th>orderPayment</th>
+             <th>orderPaymentMethod</th>
+             <th>orderTrackingNumber</th>
+             <th>orderType</th>
+             <th>orderUsername</th>
+           </thead>
+         </table>
+         <script type="module" src="./src/outputOrderMerchandise.js"></script>
+         <hr>-->
       <h2>Order</h2>
-            <section>
+      <section>
          <ul class="tabs">
             <li >Merchandise</li>
             <li>Commissions</li>
          </ul>
          <div class="horizontal-line3"></div>
-
          <div class="container">
-
             <div class="content" id="orderMerchandiseList">
-              <h2>Order-Merchandise</h2>
+               <h2>Order-Merchandise</h2>
                <div class="o-content" >
                   <h3>[Order tracking number]</h3>
                   <h6>[Order date]</h6>
                </div>
+            </div>
+         </div>
+         <div class="c-content">
+            <h2>Order-Commission</h2>
+            <div class="content" id="orderCommissionList">
+               <div class="o-content">
+                  <h3>[Commission type]</h3>
+                  <h6>[Commissioned Date]</h6>
                </div>
             </div>
-            <div class="c-content">
-              <h2>Order-Commission</h2>
-               <div class="content" id="orderCommissionList">
-                  <div class="o-content">
-                     <h3>[Commission type]</h3>
-                     <h6>[Commissioned Date]</h6>
-                  </div>
-               </div>
-            </div>
+         </div>
          </div>
       </section>
       <script type="module" src=".\src\outputOrderCommissions.js"></script>
@@ -259,29 +275,30 @@
       <hr>
       <h2>Delivery Management</h2>
       <form class="addDelivery">
-        <label for="dmAddress">dmAddress:</label>
-        <input type="text" name="dmAddress" required><br>
-        <label for="dmDueDate">dmDueDate:</label>
-        <input type="text" name="dmDueDate" required><br>
-        <label for="dmName">dmName:</label>
-        <input type="text" name="dmName" required><br>
-        <label for="dmOrderDetails">dmOrderDetails:</label>
-        <input type="text" name="dmOrderDetails" require><br>
-        <label for="dmPayment">dmPayment:</label>
-        <input type="number" name="dmPayment" required><br>
-        <label for="dmPaymentMethod">dmPaymentMethod:</label>
-        <input type="text" name="dmPaymentMethod" required><br>
-        <label for="dmStartDate">dmStartDate:</label>
-        <input type="text" name="dmStartDate" required><br>
-        <label for="dmStatus">dmStatus:</label>
-        <input type="text" name="dmStatus" required><br>
-        <label for="dmTrackingNumber">dmTrackingNumber:</label>
-        <input type="number" name="dmTrackingNumber" required><br>
-        <label for="isDmCommission">isDmCommission:</label>
-        <input type="checkbox" name="isDmCommission" id="isDeliveryCommissionCheckbox"><br>
-        <button>Add Order Item to Delivery</button>
-        <script type="module" src="./src/deliveryCreate.js"></script>
-      </form><hr>
+         <label for="dmAddress">dmAddress:</label>
+         <input type="text" name="dmAddress" required><br>
+         <label for="dmDueDate">dmDueDate:</label>
+         <input type="text" name="dmDueDate" required><br>
+         <label for="dmName">dmName:</label>
+         <input type="text" name="dmName" required><br>
+         <label for="dmOrderDetails">dmOrderDetails:</label>
+         <input type="text" name="dmOrderDetails" require><br>
+         <label for="dmPayment">dmPayment:</label>
+         <input type="number" name="dmPayment" required><br>
+         <label for="dmPaymentMethod">dmPaymentMethod:</label>
+         <input type="text" name="dmPaymentMethod" required><br>
+         <label for="dmStartDate">dmStartDate:</label>
+         <input type="text" name="dmStartDate" required><br>
+         <label for="dmStatus">dmStatus:</label>
+         <input type="text" name="dmStatus" required><br>
+         <label for="dmTrackingNumber">dmTrackingNumber:</label>
+         <input type="number" name="dmTrackingNumber" required><br>
+         <label for="isDmCommission">isDmCommission:</label>
+         <input type="checkbox" name="isDmCommission" id="isDeliveryCommissionCheckbox"><br>
+         <button>Add Order Item to Delivery</button>
+         <script type="module" src="./src/deliveryCreate.js"></script>
+      </form>
+      <hr>
       <form class="deleteOrder">
          <label for="orderId">orderId:</label>
          <input type="text" name="orderId" required>
@@ -295,19 +312,19 @@
          <button>Delete Delivery</button>
          <script type="module" src="./src/deliveryDelete.js"></script>
       </form>
-<!--      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
-        <thead>
-          <th>dmAddress</th>
-          <th>dmDueDate</th>
-          <th>dmName</th>
-          <th>dmOrderDetails</th>
-          <th>dmPayment</th>
-          <th>dmPaymentMethod</th>
-          <th>dmStartDate</th>
-          <th>dmStatus</th>
-          <th>dmTrackingNumber</th>
-        </thead>
-      </table>-->
+      <!--      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+         <thead>
+           <th>dmAddress</th>
+           <th>dmDueDate</th>
+           <th>dmName</th>
+           <th>dmOrderDetails</th>
+           <th>dmPayment</th>
+           <th>dmPaymentMethod</th>
+           <th>dmStartDate</th>
+           <th>dmStatus</th>
+           <th>dmTrackingNumber</th>
+         </thead>
+         </table>-->
       <hr>
       <h2>Deliveries</h2>
       <section>
@@ -316,7 +333,7 @@
             <li>Commissions</li>
          </ul>
          <div class="container">
-           <h3>Merchandise</h3>
+            <h3>Merchandise</h3>
             <div class="content">
                <table class="content-table" id="deliveryMerchandiseList">
                   <thead>
@@ -333,12 +350,11 @@
                      </tr>
                   </thead>
                   <tbody>
-
                   </tbody>
                </table>
             </div>
             <div class="content">
-              <h3>Commissions</h3>
+               <h3>Commissions</h3>
                <table class="content-table" id="deliveryCommissionList">
                   <thead>
                      <tr>
@@ -354,7 +370,6 @@
                      </tr>
                   </thead>
                   <tbody>
-
                   </tbody>
                </table>
             </div>

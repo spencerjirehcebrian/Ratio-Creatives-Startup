@@ -26,7 +26,7 @@ onSnapshot(colRefCart, (snapshot)=>{
   })
   console.log(cart)
 })
-
+/*
 // adding docs
 const addCartForm = document.querySelector('.addCart')
  addCartForm.addEventListener('submit', (e) => {
@@ -43,3 +43,20 @@ const addCartForm = document.querySelector('.addCart')
     addCartForm.reset()
   })
 })
+
+window.addToCart = function addToCart(productId){
+  const details = document.getElementById(productId)
+  addDoc(colRefCart, {
+    ucCommissionType: details.ucCommissionType.value,
+    ucDescription: details.ucDescription.value,
+    ucEmail: details.ucEmail.value,
+    ucName: details.ucName.value,
+    ucQuantity: details.ucQuantity.value
+  })
+}*/
+/*const product = document.getElementsByClassName("product");
+
+product.addEventListener("click", () => {
+  productId = product.getAttribute('doc-id')
+  console.log(productId);
+})*/

@@ -55,6 +55,7 @@ addInvForm.addEventListener('submit', (e) => {
           .then(()=>{
             addInvForm.reset()
             picURL = "";
+            console.log("item added successfully");
             })
           }
             catch (e){

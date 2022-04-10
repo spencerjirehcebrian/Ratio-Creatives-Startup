@@ -3,6 +3,13 @@
    <head>
      <!--<link rel="stylesheet" href=".\adminModules\style.css">-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+       img{
+         height: 200px;
+         width: 200px;
+         border: 1px solid black;
+       }
+     </style>
       <title>Test</title>
    </head>
    <body>
@@ -10,64 +17,64 @@
       <a href=".\adminModules\index.html">
          <h4>Open Admin Dashboard</h4>
       </a>
-      <a href=".\front-end\aboutus.html">
+      <a href=".\customerModules\aboutus.html">
          <h4>aboutus</h4>
       </a>
-      <a href=".\front-end\cart.html">
+      <a href=".\customerModules\cart.html">
          <h4>cart</h4>
       </a>
-      <a href=".\front-end\confirmation.html">
+      <a href=".\customerModules\confirmation.html">
          <h4>confirmation</h4>
       </a>
-      <a href=".\front-end\contactus.html">
+      <a href=".\customerModules\contactus.html">
          <h4>contactus</h4>
       </a>
-      <a href=".\front-end\homepage.html">
+      <a href=".\customerModules\homepage.html">
          <h4>homepage</h4>
       </a>
-      <a href=".\front-end\login.html">
+      <a href=".\customerModules\login.html">
          <h4>login</h4>
       </a>
-      <a href=".\front-end\orderandpay.html">
+      <a href=".\customerModules\orderandpay.html">
          <h4>orderandpay</h4>
       </a>
-      <a href=".\front-end\orderconfirmation.html">
+      <a href=".\customerModules\orderconfirmation.html">
          <h4>orderconfirmation</h4>
       </a>
-      <a href=".\front-end\product.html">
+      <a href=".\customerModules\product.html">
          <h4>product</h4>
       </a>
-      <a href=".\front-end\productbusts.html">
+      <a href=".\customerModules\productbusts.html">
          <h4>productbusts</h4>
       </a>
-      <a href=".\front-end\productbobbleheads.html">
+      <a href=".\customerModules\productbobbleheads.html">
          <h4>productbobbleheads</h4>
       </a>
-      <a href=".\front-end\productremoteheads.html">
+      <a href=".\customerModules\productremoteheads.html">
          <h4>productremoteheads</h4>
       </a>
-      <a href=".\front-end\productgenshinphotocards.html">
+      <a href=".\customerModules\productgenshinphotocards.html">
          <h4>productgenshinphotocards</h4>
       </a>
-      <a href=".\front-end\profile cart.html">
+      <a href=".\customerModules\profile cart.html">
          <h4>profile cart</h4>
       </a>
-      <a href=".\front-end\profile info.html">
+      <a href=".\customerModules\profile info.html">
          <h4>profile info</h4>
       </a>
-      <a href=".\front-end\profile purchase history.html">
+      <a href=".\customerModules\profile purchase history.html">
          <h4>profile purchase history</h4>
       </a>
-      <a href=".\front-end\selected product page.html">
+      <a href=".\customerModules\selected product page.html">
          <h4>selected product page</h4>
       </a>
-      <a href=".\front-end\services.html">
+      <a href=".\customerModules\services.html">
          <h4>services</h4>
       </a>
-      <a href=".\front-end\signin.html">
+      <a href=".\customerModules\signin.html">
          <h4>signin</h4>
       </a>
-      <a href=".\front-end\termsofservice.html">
+      <a href=".\customerModules\termsofservice.html">
          <h4>termsofservice</h4>
       </a>
       <h1>Backend Modules</h1>
@@ -95,39 +102,51 @@
       <hr>
       <script type="module" src="./src/authentication.js"></script>
       <h2>Inventory</h2>
-      <form class="add">
+      <form class="addInventory">
          <label for="itemName">itemName:</label>
          <input type="text" name="itemName" required><br>
          <label for="itemPrice">itemPrice:</label>
          <input type="number" name="itemPrice" required><br>
-         <label for="itemStockQuantity">itemStockQuantity:</label>
-         <input type="text" name="itemStockQuantity" required><br>
-         <label for="itemPrice">itemPictureToken:</label>
-         <input type="itemPictureToken" name="itemPictureToken" required><br>
-         <label for="itemDetails" >itemDetails:</label>
-         <input type="text" name="itemDetails" required><br>
+         <label for="itemQuantity">itemQuantity:</label>
+         <input type="number" name="itemQuantity" required><br>
+         <label for="itemDescription" >itemDescription:</label>
+         <input type="text" name="itemDescription" required><br>
+         <label for="itemType" >itemType:</label>
+         <input type="text" name="itemType" required><br>
+
+        <label for="itemPicture">itemPicture:</label>
+         <input type="text" id="itemPictureName" name="itemPicture" required><br>
+         <label id="extLab"></label><br>
+         <img id="imgDemo"><label id="upProcess"></label>
+         <br>
+         <br>
+         <button type="button" id="selectBtn">Select Image</button>
+         <!--<button type="button" id="uploadBtn">Upload Image</button>
+         <button type="button" id="retrieveBtn">Retrieve Image</button>-->
+         <br>
+         <br>
          <button>Add Inventory Item</button>
-      </form>
+               </form>
+
+
       <hr>
-      <form class="delete">
-         <label for="itemName">itemName:</label>
-         <input type="text" name="itemName" required><br>
-         <button>Delete Inventory Item</button>
+      <form class="updateInventory">
+        <label for="itemId">Search itemId:</label>
+        <input type="text" name="itemId" required><br>
+        <label for="itemName">itemName:</label>
+        <input type="text" name="itemName"><br>
+        <label for="itemPrice">itemPrice:</label>
+        <input type="number" name="itemPrice"><br>
+        <label for="itemQuantity">itemQuantity:</label>
+        <input type="number" name="itemQuantity"><br>
+        <label for="itemDescription" >itemDescription:</label>
+        <input type="text" name="itemDescription"><br>
+        <label for="itemType" >itemType:</label>
+        <input type="text" name="itemType"><br>
+         <button type="submit" id="updateItemBtn">Update Item</button>
+         <button type="submit" id="deleteItemBtn">Delete Inventory Item</button>
       </form>
-      <hr>
-      <form class="update">
-         <label for="itemName">itemName:</label>
-         <input type="text" name="itemName" required><br>
-         <label for="itemPrice">itemPrice:</label>
-         <input type="number" name="itemPrice" required><br>
-         <label for="itemStockQuantity">itemStockQuantity:</label>
-         <input type="text" name="itemStockQuantity" required><br>
-         <label for="itemPrice">itemPictureToken:</label>
-         <input type="itemPictureToken" name="itemPictureToken" required><br>
-         <label for="itemDetails" >itemDetails:</label>
-         <input type="text" name="itemDetails" required><br>
-         <button>Update Item</button>
-      </form>
+      <script type="module" src="./src/inventoryCRUD.js"></script>
       <hr>
       <h2>Products/Commission - Add To Cart</h2>
       <form class="addCart">

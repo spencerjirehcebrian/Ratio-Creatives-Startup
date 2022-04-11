@@ -27,6 +27,28 @@ onSnapshot(colRefOrder, (snapshot)=>{
   console.log(cart)
 })
 
+const colRefCart = collection(db, 'userCart') //collection reference
+let details="";
+
+const cookieEmail = document.cookie
+.split('+ ')
+.find(row => row.startsWith('userEmail='))
+.split('=')[1];
+
+const cookieName = document.cookie
+.split('+ ')
+.find(row => row.startsWith('userName='))
+.split('=')[1];
+
+const q = query(colRefCart, where("ucEmail", "==", cookieEmail))
+onSnapshot(q, (snapshot) => {
+    let col = []
+    snapshot.docs.forEach((doc) => {
+        details += doc.data().ucName + doc.data().ucQuantity+"\n";
+    })
+})
+
+
 // adding docs
 const addOrderForm = document.querySelector('.addOrder')
  addOrderForm.addEventListener('submit', (e) => {
@@ -34,11 +56,14 @@ const addOrderForm = document.querySelector('.addOrder')
 
   let isCommissionBoolForm = document.getElementById('isOrderCommissionCheckbox').checked;
 
+
+    console.log(details);
+
   addDoc(colRefOrder, {
     orderAddress: addOrderForm.orderAddress.value,
-    orderDetails: addOrderForm.orderDetails.value,
+    orderDetails: details,
     orderDate: addOrderForm.orderDate.value,
-    orderUsername: addOrderForm.orderUsername.value,
+    orderUsername: cookieName,
     orderTrackingNumber: addOrderForm.orderTrackingNumber.value,
     orderType: addOrderForm.orderType.value,
     orderPaymentMethod: addOrderForm.orderPaymentMethod.value,

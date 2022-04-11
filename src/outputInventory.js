@@ -24,7 +24,6 @@ import {
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
 
-
 const q = query(colRefInventory)
 onSnapshot(q, (snapshot) => {
     let delivery = []
@@ -62,8 +61,9 @@ function renderDocument(doc) {
         let itemTypeRef = details.getElementsByClassName('itemType')[0].innerHTML;
         let itemDescriptionRef = details.getElementsByClassName('itemDescription')[0].innerHTML;
         let itemNameRef = details.getElementsByClassName('itemName')[0].innerHTML;
-        let itemQuantity = details.getElementsByClassName('itemQuantity')[0].innerHTML;
+        let itemQuantityRef = details.getElementsByClassName('itemQuantity')[0].innerHTML;
         let itemPriceRef = details.getElementsByClassName('itemPrice')[0].innerHTML;
+				let itemPictureRef = details.getElementsByClassName('itemPicture')[0].getAttribute("src");
 
         const cookieEmail = document.cookie
             .split('; ')
@@ -77,8 +77,9 @@ function renderDocument(doc) {
                 ucDescription: itemDescriptionRef,
                 ucEmail: cookieEmail,
                 ucName: itemNameRef,
-                ucQuantity: itemQuantity,
-                ucPrice: itemPriceRef
+                ucQuantity: itemQuantityRef,
+                ucPrice: itemPriceRef,
+								ucPicture: itemPictureRef
             })
         } else {
             alert("Please Login First")

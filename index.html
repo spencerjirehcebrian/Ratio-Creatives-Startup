@@ -192,6 +192,9 @@
       <script type="module" src=".\src\cartAdd.js"></script>
       <hr>
       <h2>Cart Management</h2>
+      <div id="userCartList">
+      <script type="module" src=".\src\outputCart.js"></script>
+      </div>
       <form class="deleteCart">
          <label for="cartId">Item ID:</label>
          <input type="text" name="cartId" required>
@@ -200,6 +203,7 @@
       <script type="module" src="./src/cartUpdate.js"></script>
       <hr>
       <h2>Checkout</h2>
+      <button id="checkoutBtn">Checkout</button>
       <form class="addOrder">
          <label for="orderAddress">orderAddress:</label>
          <input type="text" name="orderAddress" required><br>

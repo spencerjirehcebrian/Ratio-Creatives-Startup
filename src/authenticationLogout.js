@@ -28,6 +28,7 @@ logoutButton.addEventListener('click',()=>{
 	signOut(auth)
 		.then(()=>{
 			console.log('user signed out')
+			document.cookie = "";
 		})
 		.catch((err)=>{
 			console.log(err.message)

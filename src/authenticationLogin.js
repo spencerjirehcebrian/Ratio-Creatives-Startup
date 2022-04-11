@@ -22,17 +22,30 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 import { auth, db, storage  } from "./firebaseConfig.js";
 
 const colRefUser = collection(db, 'userProfile') //collection reference
-//const q = query(colRefUser, where("userEmail", "==", ));//query
 
 onAuthStateChanged(auth, user=> {
 	if (user != null){
 		const emailRef = user.email;
-		document.cookie = "userEmail="+emailRef;
+		const q = query(colRefUser, where("userEmail", "==", emailRef));
 
+			onSnapshot(q, (snapshot) => {
+		    snapshot.docs.forEach((doc) => {
+					let nameRef = doc.data().userName;
+					document.cookie = "userEmail="+emailRef+"+ userName="+nameRef;
+				})
+			})
+
+		console.log(document.cookie);
 		const cookieEmail = document.cookie
-  	.split('; ')
+  	.split('+ ')
   	.find(row => row.startsWith('userEmail='))
   	.split('=')[1];
+
+		const cookieName = document.cookie
+		.split('+ ')
+		.find(row => row.startsWith('userName='))
+		.split('=')[1];
+
 
 		console.log('logged in: ' + cookieEmail);
 	} else {
@@ -50,9 +63,7 @@ loginForm.addEventListener('submit', (e) => {
   signInWithEmailAndPassword(auth, email, password)
     .then(cred => {
       console.log('user logged in:', cred.user)
-			document.cookie = "username="+email;
       loginForm.reset()
-			window.open("./homepage.html", self);
     })
     .catch(err => {
       console.log(err.message)

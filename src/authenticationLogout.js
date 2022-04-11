@@ -7,11 +7,20 @@ import { auth } from "./firebaseConfig.js";
 
 onAuthStateChanged(auth, user=> {
 	if (user != null){
-		console.log('logged in')
+		const emailRef = user.email;
+		document.cookie = "userEmail="+emailRef;
+
+		const cookieEmail = document.cookie
+  	.split('; ')
+  	.find(row => row.startsWith('userEmail='))
+  	.split('=')[1];
+
+		console.log('logged in: ' + cookieEmail);
 	} else {
 		console.log('No user')
 	}
 });
+
 //logout
 const logoutButton = document.querySelector('.userLogout')
 

@@ -1879,7 +1879,6 @@ color: #000000;
 }
 /*end of profile*/
 
-
 /*Services*/
 
 .firstrow {
@@ -2276,12 +2275,32 @@ padding-right: 10vw;
 .tosimager2 {
     padding-left:10vw;
 }
+.commissionhere0{
+    position: absolute;
+    width: 189px;
+    height: 39px;
+right: 49px;
+top: 1212px;
+border: none;
+outline: none;
+background: #EA9924;
+border-radius: 2.0107238605898123vh;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 0.9114583333333334vw;
+line-height: 2.278820375335121vh;
+/* identical to box height */
+
+color: #FFFFFF;
+}
 .commissionhere1{
     position: absolute;
 width: 10.807291666666666vw;
 height: 5.227882037533512vh;
 right: 9.114583333333334vw;
-top: 359.24932975871315vh;
+top: 2603px;
 border: none;
 outline: none;
 background: #EA9924;
@@ -2302,7 +2321,7 @@ color: #FFFFFF;
     width: 10.807291666666666vw;
     height: 5.227882037533512vh;
 left: 23.4375vw;
-top: 408.84718498659515vh;
+top: 2984px;
 border: none;
 outline: none;
 background: #EA9924;
@@ -2323,7 +2342,7 @@ color: #FFFFFF;
     width: 10.807291666666666vw;
     height: 5.227882037533512vh;
 right: 9.440104166666666vw;
-top: 458.4450402144772vh;
+top: 3358px;
 border: none;
 outline: none;
 background: #EA9924;
@@ -2662,21 +2681,21 @@ color: #853645;
     top: 1248.92px;
     height: 115.19px;
 }
-.staricon1{
+.staricon1a{
     position: absolute;
     right: 42.2px;
     top: 1273.19px;
     height: 48.38px;
     transform: rotate(32.28deg);
 }
-.staricon2{
+.staricon2a{
     position: absolute;
     right: 187.78px;
     top: 1251.91px;
     height: 14.73px;
     transform: rotate(-12.8deg);
 }
-.staricon3{
+.staricon3a{
     position: absolute;
     right: 215.24px;
     top: 1323.16px;
@@ -3087,6 +3106,7 @@ text-align: center;
 color: white;
 
 }
+
 /*end of order and pay*/
 @font-face {
     font-family: Roboto;
@@ -4662,7 +4682,7 @@ color: #FFFFFF;
 /*Confirmation*/
 
 .confmargin {
-    padding-top: 80vw;
+    padding-top: 55vw;
 }
 
 .confheader {
@@ -4740,6 +4760,113 @@ line-height: 44px;
 text-align: center;
 
 color: #FFFFFF;
+}
+
+.confspiral{
+    position: absolute;
+    width: 4%;
+left: 3.22%;
+right: 92.68%;
+top: 60.39%;
+bottom: 60.5%;
+}
+
+.confstar{
+    position: absolute;
+    width: 4%;
+    left: 2.25%;
+    right: 94.99%;
+    top: 72.96%;
+    bottom: 54.74%;
+    transform: rotate(-12.8deg);
+}
+
+.confshoppingbag{
+    position: absolute;
+    width: 6%;
+    left: 8.28%;
+    right: 84.74%;
+    top: 66.4%;
+    bottom: 56.22%;
+    transform: rotate(0.31deg);
+}
+
+.conffilm{
+    position: absolute;
+    width: 4%;
+    left: 2.34%;
+    right: 93.36%;
+    top: 112.16%;
+    bottom: 24.14%;
+    transform: rotate(-14.07deg);
+}
+
+.confpackage{
+    position: absolute;
+    width: 7%;
+    left: 4.79%;
+    right: 87.88%;
+    top: 125.73%;
+    bottom: 15.97%;
+    transform: rotate(1.94deg);
+}
+
+.confspiral2{
+    position: absolute;
+    width: 4%;
+    left: 13.87%;
+    right: 82.03%;
+    top: 130.27%;
+    bottom: 14.62%;
+}
+
+.confpic{
+    position: absolute;
+    width: 5%;
+    left: 86.43%;
+    right: 10.43%;
+    top: 61.67%;
+    bottom: 59.62%;
+    transform: rotate(180.39deg);
+}
+
+.confpaintbrush{
+    position: absolute;
+    width: 5%;
+    left: 89.1%;
+    right: 5.65%;
+    top: 68.32%;
+    bottom: 55.31%;
+    transform: rotate(-8.86deg);
+}
+
+.confcameralens{
+    position: absolute;
+    width: 2.5%;
+    left: 94.63%;
+    right: 2.25%;
+    top: 75.87%;
+    bottom: 53.45%;
+}
+
+.confgrid{
+    position: absolute;
+    width: 4%;
+    left: 90.02%;
+    right: 3.65%;
+    top: 116.33%;
+    bottom: 26.94%;
+    transform: rotate(13.36deg);
+}
+
+.confgift{
+    position: absolute;
+    width: 7%;
+    left: 85.24%;
+    right: 6.56%;
+    top: 124.51%;
+    bottom: 15.59%;
+    transform: rotate(360.17deg);
 }
 /*Confirmation End*/
 
@@ -6269,4 +6396,5 @@ text-align: center;
 text-indent: 20px;
 color: #F7F7F7;
 }
+
 /*Order Confirmation End*/

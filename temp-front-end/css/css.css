@@ -6398,3 +6398,157 @@ color: #F7F7F7;
 }
 
 /*Order Confirmation End*/
+
+/*forgot password*/
+.fpright h1{
+    position: absolute;
+height: 58px;
+left: 526px;
+top: 321px;
+
+font-family: Monument;
+font-style: normal;
+font-weight: 800;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.fpright h2{
+    position: absolute;
+width: 355px;
+height: 29px;
+left: 526px;
+top: 390px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #837F7F;
+
+}
+.fpright input[type="text"]{
+    position: absolute;
+    width: 595.02px;
+    height: 65.8px;
+    left: 526px;
+    top: 469px;
+border: 0.40214477211796246vh solid #837F7F;
+text-indent: 1.3020833333333333vw;
+
+box-sizing: border-box;
+border-radius: 2.0107238605898123vh;
+}
+.fpright input[type="text"]:focus{
+    border: 0.8042895442359249vh solid #466CF1;
+    text-indent: 1.3020833333333333vw;
+}
+.fpright button{
+    position: absolute;
+width: 595.02px;
+height: 49.63px;
+left: 526px;
+top: 564.37px;
+
+background: #466CF1;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 0.9765625vw;
+line-height: 2.4128686327077746vh;
+text-align: center;
+
+color: #FFFFFF;
+}
+/*end of forgot password */
+
+/*forgot password 2*/
+.fp2right h1{
+    position: absolute;
+height: 58px;
+left: 526px;
+top: 321px;
+
+font-family: Monument;
+font-style: normal;
+font-weight: 800;
+font-size: 48px;
+line-height: 58px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.fp2right h2{
+    position: absolute;
+width: 355px;
+height: 29px;
+left: 526px;
+top: 390px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #837F7F;
+
+}
+.fp2right input[type="password"]{
+    position: absolute;
+    width: 595.02px;
+    height: 65.8px;
+    left: 526px;
+    top: 448px;
+border: 0.40214477211796246vh solid #837F7F;
+text-indent: 1.3020833333333333vw;
+
+box-sizing: border-box;
+border-radius: 2.0107238605898123vh;
+}
+.fp2right input[type="password"]:focus{
+    border: 0.8042895442359249vh solid #466CF1;
+    text-indent: 1.3020833333333333vw;
+}
+.fp2right input[type="password2"]{
+    position: absolute;
+    width: 595.02px;
+    height: 65.8px;
+    left: 526px;
+    top: 531.35px;
+border: 0.40214477211796246vh solid #837F7F;
+text-indent: 1.3020833333333333vw;
+
+box-sizing: border-box;
+border-radius: 2.0107238605898123vh;
+}
+.fp2right input[type="password2"]:focus{
+    border: 0.8042895442359249vh solid #466CF1;
+    text-indent: 1.3020833333333333vw;
+}
+.fp2right button{
+    position: absolute;
+    width: 595.02px;
+    height: 49.63px;
+    left: 526px;
+    top: 638px;
+
+background: #466CF1;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 0.9765625vw;
+line-height: 2.4128686327077746vh;
+text-align: center;
+
+color: #FFFFFF;
+}
+/*end of forgot password2 */

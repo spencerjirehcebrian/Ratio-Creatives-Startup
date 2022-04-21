@@ -2486,12 +2486,16 @@ border: 0.13vw solid #DB513A;
     position: absolute;
 width: 39.0625vw;
 height: 9.785522788203753vh;
-left: 3.4505208333333335vw;
+left: 18vw;
 top: 90.3485254691689vh;
 
 background: rgba(253, 253, 253, 0.2);
 border: 0.3351206434316354vh solid #000000;
 box-sizing: border-box;
+}
+
+.oapleft{
+    padding-left: 14vw;
 }
 .merchbox h1{
     position: absolute;
@@ -2528,7 +2532,7 @@ color: #000000;
     position: absolute;
     width: 13.020833333333334vw;
     height: 4.959785522788204vh;
-left: 5.338541666666667vw;
+left: 19vw;
 top: 135.52278820375335vh;
 border: none;
 outline: none;
@@ -2566,7 +2570,7 @@ border: 0.13404825737265416vh solid #000000;
     position: absolute;
     width: 305px;
     height: 395px;
-    right: 42px;
+    right: 300px;
     top: 677px;
 }
 

@@ -1144,6 +1144,13 @@ height: 31.61260053619303vh;
 left: 3.3092447916666665vw;
 top: 105.843163538874vh;
 }
+.wwysize {
+    position: absolute;
+    top: 187%;
+    left: 62.5%;
+    font-family: 'Monument';
+    font-size: 3.5vw;
+}
 /*homepage end*/
 
 /*profile*/

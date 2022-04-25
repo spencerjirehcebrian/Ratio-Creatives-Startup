@@ -1,0 +1,37 @@
+.productList{
+  position: relative;
+  top: 15px;
+  left: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.product{
+  display: block;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px;
+}
+
+.sticker {
+    position: relative;
+    width: 11.067vw;
+    height: 11.067vw;
+    border-radius: 0.9765625vw;
+    text-align: center;
+
+}
+
+.stickername {
+    position: relative;
+    border-radius: 0.9765625vw;
+        text-align: center;
+
+}
+
+.stickerprice {
+    position: relative;
+    border-radius: 0.9765625vw;
+        text-align: center;
+
+}

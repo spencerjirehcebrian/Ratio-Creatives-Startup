@@ -8,7 +8,7 @@
 .lleft{
     width: 25.1953125vw;
     background-image:     linear-gradient(
-        rgba(86, 80, 74, 0.9), 
+        rgba(86, 80, 74, 0.9),
         rgba(86, 80, 74, 0.9)
   ),
     url("../assets/Ratio Creatives Backgrounds/Back_Design_Edited.png");
@@ -83,7 +83,7 @@ color: #FFFFFF;
     height: 5.96514745308311vh;
     left: 3.90625vw;
     top: 97.31903485254692vh;
-    
+
     background: #466CF1;
     border-radius: 1.3404825737265416vh;
     outline: none;
@@ -219,7 +219,7 @@ border-radius: 2.0107238605898123vh;
     font-size: 0.9765625vw;
     line-height: 2.4128686327077746vh;
     text-align: center;
-    
+
     color: #FFFFFF;
 }
 
@@ -298,11 +298,11 @@ text-indent: 1.3020833333333333vw;
 box-sizing: border-box;
 border-radius: 2.0107238605898123vh;
 }
-.sright input[type="password"]:focus{
+.sright input[class="password"]:focus{
     border: 0.8042895442359249vh solid #466CF1;
     text-indent: 1.3020833333333333vw;
 }
-.sright input[type="password2"]{
+.sright input[class="password2"]{
     position: absolute;
     width: 38.73828125vw;
     height: 8.820375335120643vh;
@@ -383,7 +383,7 @@ border-radius: 2.0107238605898123vh;
     font-size: 0.9765625vw;
     line-height: 2.4128686327077746vh;
     text-align: center;
-    
+
     color: #FFFFFF;
 }
 
@@ -463,14 +463,14 @@ top: 7.640750670241287vh;
     height: 2.278820375335121vh;
     right: 10.677083333333334vw;
     top: 4.825737265415549vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 0.9114583333333334vw;
     line-height: 2.278820375335121vh;
-    
-    
+
+
     color: #000000;
 }
 .hide2{
@@ -479,17 +479,17 @@ top: 7.640750670241287vh;
     height: 2.278820375335121vh;
    right: 7.096354166666667vw;
     top: 4.825737265415549vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 0.9114583333333334vw;
     line-height: 2.278820375335121vh;
     /* identical to box height */
-    
-    
+
+
     color: #000000;
-    
+
 }
 input[type="search"]{
     position: absolute;
@@ -690,7 +690,7 @@ color: #FFFFFF;
     height: 20.10723860589812vh;
     left: 45.5078125vw;
     bottom: 0vh;
-    
+
     background: #FFFFFF;
 }
 footer h3{
@@ -771,7 +771,7 @@ color: #FFFFFF;
     height: 20.10723860589812vh;
     right:27.669270833333332vw;
     bottom: 0vh;
-    
+
     background: #FFFFFF;
 }
 footer h4{
@@ -954,7 +954,7 @@ color: #FFFFFF;
     height: 15.097855227882038vh;
     left: 0vh;
     top: 81.90348525469169vh;
-    
+
     background: black;
 }
 .middlehome{
@@ -1052,7 +1052,7 @@ top: 156.56836461126005vh;
     height: 15.097855227882038vh;
     left: 0vh;
     top: 156.56836461126005vh;
-    
+
     background: white;
 }
 .whitebg3{
@@ -1061,7 +1061,7 @@ top: 156.56836461126005vh;
     height: 15.097855227882038vh;
     right: 0vh;
     top: 156.56836461126005vh;
-    
+
     background: white;
 }
 .whitebg1 h1{
@@ -1088,13 +1088,13 @@ color: #000000;
     height: 4.557640750670242vh;
     right: 3.0598958333333335vw;
     top: 192.22520107238606vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 0.9765625vw;
     line-height: 2.4128686327077746vh;
-    
+
     color: #000000;
 
 }
@@ -1123,7 +1123,7 @@ color: #FFFFFF;
     height: 4.959785522788204vh;
     right: 3.3203125vw;
     top: 200.13404825737265vh;
-    
+
     background: #DB513A;
     border-radius: 0.6702412868632708vh;
     font-family: Prodsans;
@@ -1469,14 +1469,14 @@ color: #000000;
     position: absolute;
     left: 2.857421875vw;
     top: 40.48257372654155vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5625vw;
-    
+
     color: #151515;
-    
+
     }
 .profilebox .moneyicon{
         width: 1.3020833333333333vw;
@@ -1499,13 +1499,13 @@ color: #000000;
     position: absolute;
     left: 17.317708333333332vw;
     top: 47.72117962466488vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 1.0416666666666667vw;
     line-height: 2.546916890080429vh;
-    
+
     color: #151515;
 }
 .deleteacc{
@@ -1569,7 +1569,7 @@ color: #2E1EE9;
     right: 2.2135416666666665vw;
     left: 2.734375vw;
     top: 11.26005361930295vh;
-    
+
     background: #FCFCFC;
     box-shadow: 0vh 0.2680965147453083vh 0.13404825737265416vh rgba(0, 0, 0, 0.05);
     border-radius: 2.680965147453083vh;
@@ -1643,13 +1643,13 @@ color: #000000;
     height: 1.876675603217158vh;
     left: 8.854166666666666vw;
     top: 6.032171581769437vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 0.78125vw;
     line-height: 2.0107238605898123vh;
-    
+
     color: #000000;
     }
     .pastorder h3{
@@ -1658,13 +1658,13 @@ color: #000000;
         height: 2.044235924932976vh;
         left: 8.854166666666666vw;
         top: 11.54289544235925vh;
-        
+
         font-family: Prodsans;
         font-style: normal;
         font-weight: 400;
         font-size: 0.78125vw;
         line-height: 2.0107238605898123vh;
-        
+
         color: #3A375C;
         }
 
@@ -1691,13 +1691,13 @@ color: #2E1EE9;
     right: 1.5026041666666667vw;
     left: auto;
     top: 4.449061662198392vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 0.8463541666666666vw;
     line-height: 2.1447721179624666vh;
-    
+
     color: rgba(46, 30, 233, 0.7);
 }
 .pastorderright h3{
@@ -1759,7 +1759,7 @@ color: #000000;
     right: 2.2135416666666665vw;
     left: 5.533854166666667vw;
     top: 11.26005361930295vh;
-    
+
     background: #FCFCFC;
     box-shadow: 0vh 0.2680965147453083vh 0.13404825737265416vh rgba(0, 0, 0, 0.05);
     border-radius: 2.680965147453083vh;
@@ -1778,15 +1778,15 @@ border-radius: 2.0107238605898123vh;
     position: absolute;
     left: 1.2265625vw;
     top: 1.202412868632708vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 1.7578125vw;
     line-height: 4.423592493297587vh;
     /* identical to box height */
-    
-    
+
+
     color: #000000;
     }
 
@@ -1796,13 +1796,13 @@ border-radius: 2.0107238605898123vh;
         height: 1.876675603217158vh;
         left: 8.854166666666666vw;
         top: 6.032171581769437vh;
-        
+
         font-family: Prodsans;
         font-style: normal;
         font-weight: 400;
         font-size: 0.78125vw;
         line-height: 2.0107238605898123vh;
-        
+
         color: #000000;
         }
 .profcart p1{
@@ -1840,13 +1840,13 @@ color: #2E1EE9;
     right: 1.5026041666666667vw;
     left: auto;
     top: 4.449061662198392vh;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 0.8463541666666666vw;
     line-height: 2.1447721179624666vh;
-    
+
     color: rgba(46, 30, 233, 0.7);
 }
 .profcartright h4{
@@ -1892,7 +1892,7 @@ color: #000000;
     background-image: url("../assets/Ratio Creatives Backgrounds/services background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 40vh; 
+    height: 40vh;
 }
 
 
@@ -1960,7 +1960,7 @@ color: #FFFFFF;
 .seright {
     width: 33.4%;
     float: left;
-    
+
 }
 
 .sebox {
@@ -2020,7 +2020,7 @@ text-align: center;
     background-color: #853645;
     background-size: cover;
     height: 38vh;
-    padding-top: 3vw; 
+    padding-top: 3vw;
 }
 
 .thirdleft {
@@ -2051,10 +2051,10 @@ text-align: center;
     font-size: 3.125vw;
     line-height: 3.77vw;
     /* identical to box height */
-    
-    
+
+
     color: #FFFFFF;
-    
+
     text-shadow: 0vw 0.39vw 0vw rgba(95, 28, 28, 0.5);
 }
 
@@ -2106,7 +2106,7 @@ line-height: 29px;
 
 
 /*Slideshow*/
-.mySlides 
+.mySlides
 {display: none}
 
 .slideshow-container img {vertical-align: middle;
@@ -2165,12 +2165,12 @@ line-height: 29px;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -2428,7 +2428,7 @@ border: 0.13vw solid #DB513A;
     background-image: url("../assets/Ratio Creatives Backgrounds/order and pay background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 47.184986595174266vh; 
+    height: 47.184986595174266vh;
 }
 .orderandpaytext {
     font-family: Monument;
@@ -2437,50 +2437,50 @@ border: 0.13vw solid #DB513A;
     font-size: 3.125vw;
     line-height: 3.77vw;
     /* identical to box height */
-    
-    
+
+
     color: #FFFFFF;
-    
+
     text-shadow: 0vw 0.39vw 0vw rgba(95, 28, 28, 0.5);
     }
-    
+
     .centerorderandpay {
         text-align: center;
     }
-    
+
     .orderandpaymargin {
         padding-top: 3.7vw;
     }
-    
+
     .boxorderandpay {
     margin: auto;
     width: 35.35vw;
     height: 4.55vw;
     top: 21.28;
-    
+
     background: rgba(253, 253, 253, 0.2);
     border: 0.162vw solid #EDEDED;
     box-sizing: border-box;
     }
-    
+
     .orderandpaytexttwo {
     padding-top: 1.5vw;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5vw;
     line-height: 1.8vw;
     text-align: center;
-    
+
     color: #FFFFFF;
-    
+
     }
 .merchrow{
     background: white;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 850px; 
+    height: 850px;
 }
 .merchbox{
     position: absolute;
@@ -2560,7 +2560,7 @@ border: 0.13404825737265416vh solid #000000;
 }
 
 /*Slideshow*/
-.mySlides 
+.mySlides
 {display: none}
 
 .slideshow-container2 img {vertical-align: middle;
@@ -2621,12 +2621,12 @@ border: 0.13404825737265416vh solid #000000;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -2825,7 +2825,7 @@ color: #000000;
     background: #DB513A;;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 850px; 
+    height: 850px;
 }
 .commissionstext {
     position: absolute;
@@ -2833,28 +2833,28 @@ color: #000000;
     height: 58px;
     padding-right: 22px;
     top: 5px;
-    
+
     font-family: Monument;
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
     line-height: 58px;
     /* identical to box height */
-    
-    
+
+
     color: #FFFFFF;
-    
+
     text-shadow: 0vw 0.39vw 0vw rgba(95, 28, 28, 0.5);
     }
-    
+
     .rightcommissions {
         text-align: right;
     }
-    
+
     .commissionsmargin {
         padding-top: 3.7vw;
     }
-    
+
     .boxcommissions {
         position: absolute;
         width: 579px;
@@ -2862,29 +2862,29 @@ color: #000000;
         right: 42px;
         left: auto;
         top: 1518px;
-    
+
     background: rgba(253, 253, 253, 0.2);
     border: 0.162vw solid #EDEDED;
     box-sizing: border-box;
     }
-    
+
     .commissionstexttwo {
         position: absolute;
         width: 556px;
         height: 277px;
         right: 50px;
         top: 1613px;
-        
+
         font-family: Prodsans;
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
         text-align: right;
-        
+
         color: #FFFFFF;
-        
-    
+
+
     }
 .accessformhereb{
     position: absolute;
@@ -3130,7 +3130,7 @@ color: white;
     background-image: url("../assets/About Us/First Row Background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 40vh; 
+    height: 40vh;
 }
 
 .autopmargin {
@@ -3226,8 +3226,8 @@ color: #000000;
 .authirdrow {
     background-color: #DD672E;
     background-size: cover;
-    
-    height: 60vh; 
+
+    height: 60vh;
 }
 
 .autextthree {
@@ -3245,7 +3245,7 @@ color: #FFFFFF;
 }
 
 .aufourthrow {
-    height: 75vh; 
+    height: 75vh;
 }
 
 .aufrtext {
@@ -3330,7 +3330,7 @@ background: #DD672E;
     height: 1.171875vw;
     left: 70.31vw;
     top: 125vw;
-    
+
     background: #EA9924;
 }
 
@@ -3453,7 +3453,7 @@ line-height: 1.04vw;
     height: 1.88vw;
 left: 72.91vw;
 top: 126.75vw;
-    
+
     font-family: Roboto;
 font-style: normal;
 font-weight: 400;
@@ -3495,7 +3495,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
 }
 
 .prodleft {
-    position: absolute;
+position: absolute;
 width: 288px;
 height: 1121px;
 left: 0px;
@@ -3537,7 +3537,7 @@ color: #774F48;
 /* identical to box height */
 
 
-color: #5C2A21; 
+color: #5C2A21;
 }
 
 .ehtext {
@@ -3562,13 +3562,13 @@ color: #5C2A21;
     height: 24px;
     left: 27px;
     top: 588px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: #5C2A21;
 }
 
@@ -3578,13 +3578,13 @@ color: #5C2A21;
     height: 24px;
     left: 27px;
     top: 620px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: #5C2A21;
 }
 
@@ -3594,15 +3594,15 @@ color: #5C2A21;
     height: 34px;
     left: 25px;
     top: 672px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 27.75px;
     line-height: 34px;
     /* identical to box height */
-    
-    
+
+
     color: #5C2A21;
 }
 
@@ -3628,15 +3628,15 @@ color: #5C2A21;
     height: 24px;
     left: 27px;
     top: 749px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: #5C2A21;
-    
+
 }
 
 .sticker1 {
@@ -3769,13 +3769,13 @@ color: #000000;
     height: 36px;
     left: 522px;
     top: 619px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3784,14 +3784,14 @@ color: #000000;
     width: 89px;
     height: 36px;
     left: 799px;
-    top: 619px;    
+    top: 619px;
 
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3801,13 +3801,13 @@ color: #000000;
     height: 36px;
     left: 363px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3817,13 +3817,13 @@ color: #000000;
     height: 36px;
     left: 529px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3839,7 +3839,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3855,7 +3855,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3865,13 +3865,13 @@ color: #000000;
     height: 36px;
     left: 583px;
     top: 1133px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3881,13 +3881,13 @@ color: #000000;
     height: 36px;
     left: 795px;
     top: 1133px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3897,13 +3897,13 @@ color: #000000;
     height: 36px;
     left: 351px;
     top: 1389px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3919,7 +3919,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3935,7 +3935,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3945,13 +3945,13 @@ color: #000000;
     height: 36px;
     left: 590px;
     top: 619px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3961,13 +3961,13 @@ color: #000000;
     height: 36px;
     left: 380px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3977,13 +3977,13 @@ color: #000000;
     height: 36px;
     left: 570px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -3993,13 +3993,13 @@ color: #000000;
     height: 36px;
     left: 590px;
     top: 619px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4009,13 +4009,13 @@ color: #000000;
     height: 36px;
     left: 380px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4025,13 +4025,13 @@ color: #000000;
     height: 36px;
     left: 575px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4047,7 +4047,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4063,7 +4063,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4087,13 +4087,13 @@ color: #000000;
     height: 36px;
     left: 610px;
     top: 619px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4103,13 +4103,13 @@ color: #000000;
     height: 36px;
     left: 375px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4119,13 +4119,13 @@ color: #000000;
     height: 36px;
     left: 540px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4135,13 +4135,13 @@ color: #000000;
     height: 36px;
     left: 570px;
     top: 619px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4149,14 +4149,14 @@ color: #000000;
     position: absolute;
     height: 36px;
     left: 780px;
-    top: 619px;    
+    top: 619px;
 
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4166,13 +4166,13 @@ color: #000000;
     height: 36px;
     left: 350px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4182,13 +4182,13 @@ color: #000000;
     height: 36px;
     left: 570px;
     top: 875px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4204,7 +4204,7 @@ color: #000000;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    
+
     color: #000000;
 }
 
@@ -4214,7 +4214,7 @@ color: #000000;
     height: 24px;
     left: 367px;
     top: 660px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
@@ -4353,7 +4353,7 @@ color: #000000;
     width: 75px;
     height: 24px;
     left: 585px;
-    top: 1430px;    
+    top: 1430px;
 
     font-family: Prodsans;
     font-style: normal;
@@ -4368,7 +4368,7 @@ color: #000000;
     height: 24px;
     left: 809px;
     top: 1430px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
@@ -4419,7 +4419,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 48px;
     left: 72px;
     top: 458px;
-    
+
     font-family: Monument;
     font-style: normal;
     font-weight: 400;
@@ -4457,13 +4457,13 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 29px;
     left: 225px;
     top: 544px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 49px;
-    
+
     color: #000000;
 }
 
@@ -4473,13 +4473,13 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 29px;
     left: 223px;
     top: 702px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 49px;
-    
+
     color: #000000;
 }
 
@@ -4489,13 +4489,13 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 29px;
     left: 223px;
     top: 868px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 49px;
-    
+
     color: #000000;
 }
 
@@ -4505,13 +4505,13 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 19px;
     left: 231px;
     top: 592px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: #000000;
 }
 
@@ -4521,13 +4521,13 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 19px;
     left: 225px;
     top: 752px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: #000000;
 }
 
@@ -4537,13 +4537,13 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 19px;
     left: 225px;
     top: 916px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: #000000;
 }
 
@@ -4553,7 +4553,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 45px;
     left: 731px;
     top: 580px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
@@ -4567,7 +4567,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 45px;
     left: 719px;
     top: 743px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
@@ -4581,7 +4581,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 45px;
     left: 706px;
     top: 900px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
@@ -4731,7 +4731,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     height: 158px;
     left: 350px;
     top: 532px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
@@ -4750,7 +4750,7 @@ text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    line-height: 40px;   
+    line-height: 40px;
     text-align: center;
 }
 .backhomeb{
@@ -4886,7 +4886,7 @@ bottom: 60.5%;
     background-image: url("../assets/Ratio Creatives Backgrounds/contact us background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 312px; 
+    height: 312px;
 }
 .contactbgtext {
     font-family: Monument;
@@ -4895,50 +4895,50 @@ bottom: 60.5%;
     font-size: 3.125vw;
     line-height: 3.77vw;
     /* identical to box height */
-    
-    
+
+
     color: #FFFFFF;
-    
+
     text-shadow: 0vw 0.39vw 0vw rgba(95, 28, 28, 0.5);
     }
-    
+
     .centercontactbg {
         text-align: center;
     }
-    
+
     .contactbgmargin {
         padding-top: 3.7vw;
     }
-    
+
     .boxcontactbg {
     margin: auto;
     width: 35.35vw;
     height: 4.55vw;
     top: 21.28;
-    
+
     background: rgba(253, 253, 253, 0.2);
     border: 0.162vw solid #EDEDED;
     box-sizing: border-box;
     }
-    
+
     .contactbgtexttwo {
     padding-top: 1.5vw;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5vw;
     line-height: 1.8vw;
     text-align: center;
-    
+
     color: #FFFFFF;
-    
+
     }
 .contactbox{
     background: white;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1150px; 
+    height: 1150px;
 }
 .contactbox h1{
     position: absolute;
@@ -5151,15 +5151,15 @@ top: 1267px;
     height: 24px;
     left: 145px;
     top: 1209px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    
+
     color: #727272;
-    
+
 }
 .feedbackform p2{
     position: absolute;
@@ -5167,15 +5167,15 @@ top: 1267px;
     height: 24px;
     left: 145px;
     top: 1270px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    
+
     color: #727272;
-    
+
 }
 .feedbackform .cnamebox{
     position: absolute;
@@ -5233,15 +5233,15 @@ border-radius: 5px;
     height: 14px;
     left: 94px;
     top: 1412px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    
+
     color: rgba(124, 124, 124, 0.7);
-    
+
 
 }
 .feedbackform .feedbacktext{
@@ -5281,10 +5281,10 @@ color: #FFFFFF;
     background: white;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px; 
+    height: 800px;
 }
 
-.mySlides 
+.mySlides
 {display: none}
 
 .slideshow-container4 img {vertical-align: middle;
@@ -5344,12 +5344,12 @@ color: #FFFFFF;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -5799,7 +5799,7 @@ border-radius: 16px;
     height: 16px;
     left: 121px;
     top: 784px;
-    
+
 
 font-family: Prodsans;
 font-style: normal;
@@ -5818,7 +5818,7 @@ color: #000000;
     height: 13px;
     left: 121px;
     top: 803px;
-    
+
 
 font-family: Prodsans;
 font-style: normal;
@@ -5917,7 +5917,7 @@ filter: brightness(70%);
     height: 142px;
     left: 0px;
     top: 270px;
-    
+
     background: #DB513A;
 }
 
@@ -5927,15 +5927,15 @@ filter: brightness(70%);
     height: 26px;
     left: 40px;
     top: 315px;
-    
+
     font-family: Monument;
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
     line-height: 58px;
-    
+
     color: #FFFFFF;
-    
+
     text-shadow: 0px 6px 0px rgba(95, 28, 28, 0.5);
 }
 
@@ -6035,7 +6035,7 @@ filter: brightness(70%);
     height: 80px;
     left: 32px;
     top: 788px;
-    
+
     background: rgba(219, 81, 58, 0.5);
     border-radius: 14px;
 }
@@ -6046,7 +6046,7 @@ filter: brightness(70%);
     height: 221px;
     left: 32px;
     top: 788px;
-    
+
     background: rgba(219, 81, 58, 0.3);
     border-radius: 15px;
 }
@@ -6057,14 +6057,14 @@ filter: brightness(70%);
     height: 48px;
     left: 60px;
     top: 804px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    
+
     color: #151515;
 }
 
@@ -6074,14 +6074,14 @@ filter: brightness(70%);
     height: 48px;
     left: 300px;
     top: 804px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    
+
     color: #151515;
 }
 
@@ -6107,14 +6107,14 @@ filter: brightness(70%);
     height: 17px;
     left: 66px;
     top: 972px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    
+
     color: #151515;
 }
 
@@ -6124,7 +6124,7 @@ filter: brightness(70%);
     height: 99px;
     left: 225px;
     top: 888px;
-    
+
     background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
 }
@@ -6135,13 +6135,13 @@ filter: brightness(70%);
     height: 78px;
     left: 242px;
     top: 898px;
-    
+
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
     font-size: 9px;
     line-height: 11px;
-    
+
     color: #000000;
 }
 
@@ -6152,8 +6152,8 @@ filter: brightness(70%);
 .ocbanner2 {
     width: 403px;
     height: 571px;
-    
-    
+
+
     background: #C4C4C4;
     border-radius: 20px;
 }
@@ -6174,12 +6174,12 @@ filter: brightness(70%);
 }
 
 .ocbanner2bg1 {
-    
+
     width: 356px;
     height: 145px;
     left: 629px;
     top: 495px;
-    
+
     background: rgba(255, 255, 255, 0.7);
     border-radius: 3px;
 }
@@ -6221,10 +6221,10 @@ filter: brightness(70%);
     color: #151515;
 }
 
-.ocbanner2bg2 {   
+.ocbanner2bg2 {
     width: 353px;
     height: 34px;
-    
+
     background: rgba(255, 255, 255, 0.7);
     border-radius: 3px;
 }
@@ -6331,7 +6331,7 @@ filter: brightness(70%);
     height: 0px;
     left: 940px;
     top: 925px;
-    
+
     border: 1px solid #151515;
 }
 

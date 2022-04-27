@@ -24,9 +24,13 @@ import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs';
 
 const colRefCart = collection(db, 'userCart') //collection reference
 
-let value = 0;
+let quantityVar = 0;
+let priceVar = 0;
+let priceComm = 0;
+let shippingFee = 25.00;
 
 let cookieEmail = Cookies.get('userEmail');
+let cookieName = Cookies.get('userName');
 
 const q = query(colRefCart, where("ucEmail","==",cookieEmail))
 onSnapshot(q, (snapshot) => {
@@ -36,89 +40,107 @@ onSnapshot(q, (snapshot) => {
     })
 })
 
-const userCartList = document.querySelector('#cartList');
+const confirmOrderList = document.querySelector('#oclList');
+const confirmCommissionList = document.querySelector('#oclListComm');
 function renderDocument(doc) {
     let division = document.createElement('div');
     let el_ucCommissionType = document.createElement('h1');
-    let el_ucDescription = document.createElement('p');
-    let el_ucEmail = document.createElement('p');
+    let el_ucDescription = document.createElement('h1');
+    let el_ucEmail = document.createElement('h1');
     let el_ucName = document.createElement('h1');
     let el_ucPrice = document.createElement('h1');
-    let el_ucQuantity = document.createElement('p');
+    let el_ucQuantity = document.createElement('h1');
     let el_ucPicture = document.createElement('img');
-    let el_ucQuantityUpBtn = document.createElement('button');
-    let el_ucQuantityDownBtn = document.createElement('button');
 
-    el_ucCommissionType.setAttribute("class", "ucCommissionType");
+    /*el_ucCommissionType.setAttribute("class", "ucCommissionType");
     el_ucDescription.setAttribute("class", "ucDescription");
     el_ucEmail.setAttribute("class", "ucEmail");
     el_ucName.setAttribute("class", "ucName");
     el_ucPrice.setAttribute("class", "ucPrice");
     el_ucQuantity.setAttribute("class", "ucQuantity");
-    el_ucPicture.setAttribute("class", "ucPicture");
+    el_ucPicture.setAttribute("class", "ucPicture");*/
 
     division.setAttribute("id", doc.id);
-    division.setAttribute("class", "cartListItem");
+    division.setAttribute("class", "oclDiv");
 
-    /*el_ucQuantityUpBtn.addEventListener('click', function() {
-      const details = document.getElementById(doc.id)
-      let modQuantity = parseInt(details.getElementsByClassName('ucQuantity')[0].innerHTML);
-      modQuantity ++;
-      el_ucQuantity.textContent = modQuantity;
-    });
-
-    el_ucQuantityDownBtn.addEventListener('click', function() {
-      const details = document.getElementById(doc.id)
-      let modQuantity = parseInt(details.getElementsByClassName('ucQuantity')[0].innerHTML);
-      if (modQuantity > 1){
-      modQuantity --;
-      el_ucQuantity.textContent = modQuantity;
-      }
-    });*/
-
-    //el_addToCartBtn.setAttribute("onclick", "addToCart()");
-    let el_ucPictureTrash = document.createElement('img');
-    el_ucPictureTrash.addEventListener("click",
-    function() {
-      deleteCart(doc.id);
-    });
-
-    el_ucPictureTrash.setAttribute('src', './assets/Icons/trash.svg');
     el_ucPicture.setAttribute('src', doc.data().ucPicture);
-
-    el_ucQuantityUpBtn.textContent = "QuantityUpBtn";
-    el_ucQuantityDownBtn.textContent = "QuantityDownBtn";
 
     el_ucCommissionType.textContent = doc.data().ucCommissionType;
     el_ucDescription.textContent = doc.data().ucDescription;
     el_ucEmail.textContent = doc.data().ucEmail;
     el_ucName.textContent = doc.data().ucName;
-    el_ucPrice.textContent = "PHP "+doc.data().ucPrice;
-    el_ucQuantity.textContent = doc.data().ucQuantity;
+    el_ucPrice.textContent = "Total Price: PHP "+doc.data().ucPrice;
+    el_ucQuantity.textContent = "Quantity: "+doc.data().ucQuantity+"x";
 
     el_ucPicture.setAttribute("class","cartitem");
 
-    el_ucCommissionType.setAttribute("class","cartdesc");
-    el_ucName.setAttribute("class","cartname");
-    el_ucPrice.setAttribute("class","cartprice");
-    el_ucPicture.setAttribute("class","cartitem");
-    el_ucPictureTrash.setAttribute("class","carttrash");
+    //el_ucCommissionType.setAttribute("class","cartdesc");
+    el_ucName.setAttribute("class","ocitemname");
+    el_ucQuantity.setAttribute("class", "ocquantity");
+    el_ucPrice.setAttribute("class","octotalprice");
+    el_ucPicture.setAttribute("class","ocprodimage");
 
-
-    //division.appendChild(el_ucDescription);
     //division.appendChild(el_ucEmail);
-    division.appendChild(el_ucName);
-    division.appendChild(el_ucCommissionType);
-    division.appendChild(el_ucPrice);
-    //division.appendChild(el_ucQuantity);
     division.appendChild(el_ucPicture);
-    division.appendChild(el_ucPictureTrash);
+    division.appendChild(el_ucName);
+
+    division.appendChild(el_ucQuantity);
+    division.appendChild(el_ucPrice);
+
     //division.appendChild(el_ucQuantityUpBtn);
     //division.appendChild(el_ucQuantityDownBtn);
 
-    userCartList.appendChild(division);
 
-    value += parseInt(doc.data().ucPrice);
-    let cartsubtotalvalueQuantity = document.getElementById('cartsubtotalvalue');
-    cartsubtotalvalueQuantity.textContent = "PHP "+value+".00";
+
+    let type = doc.data().ucCommissionType;
+
+    let division2 = document.createElement('div');
+    let commImageType = document.querySelector('.ocfilmsize');
+    let commNameType = document.querySelector('.oceditingtext');
+    let commDesc = document.querySelector('.occomideatext');
+
+    let displayUsername = document.querySelector('#displayUsername');
+    let displayEmail = document.querySelector('#displayEmail');
+
+    let displayCommisionType = document.querySelector('#displayCommisionType');
+    let displayCommissionPayment = document.querySelector('#displayCommissionPayment');
+
+    let displayQuantity = document.querySelector('#displayQuantity');
+    let displayShippingType = document.querySelector('#displayShippingType');
+    let displayOrderPayment = document.querySelector('#displayOrderPayment');
+    let displayShippingPayment = document.querySelector('#displayShippingPayment');
+    let displayPayment = document.querySelector('#displayPayment');
+
+    if ((type == "Commission - Video Editing")&&(type == "Commission - Layout")&&(type == "Commission - Art Commissions")){
+    if (type == "Commission - Video Editing"){
+      //src="./assets/Icons/film.png"
+      commImageType.setAttribute("src","./assets/Icons/film.svg");
+    }else if (type == "Commission - Layout"){
+      //src="./assets/Icons/dashboard.png"
+      commImageType.setAttribute("src","./assets/Icons/dashboard.png");
+    }else if(type == "Commission - Art Commissions"){
+      //src="./assets/Icons/paint-brush.svg"
+      commImageType.setAttribute("src","./assets/Icons/paint-brush.svg");
+    }
+    commNameType.textContent = doc.data().ucCommissionType;
+    commDesc.textContent = doc.data().ucDescription;
+    displayCommisionType.textContent = doc.data().ucCommissionType;
+
+    priceComm = doc.data().ucPrice;
+    displayCommissionPayment.textContent = "PHP "+ priceComm +".00";
+    }
+    else{
+    confirmOrderList.appendChild(division);
+    priceVar += parseInt(doc.data().ucPrice);
+    quantityVar += parseInt(doc.data().ucQuantity);
+    displayOrderPayment.textContent = "PHP "+ priceVar +".00";
+    displayShippingPayment.textContent = "PHP "+ shippingFee +".00";
+    displayQuantity.textContent = quantityVar + " items";
+    let priceTotal = priceVar + priceComm + shippingFee;
+    displayPayment.textContent = "PHP "+ priceTotal +".00";
+    }
+    displayUsername.textContent = cookieName;
+    displayEmail.textContent = cookieEmail;
+
+
 };

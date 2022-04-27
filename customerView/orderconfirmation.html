@@ -45,7 +45,8 @@
                 <div class="ocleft">
                     <div class="ocleftlpad">
                        <h1 class="octitle">Merchandise</h1>
-                       <div class="oclleft">
+                       <div id="oclList">
+                       <!--<div class="oclleft">
                             <img src="./assets/Merchandise photos/SHOPPEE PRODUCT PICS/YAE STICKER 1.png" class="ocprodimage">
                             <h1 class="ocitemname">Yae</h1>
                             <h1 class="ocquantity">Quantity: 2x</h1>
@@ -61,18 +62,21 @@
                             <img src="./assets/Merchandise photos/SHOPPEE PRODUCT PICS/bennett-photocard.png" class="ocprodimage">
                             <h1 class="ocitemname">Bennett</h1>
                             <h1 class="ocquantity">Quantity: 5x</h1>
-                            <h1 class="octotalprice">Total Price: PHP 400.00</h1>
+                            <h1 class="octotalprice">Total Price: PHP 400.00</h1>-->
+                        </div>
                         </div>
                         <div class="ocline"></div>
+                        <div id="oclListComm">
                         <h1 class="occomtext">Commission</h1>
                         <div class="oclefttitlebackground"></div>
                         <div class="ocleftbodybackground"></div>
                         <h1 class="octoc">Type of Commission</h1>
                         <h1 class="occomidea">Commission Idea</h1>
-                        <div class="occircle"><img src="./assets/Icons/film.svg" class="ocfilmsize"></div>
+                        <div class="occircle"><img  class="ocfilmsize"></div>
                         <h1 class="oceditingtext">Video Editing</h1>
                         <div class="occomideabg"></div>
                         <h1 class="occomideatext">The moon is high like your friends were the night that we first met . Went home and tried to stalk you on the internet . Now I've read all of the books beside your bed The wine is cold like the shoulder that I gave you in the street . Cat and mouse for a month or two or three . Now I wake up in the night and watch you breathe</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="ocright">
@@ -89,8 +93,8 @@
                                         <h1 class="ocshippingtext1">Address</h1>
                                     </div>
                                     <div class="ocshippingright">
-                                        <h1 class="ocshippingtext2">Firstname Lastname</h1>
-                                        <h1 class="ocshippingtext2">something@example.com</h1>
+                                        <h1 class="ocshippingtext2" id="displayUsername">Firstname Lastname</h1>
+                                        <h1 class="ocshippingtext2" id="displayEmail">something@example.com</h1>
                                         <h1 class="ocshippingtext2">123-456-7890</h1>
                                         <h1 class="ocshippingtext2">mm-dd-yyyy</h1>
                                         <h1 class="ocshippingtext2">1234 Bleeker Street New York City</h1>
@@ -99,7 +103,7 @@
                                 <h1 class="ocpayment">Payment method:</h1>
                                 <div class="ocbanner2bg2">
                                     <div class="ocbanner2left">
-                                        <h1 class="ocgcash">GCash</h1>
+                                        <h1 class="ocgcash" id="displayPaymentMethod">GCash</h1>
                                     </div>
                                     <div class="ocbanner2right">
                                         <h1 class="ocgcashnum">***-***-4567</h1>
@@ -113,21 +117,21 @@
                                     <h1 class="ocsummarylefttext">Commission Fee</h1>
                                 </div>
                                 <div class="ocsummarymid">
-                                    <h1 class="ocsummarymidtext">12 items</h1>
-                                    <h1 class="ocsummarymidtext">Standard</h1>
-                                    <h1 class="ocsummarymidtext">Video Editing</h1>
+                                    <h1 class="ocsummarymidtext" id="displayQuantity">12 items</h1>
+                                    <h1 class="ocsummarymidtext" id="displayShippingType">Standard</h1>
+                                    <h1 class="ocsummarymidtext" id="displayCommisionType">Video Editing</h1>
                                 </div>
                                 <div class="ocsummaryright">
-                                    <h1 class="ocsummaryrighttext">PHP 575.00</h1>
-                                    <h1 class="ocsummaryrighttext">PHP 38.00</h1>
-                                    <h1 class="ocsummaryrighttext">PHP 500.00</h1>
+                                    <h1 class="ocsummaryrighttext" id="displayOrderPayment">PHP 0.00</h1>
+                                    <h1 class="ocsummaryrighttext" id="displayShippingPayment">PHP 0.00</h1>
+                                    <h1 class="ocsummaryrighttext" id="displayCommissionPayment">PHP 0.00</h1>
                                 </div>
                                 <div class="ocshippingline"></div>
                                 <div class="octotalleft">
                                     <h1 class="octotallefttext">TOTAL</h1>
                                 </div>
                                 <div class="octotalright">
-                                    <h1 class="octotalrighttext">PHP1113.00</h1>
+                                    <h1 class="octotalrighttext" id="displayPayment" >PHP1113.00</h1>
                                 </div>
 
                                 <a href="product.html"><button class="cancelorderb">Cancel Order</button></a>

@@ -35,3 +35,77 @@
         text-align: center;
 
 }
+
+.cartList{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+
+.cartListItem{
+    display: flex;
+}
+
+
+
+.cartitem {
+    position: relative;
+    width: 134px;
+    height: 129px;
+    left: 74px;
+    top: 527px;
+}
+
+.cartname {
+    position: relative;
+    width: 79px;
+    height: 29px;
+    left: 225px;
+    top: 544px;
+
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+
+    color: #000000;
+}
+
+.cartdesc {
+    position: relative;
+    width: 212px;
+    height: 19px;
+    left: 231px;
+    top: 592px;
+
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.cartprice {
+    position: relative;
+    width: 180px;
+    height: 45px;
+    left: 731px;
+    top: 580px;
+
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.carttrash {
+    position: relative;
+    left: 1000px;
+    top: 570px;
+    width: 4vw;
+}

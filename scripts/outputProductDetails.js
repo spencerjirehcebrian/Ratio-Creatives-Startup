@@ -20,12 +20,16 @@ import {
     storage
 } from "./firebaseConfig.js";
 
-//let cookieEmail = ;
+import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
+
+let cookieProduct = Cookies.get('productId');
+console.log(cookieProduct);
 
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
 
-const q = query(colRefInventory, where(doc.id, "==", cookieProduct))
+
+const q = query(colRefInventory, where('__name__', '==', cookieProduct))
 onSnapshot(q, (snapshot) => {
     let delivery = []
     snapshot.docs.forEach((doc) => {
@@ -34,13 +38,13 @@ onSnapshot(q, (snapshot) => {
 })
 
 const productDetails = document.querySelector('#selectedproducttop');
-const productImages = document.querySelector('#selectedproducttop');
+const productImages = document.querySelector('.mySlides');
 
 function renderDocument(doc) {
     let el_itemName = document.createElement('h1');
     let el_itemPrice = document.createElement('p2');
     let el_itemQuantity = document.createElement('p1');
-    let el_itemPicture = document.createElement('img');
+
     let el_itemDescription = document.createElement('h3');
     let el_itemType = document.createElement('h2');
     let el_itemProductDescLabel = document.createElement('h4');
@@ -48,7 +52,6 @@ function renderDocument(doc) {
     el_itemName.setAttribute("class", "itemName");
     el_itemPrice.setAttribute("class", "itemPrice");
     el_itemQuantity.setAttribute("class", "itemQuantity");
-    el_itemPicture.setAttribute("class", "itemPicture");
     el_itemDescription.setAttribute("class", "itemDescription");
     el_itemType.setAttribute("class", "itemType");
 
@@ -59,13 +62,13 @@ function renderDocument(doc) {
     el_addToCartBtn.setAttribute("class", "addtocartb");
     el_addToCartBtn.addEventListener('click', function() {
 
-        const details = document.getElementById(doc.id)
-        let itemTypeRef = details.getElementsByClassName('itemType')[0].innerHTML;
-        let itemDescriptionRef = details.getElementsByClassName('itemDescription')[0].innerHTML;
-        let itemNameRef = details.getElementsByClassName('itemName')[0].innerHTML;
-        let itemQuantityRef = details.getElementsByClassName('itemQuantity')[0].innerHTML;
-        let itemPriceRef = details.getElementsByClassName('itemPrice')[0].innerHTML;
-				let itemPictureRef = details.getElementsByClassName('itemPicture')[0].getAttribute("src");
+        const details = document.getElementById(doc.id);
+        let itemTypeRef = doc.data().itemType;
+        let itemDescriptionRef = doc.data().itemDescription;
+        let itemNameRef = doc.data().itemName;
+        let itemQuantityRef = "1";
+        let itemPriceRef = doc.data().itemPrice;
+				let itemPictureRef = doc.data().itemPicture;
 
         const cookieEmail = document.cookie
             .split('; ')
@@ -83,13 +86,13 @@ function renderDocument(doc) {
                 ucPrice: itemPriceRef,
 								ucPicture: itemPictureRef
             })
+            alert("Cart Added")
         } else {
             alert("Please Login First")
         }
     });
 
-    //el_itemPicture.setAttribute('src', doc.data().itemPicture);
-    //el_itemPicture.setAttribute("class", "sticker");
+
     el_addToCartBtn.textContent = "Add To Cart";
     el_itemName.textContent = doc.data().itemName;
     el_itemPrice.textContent = "P "+doc.data().itemPrice;
@@ -108,6 +111,30 @@ function renderDocument(doc) {
     productDetails.appendChild(el_addToCartBtn);
     //productDetails.appendChild(el_itemPicture);
 
+    let division = document.createElement('div');
+    division.setAttribute('class', 'mySlides fade');
+
+    let el_itemPicture = document.createElement('img');
+    el_itemPicture.setAttribute('src', doc.data().itemPicture);
+    el_itemPicture.setAttribute('style', 'width:100%');
+
+    /*let el_arrowleft = document.createElement('a');
+    el_arrowleft.setAttribute('class', 'prev');
+    el_arrowleft.setAttribute("onclick", "plusSlides(-1)");
+    el_arrowleft.textContent = "&#10094;";
+    let el_arrowRight = document.createElement('a');
+    el_arrowRight.setAttribute('class', 'next');
+    el_arrowRight.setAttribute("onclick", "plusSlides(1)");
+    el_arrowRight.textContent ="&#10095;";
+    let el_br = document.createElement('br');*/
+
+    //division.appendChild(el_itemPicture);
+
+    productImages.appendChild(el_itemPicture);
+
+    //productImages.appendChild(el_arrowleft);
+    //productImages.appendChild(el_arrowRight);
+    //productImages.appendChild(el_br);
     //division
 
 

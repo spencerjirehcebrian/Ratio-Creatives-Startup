@@ -20,7 +20,7 @@ import {
     storage
 } from "./firebaseConfig.js";
 
-//let cookieEmail = ;
+import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
 
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
@@ -53,41 +53,12 @@ function renderDocument(doc) {
 
     division.setAttribute("id", doc.id);
     division.setAttribute("class", "product");
-    let el_addToCartBtn = document.createElement('button');
-    el_addToCartBtn.addEventListener('click', function() {
 
-        const details = document.getElementById(doc.id)
-        let itemTypeRef = details.getElementsByClassName('itemType')[0].innerHTML;
-        let itemDescriptionRef = details.getElementsByClassName('itemDescription')[0].innerHTML;
-        let itemNameRef = details.getElementsByClassName('itemName')[0].innerHTML;
-        let itemQuantityRef = details.getElementsByClassName('itemQuantity')[0].innerHTML;
-        let itemPriceRef = details.getElementsByClassName('itemPrice')[0].innerHTML;
-				let itemPictureRef = details.getElementsByClassName('itemPicture')[0].getAttribute("src");
-
-        const cookieEmail = document.cookie
-            .split('; ')
-            .find(row => row.startsWith('userEmail='))
-            .split('=')[1];
-
-        if (cookieEmail != null) {
-            addDoc(colRefCart, {
-
-                ucType: itemTypeRef,
-                ucDescription: itemDescriptionRef,
-                ucEmail: cookieEmail,
-                ucName: itemNameRef,
-                ucQuantity: itemQuantityRef,
-                ucPrice: itemPriceRef,
-								ucPicture: itemPictureRef
-            })
-        } else {
-            alert("Please Login First")
-        }
-    });
+    //let link = document.querySelector('id');
+    let id = doc.id;
 
     division.addEventListener('click', function() {
-      const id = document.getElementById(doc.id);
-      document.cookie = "+ productId="+id;
+      Cookies.set('productId', id);
       window.open('selectedproductpage.html', '_self', 'width=1000vw,height=fixed');
     });
 

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/FlyMeToTheSun/Ratio-Creatives-Startup#readme",
   "dependencies": {
-    "firebase": "^9.6.10"
+    "firebase": "^9.6.10",
+    "js-cookie": "^3.0.1"
   }
 }

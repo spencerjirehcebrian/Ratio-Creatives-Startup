@@ -20,6 +20,7 @@ limit,
 serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
 import { auth, db, storage  } from "./firebaseConfig.js";
+import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
 
 const colRefUser = collection(db, 'userProfile') //collection reference
 

@@ -1,11 +1,343 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Test</title>
-</head>
+   <head>
+      <!--<link rel="stylesheet" href=".\adminModules\style.css">-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         img{
+         height: 200px;
+         width: 200px;
+         border: 1px solid black;
+         }
+      </style>
+      <title>Test</title>
+   </head>
+   <body>
+      <h1>Prototype Dashboard</h1>
+      <a href=".\adminView\index.html">
+         <h4>Open Admin Dashboard</h4>
+      </a>
+      <a href=".\customerView\homepage.html">
+         <h4>Open Customer Homepage</h4>
+      </a>
 
-<body>
-  <h1>Temporary Navigation</h1>
-  <a href=".\temp-front-end\Admin Pane v1 Design\index.html"><h4>Open Admin Dashboard</h4></a>
-</body>
-</html
+      <h1>Backend Modules</h1>
+      <hr>
+      <h2>Authentication</h2>
+      <form class="userLogin">
+         <label for="userEmail">userEmail:</label>
+         <input type="email"name="userEmail"><br>
+         <label for="userPassword">userPassword:</label>
+         <input type="password" name="userPassword"><br>
+         <button>login</button>
+         <script type="module" src="./src/authenticationLogin.js"></script>
+      </form>
+      <hr>
+      <h2>Register Account</h2>
+      <form class="userRegister">
+        <label for="userAddress">userAddress:</label>
+        <input type="text" name="userAddress"><br>
+        <label for="userContact">userContact:</label>
+        <input type="text" name="userContact"><br>
+        <label for="userName">userName:</label>
+        <input  type="text" name="userName"><br>
+        <label for="userType">userType:</label>
+        <input type="text" name="userType"><br>
+         <label for="userEmail">userEmail:</label>
+         <input type="email"name="userEmail"><br>
+         <label for="userPassword">userPassword:</label>
+         <input type="password" name="userPassword"><br>
+         <button>register</button>
+         <script type="module" src="./src/authenticationRegister.js"></script>
+      </form>
+      <hr>
+      <h2>Profile Management</h2>
+      <button class="userLogout">userLogout</button>
+      <hr>
+      <script type="module" src="./src/authenticationLogout.js"></script>
+      <h2>Inventory</h2>
+      <form class="addInventory">
+         <label for="itemName">itemName:</label>
+         <input type="text" name="itemName" required><br>
+         <label for="itemPrice">itemPrice:</label>
+         <input type="number" name="itemPrice" required><br>
+         <label for="itemQuantity">itemQuantity:</label>
+         <input type="number" name="itemQuantity" required><br>
+         <label for="itemDescription" >itemDescription:</label>
+         <input type="text" name="itemDescription" required><br>
+         <label for="itemType" >itemType:</label>
+         <select name="itemType" required>
+            <option value="actionbusts">actionbusts</option>
+            <option value="bobbleheads">bobbleheads</option>
+            <option value="genshinpets">genshinpets</option>
+            <option value="genshinphotocards">genshinphotocards</option>
+         </select>
+         <br>
+         <label for="itemPicture">itemPicture:</label>
+         <input type="text" id="itemPictureName" name="itemPicture" required><br>
+         <label id="extLab"></label><br>
+         <img id="imgDemo"><label id="upProcess"></label>
+         <br>
+         <br>
+         <button type="button" id="selectBtn">Select Image</button>
+         <!--<button type="button" id="uploadBtn">Upload Image</button>
+            <button type="button" id="retrieveBtn">Retrieve Image</button>-->
+         <br>
+         <br>
+         <button>Add Inventory Item</button>
+      </form>
+      <hr>
+      <form class="updateInventory">
+         <label for="itemId">Search itemId:</label>
+         <input type="text" name="itemId" required><br>
+         <label for="itemName">itemName:</label>
+         <input type="text" name="itemName"><br>
+         <label for="itemPrice">itemPrice:</label>
+         <input type="number" name="itemPrice"><br>
+         <label for="itemQuantity">itemQuantity:</label>
+         <input type="number" name="itemQuantity"><br>
+         <label for="itemDescription" >itemDescription:</label>
+         <input type="text" name="itemDescription"><br>
+         <label for="itemType" >itemType:</label>
+         <select name="itemType" required>
+            <option value="actionbusts">actionbusts</option>
+            <option value="bobbleheads">bobbleheads</option>
+            <option value="genshinemoteheads">genshinemoteheads</option>
+            <option value="genshinpets">genshinpets</option>
+            <option value="genshinphotocards">genshinphotocards</option>
+         </select>
+         <br>
+         <button type="submit" id="updateItemBtn">Update Item</button>
+         <button type="submit" id="deleteItemBtn">Delete Inventory Item</button>
+      </form>
+      <script type="module" src="./src/inventoryCRUD.js"></script>
+      <hr>
+      <h2>Products/Commission - Add To Cart</h2>
+      <h2>productactionbusts</h2>
+      <div id="productactionbustsList">
+      </div>
+      <hr>
+      <h2>productbobbleheads</h2>
+      <div id="productbobbleheadsList">
+      </div>
+      <hr>
+      <h2>productremoteheads</h2>
+      <div id="productremoteheadsList">
+      </div>
+      <hr>
+      <h2>productgenshinpets</h2>
+      <div id="productgenshinpetsList">
+      </div>
+      <hr>
+      <h2>productgenshinphotocards</h2>
+      <div id="productgenshinphotocardsList">
+      </div>
+      <hr>
+      <script type="module" src=".\src\outputInventory.js"></script>
+      <script type="module" src=".\src\cartAdd.js"></script>
+      <hr>
+      <h2>Cart Management</h2>
+      <div id="userCartList">
+      <script type="module" src=".\src\outputCart.js"></script>
+      </div>
+      <form class="deleteCart">
+         <label for="cartId">Item ID:</label>
+         <input type="text" name="cartId" required>
+         <button>Delete Item</button>
+      </form>
+      <script type="module" src="./src/cartUpdate.js"></script>
+      <hr>
+      <h2>Checkout</h2>
+      <button id="checkoutBtn">Checkout</button>
+      <form class="addOrder">
+         <label for="orderAddress">orderAddress:</label>
+         <input type="text" name="orderAddress" required><br>
+         <label for="orderDetails">orderDetails:</label>
+         <input type="text" name="orderDetails" required><br>
+         <label for="orderDate">orderDate:</label>
+         <input type="text" name="orderDate" require><br>
+         <label for="orderUsername">orderUsername:</label>
+         <input type="text" name="orderUsername" required><br>
+         <label for="orderTrackingNumber">orderTrackingNumber:</label>
+         <input type="number" name="orderTrackingNumber" required><br>
+         <label for="orderType">orderType:</label>
+         <input type="text" name="orderType" required><br>
+         <label for="orderPaymentMethod">orderPaymentMethod:</label>
+         <input type="text" name="orderPaymentMethod" required><br>
+         <label for="orderPayment">orderPayment:</label>
+         <input type="number" name="orderPayment" required><br>
+         <label for="isCommission">isCommission:</label>
+         <input type="checkbox" name="isCommission" id="isOrderCommissionCheckbox"><br>
+         <button>Add Cart Item to Order</button>
+         <script type="module" src="./src/orderCreate.js"></script>
+      </form>
+      <hr>
+      <!--<h2>Orders - Commissions</h2>
+         <table id="orderCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+           <thead>
+             <th>orderAddress</th>
+             <th>orderDate</th>
+             <th>orderDetails</th>
+             <th>orderPayment</th>
+             <th>orderPaymentMethod</th>
+             <th>orderTrackingNumber</th>
+             <th>orderType</th>
+             <th>orderUsername</th>
+           </thead>
+         </table>
+         <script type="module" src="./src/outputOrderCommissions.js"></script>
+         <hr>
+         <h2>Orders - Merchandise</h2>
+         <table id="orderMerchandiseList" border="1" cellpadding="10" style="border-collapse:collapse;">
+           <thead>
+             <th>orderAddress</th>
+             <th>orderDate</th>
+             <th>orderDetails</th>
+             <th>orderPayment</th>
+             <th>orderPaymentMethod</th>
+             <th>orderTrackingNumber</th>
+             <th>orderType</th>
+             <th>orderUsername</th>
+           </thead>
+         </table>
+         <script type="module" src="./src/outputOrderMerchandise.js"></script>
+         <hr>-->
+      <h2>Order</h2>
+      <section>
+         <ul class="tabs">
+            <li >Merchandise</li>
+            <li>Commissions</li>
+         </ul>
+         <div class="horizontal-line3"></div>
+         <div class="container">
+            <div class="content" id="orderMerchandiseList">
+               <h2>Order-Merchandise</h2>
+               <div class="o-content" >
+                  <h3>[Order tracking number]</h3>
+                  <h6>[Order date]</h6>
+               </div>
+            </div>
+         </div>
+         <div class="c-content">
+            <h2>Order-Commission</h2>
+            <div class="content" id="orderCommissionList">
+               <div class="o-content">
+                  <h3>[Commission type]</h3>
+                  <h6>[Commissioned Date]</h6>
+               </div>
+            </div>
+         </div>
+         </div>
+      </section>
+      <script type="module" src=".\src\outputOrderCommissions.js"></script>
+      <script type="module" src=".\src\outputOrderMerchandise.js"></script>
+      <hr>
+      <h2>Delivery Management</h2>
+      <form class="addDelivery">
+         <label for="dmAddress">dmAddress:</label>
+         <input type="text" name="dmAddress" required><br>
+         <label for="dmDueDate">dmDueDate:</label>
+         <input type="text" name="dmDueDate" required><br>
+         <label for="dmName">dmName:</label>
+         <input type="text" name="dmName" required><br>
+         <label for="dmOrderDetails">dmOrderDetails:</label>
+         <input type="text" name="dmOrderDetails" require><br>
+         <label for="dmPayment">dmPayment:</label>
+         <input type="number" name="dmPayment" required><br>
+         <label for="dmPaymentMethod">dmPaymentMethod:</label>
+         <input type="text" name="dmPaymentMethod" required><br>
+         <label for="dmStartDate">dmStartDate:</label>
+         <input type="text" name="dmStartDate" required><br>
+         <label for="dmStatus">dmStatus:</label>
+         <input type="text" name="dmStatus" required><br>
+         <label for="dmTrackingNumber">dmTrackingNumber:</label>
+         <input type="number" name="dmTrackingNumber" required><br>
+         <label for="isDmCommission">isDmCommission:</label>
+         <input type="checkbox" name="isDmCommission" id="isDeliveryCommissionCheckbox"><br>
+         <button>Add Order Item to Delivery</button>
+         <script type="module" src="./src/deliveryCreate.js"></script>
+      </form>
+      <hr>
+      <form class="deleteOrder">
+         <label for="orderId">orderId:</label>
+         <input type="text" name="orderId" required>
+         <button>Delete Order</button>
+         <script type="module" src="./src/orderDelete.js"></script>
+      </form>
+      <hr>
+      <form class="deleteDelivery">
+         <label for="deliveryId">deliveryId:</label>
+         <input type="text" name="deliveryId" required>
+         <button>Delete Delivery</button>
+         <script type="module" src="./src/deliveryDelete.js"></script>
+      </form>
+      <!--      <table id="deliveryCommissionList" border="1" cellpadding="10" style="border-collapse:collapse;">
+         <thead>
+           <th>dmAddress</th>
+           <th>dmDueDate</th>
+           <th>dmName</th>
+           <th>dmOrderDetails</th>
+           <th>dmPayment</th>
+           <th>dmPaymentMethod</th>
+           <th>dmStartDate</th>
+           <th>dmStatus</th>
+           <th>dmTrackingNumber</th>
+         </thead>
+         </table>-->
+      <hr>
+      <h2>Deliveries</h2>
+      <section>
+         <ul class="tabs">
+            <li>Merchandise</li>
+            <li>Commissions</li>
+         </ul>
+         <div class="container">
+            <h3>Merchandise</h3>
+            <div class="content">
+               <table class="content-table" id="deliveryMerchandiseList">
+                  <thead>
+                     <tr>
+                        <th><input type="checkbox" id="checkbox" value="check"></th>
+                        <th>Order #</th>
+                        <th>Status</th>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Order Details</th>
+                        <th>Payment</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+            </div>
+            <div class="content">
+               <h3>Commissions</h3>
+               <table class="content-table" id="deliveryCommissionList">
+                  <thead>
+                     <tr>
+                        <th><input type="checkbox" id="checkbox" value="check"></th>
+                        <th>Order #</th>
+                        <th>Status</th>
+                        <th>Customer Name</th>
+                        <th>Address</th>
+                        <th>Order Details</th>
+                        <th>Payment</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </section>
+      <script type="module" src="./src/outputDeliveryMerchandise.js"></script>
+      <script type="module" src="./src/outputDeliveryCommissions.js"></script>
+      <!--<script src="./adminModules/script.js" ></script>-->
+      <hr>
+      <script type="module" src="./src/firebaseConfig.js"></script>
+   </body>
+   </html

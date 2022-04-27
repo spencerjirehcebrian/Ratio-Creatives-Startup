@@ -22,11 +22,11 @@ import {
 
 import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs';
 
-import { deleteCart } from "./deleteCart.js";
 const colRefCart = collection(db, 'userCart') //collection reference
 
 let value = 0;
-let cookieEmail = Cookies.get('userEmail')
+
+let cookieEmail = Cookies.get('userEmail');
 
 const q = query(colRefCart, where("ucEmail","==",cookieEmail))
 onSnapshot(q, (snapshot) => {

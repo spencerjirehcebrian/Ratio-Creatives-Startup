@@ -32,12 +32,14 @@ onAuthStateChanged(auth, user=> {
 			onSnapshot(q, (snapshot) => {
 		    snapshot.docs.forEach((doc) => {
 					let nameRef = doc.data().userName;
-					document.cookie = "+ userEmail="+emailRef+"+ userName="+nameRef;
+					//document.cookie = "+ userEmail="+emailRef+"+ userName="+nameRef;
+					Cookies.set('userEmail', 'emailRef');
+					Cookies.set('userName', 'nameRef')
 				})
 			})
 
 		//console.log(document.cookie);
-		const cookieEmail = document.cookie
+		/*const cookieEmail = document.cookie
   	.split('+ ')
   	.find(row => row.startsWith('userEmail='))
   	.split('=')[1];
@@ -47,8 +49,8 @@ onAuthStateChanged(auth, user=> {
 		.find(row => row.startsWith('userName='))
 		.split('=')[1];
 
-		//window.close("../customerView/login.html", "_blank");
-		console.log('Logged in: ' + cookieEmail +" "+ cookieName);
+		//window.close("../customerView/login.html", "_blank");*/
+		console.log('Logged in: ' + Cookies.get('userEmail') +" "+ Cookies.get('userName'));
 	} else {
 		//console.log('No user');
     window.open("../customerView/login.html", "_self");

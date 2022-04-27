@@ -25,7 +25,7 @@ import {
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
 
-const q = query(colRefInventory)
+const q = query(colRefInventory, where(doc.id, "==", cookieProduct))
 onSnapshot(q, (snapshot) => {
     let delivery = []
     snapshot.docs.forEach((doc) => {

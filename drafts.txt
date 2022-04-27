@@ -1,51 +1,8 @@
-//image upload
-//uploadBtn.onclick = uploadProcess;
-/*async*/ function uploadProcess(){
-  let imgToUpload = files[0];
-  let imgName = itemPictureName.value + extLab.innerHTML;
-  console.log(imgName);
-  /*const metaData = {
-    contentType: imgToUpload.type
-  }*/
+password strength
+forgot password
+profile update
+- add authentication script to all html, except login and signup
 
-  const storageRef = sRef(storage, "Images/"+imgName);
-
-  const uploadTask = uploadBytesResumable(storageRef, imgToUpload/*, metaData*/);
-
-  uploadTask.on('state-changed', (snapshot) => {
-    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    upProcess.innerHTML = "Upload "+progress+"%";
-  },
-
-  (error) => {
-    alert("error");
-  },
-
-  ()=>{
-    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
-      picURL = downloadURL;
-      console.log(picURL);
-    });
-  }
-  );
-};
-
-//Referencing to Database = invenotry
-/*function saveURLtoFirebase(URL){
-  let name = itemPictureName.value;
-  let ext = extLab.innerHTML;
-
-  addDoc(colRefInventory, {
-    itemPicture: URL
-  	})
-  	.then(()=>{
-  		add.reset()
-  	})
-}*/
-
-function getURLfromFirebase(){
-  let name = itemPictureName.value;
-  const docRef =  doc(db, 'inventory', name);
-}
-
-retrieveBtn.onclick = getURLfromFirebase;
+- move products to cart
+- images
+- add products

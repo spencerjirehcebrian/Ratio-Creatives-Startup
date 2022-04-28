@@ -32,9 +32,13 @@ onAuthStateChanged(auth, user=> {
 			onSnapshot(q, (snapshot) => {
 		    snapshot.docs.forEach((doc) => {
 					let nameRef = doc.data().userName;
+					let addressRef = doc.data().userAddress;
+					let contactRef = doc.data().userContact;
 					//document.cookie = "+ userEmail="+emailRef+"+ userName="+nameRef;
 					Cookies.set('userEmail', user.email);
 					Cookies.set('userName', nameRef)
+					Cookies.set('userAddress', addressRef)
+					Cookies.set('userContact', contactRef)
 				})
 			})
 

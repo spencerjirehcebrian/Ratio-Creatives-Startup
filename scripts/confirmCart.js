@@ -29,8 +29,10 @@ let priceVar = 0;
 let priceComm = 0;
 let shippingFee = 25.00;
 
-let cookieEmail = Cookies.get('userEmail');
-let cookieName = Cookies.get('userName');
+const cookieEmail = Cookies.get('userEmail');
+const cookieName = Cookies.get('userName');
+const cookieAddress = Cookies.get('userAddress');
+const cookieContact = Cookies.get('userContact');
 
 const q = query(colRefCart, where("ucEmail","==",cookieEmail))
 onSnapshot(q, (snapshot) => {
@@ -65,7 +67,7 @@ function renderDocument(doc) {
 
     el_ucPicture.setAttribute('src', doc.data().ucPicture);
 
-    el_ucCommissionType.textContent = doc.data().ucCommissionType;
+    el_ucCommissionType.textContent = doc.data().ucType;
     el_ucDescription.textContent = doc.data().ucDescription;
     el_ucEmail.textContent = doc.data().ucEmail;
     el_ucName.textContent = doc.data().ucName;
@@ -92,7 +94,7 @@ function renderDocument(doc) {
 
 
 
-    let type = doc.data().ucCommissionType;
+    let type = doc.data().ucType;
 
     let division2 = document.createElement('div');
     let commImageType = document.querySelector('.ocfilmsize');
@@ -105,42 +107,48 @@ function renderDocument(doc) {
     let displayCommisionType = document.querySelector('#displayCommisionType');
     let displayCommissionPayment = document.querySelector('#displayCommissionPayment');
 
-    let displayQuantity = document.querySelector('#displayQuantity');
+    let displayQuantity = document.querySelector('#displayQuantity')
     let displayShippingType = document.querySelector('#displayShippingType');
     let displayOrderPayment = document.querySelector('#displayOrderPayment');
     let displayShippingPayment = document.querySelector('#displayShippingPayment');
     let displayPayment = document.querySelector('#displayPayment');
 
-    if ((type == "Commission - Video Editing")&&(type == "Commission - Layout")&&(type == "Commission - Art Commissions")){
-    if (type == "Commission - Video Editing"){
-      //src="./assets/Icons/film.png"
-      commImageType.setAttribute("src","./assets/Icons/film.svg");
-    }else if (type == "Commission - Layout"){
-      //src="./assets/Icons/dashboard.png"
-      commImageType.setAttribute("src","./assets/Icons/dashboard.png");
-    }else if(type == "Commission - Art Commissions"){
-      //src="./assets/Icons/paint-brush.svg"
-      commImageType.setAttribute("src","./assets/Icons/paint-brush.svg");
-    }
-    commNameType.textContent = doc.data().ucCommissionType;
-    commDesc.textContent = doc.data().ucDescription;
-    displayCommisionType.textContent = doc.data().ucCommissionType;
+    //NOT YET IMPLEMENTED
+    let displayContact  = document.querySelector('#displayContact');
+    let displayDate  = document.querySelector('#displayDate');
 
-    priceComm = doc.data().ucPrice;
-    displayCommissionPayment.textContent = "PHP "+ priceComm +".00";
-    }
-    else{
-    confirmOrderList.appendChild(division);
-    priceVar += parseInt(doc.data().ucPrice);
-    quantityVar += parseInt(doc.data().ucQuantity);
-    displayOrderPayment.textContent = "PHP "+ priceVar +".00";
-    displayShippingPayment.textContent = "PHP "+ shippingFee +".00";
-    displayQuantity.textContent = quantityVar + " items";
-    let priceTotal = priceVar + priceComm + shippingFee;
-    displayPayment.textContent = "PHP "+ priceTotal +".00";
+    if ((type == "Commission - Video Editing")||(type == "Commission - Layout")||(type == "Commission - Art Commissions")){
+      if (type == "Commission - Video Editing"){
+        //src="./assets/Icons/film.png"
+        commImageType.setAttribute("src","./assets/Icons/film.svg");
+      }else if (type == "Commission - Layout"){
+        //src="./assets/Icons/dashboard.png"
+        commImageType.setAttribute("src","./assets/Icons/dashboard.png");
+      }else if(type == "Commission - Art Commissions"){
+        //src="./assets/Icons/paint-brush.svg"
+        commImageType.setAttribute("src","./assets/Icons/paint-brush.svg");
+      }
+      commNameType.textContent = doc.data().ucType;
+      commDesc.textContent = doc.data().ucDescription;
+      displayCommisionType.textContent = doc.data().ucType;
+
+      priceComm = doc.data().ucPrice;
+      displayCommissionPayment.textContent = "PHP "+ priceComm +".00";
+      }
+      else{
+      confirmOrderList.appendChild(division);
+      priceVar += parseInt(doc.data().ucPrice);
+      quantityVar += parseInt(doc.data().ucQuantity);
+      displayOrderPayment.textContent = "PHP "+ priceVar +".00";
+      displayShippingPayment.textContent = "PHP "+ shippingFee +".00";
+      displayQuantity.textContent = quantityVar + " items";
+      let priceTotal = priceVar + priceComm + shippingFee;
+      displayPayment.textContent = "PHP "+ priceTotal +".00";
     }
     displayUsername.textContent = cookieName;
     displayEmail.textContent = cookieEmail;
+    displayContact.textContent = cookieContact;
+    displayDate.textContent = 01-01-01; //NEEDS IMPLEMENTATUON 
 
 
 };

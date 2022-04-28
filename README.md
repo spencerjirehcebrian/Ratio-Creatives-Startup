@@ -10,4 +10,10 @@ Labrado, Joshua Reynald <br>
 Perez, Mark Francis <br>
 Queqquegan, Mikaela <br>
 
-try lang
+Need to do;
+- password strength
+- forgot password
+- profile update
+- add authentication script to all html, except login and signup
+- profile add shipping address and contact
+- implement due date in cart/order/delivery

@@ -1,6 +1,0 @@
-password strength
-forgot password
-profile update
-- add authentication script to all html, except login and signup
-
-- output cart

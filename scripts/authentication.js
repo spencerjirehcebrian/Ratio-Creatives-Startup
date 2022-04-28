@@ -22,7 +22,7 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 import { auth, db, storage  } from "./firebaseConfig.js";
 //import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
 
-import Cookies from "/node_modules/js-cookie/dist/js.cookie.mjs";
+import Cookies from "../node_modules/js-cookie/dist/js.cookie.mjs";
 
 const colRefUser = collection(db, 'userProfile') //collection reference
 

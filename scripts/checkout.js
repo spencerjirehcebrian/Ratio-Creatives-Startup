@@ -16,7 +16,7 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 
 import { db } from "./firebaseConfig.js";
 
-import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs';
+import Cookies from '/node_modules/js-cookie/dist/js.cookie.mjs';
 
 const colRefOrder = collection(db, 'order') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
@@ -77,7 +77,7 @@ occonfirmorder.addEventListener('click', (e) => {
             .catch(err =>{
               alert(err.message);
             })
-            
+
             updateDoc(colRefVar, {
               currentTrackingNumber: trackingNo
             })

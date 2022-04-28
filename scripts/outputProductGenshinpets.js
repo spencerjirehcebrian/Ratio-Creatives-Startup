@@ -20,7 +20,7 @@ import {
     storage
 } from "./firebaseConfig.js";
 
-import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
+import Cookies from "/node_modules/js-cookie/dist/js.cookie.mjs";
 
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference

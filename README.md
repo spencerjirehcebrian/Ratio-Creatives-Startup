@@ -10,8 +10,14 @@ Labrado, Joshua Reynald <br>
 Perez, Mark Francis <br>
 Queqquegan, Mikaela <br>
 
+## Current Dependencies
+firebase <br>
+js-cookies <br>
 
-Backend yet to complete requirements;
+<br>
+<br>
+<br>
+## Backend yet to complete requirements;
 - fix broken frontend :(
 
 - add commission to cart

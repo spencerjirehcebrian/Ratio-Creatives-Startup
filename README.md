@@ -10,8 +10,9 @@ Labrado, Joshua Reynald <br>
 Perez, Mark Francis <br>
 Queqquegan, Mikaela <br>
 
-Need to do;
 
+Backend yet to complete requirements;
+- add commission to cart
 - password strength
 - forgot password
 - profile update
@@ -21,10 +22,6 @@ Need to do;
 - implement email confirm purchase
 
 - current tracking number updating on each order added
-- output
-  - order
-  - delivery
-  - product
-
 - input all products
 - add authentication script to all html, except login and signup
+- commission slot management in adminView

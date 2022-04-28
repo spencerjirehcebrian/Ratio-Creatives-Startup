@@ -750,30 +750,11 @@ label #sidebar_btn{
 
 
 
-.inventory-title h2{
-
-  font-family: monumentr;
-  font-weight: 400;
-  font-size: 27px;
-  line-height: 67px;
-  color: #000000;
-  position: absolute;
-  width: 800px;
-  height: 86px;
-  left:-30px ;
-  top:-80px ;
-
-}
 
 
 
-.stock-gallery img{
-  width: 200px;
-  height: 200px;
-  border-radius: 15px;
-  margin: 10px;
-  opacity: 1;
-}
+
+
 
 .stock-container{
 
@@ -849,7 +830,7 @@ label #sidebar_btn{
 
 
 
-.slot-commission{
+.slot-commission1{
 
   position: absolute;
   width: 210px;

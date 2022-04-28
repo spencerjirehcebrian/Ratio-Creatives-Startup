@@ -49,12 +49,14 @@ loginForm.addEventListener('submit', (e) => {
   e.preventDefault()
   const email = loginForm.userEmail.value
 	const password = loginForm.userPassword.value
-
+  let cookieType;
 	const q = query(colRefUser, where("userEmail", "==", email))
 	onSnapshot(q, (snapshot) => {
 	    snapshot.docs.forEach((doc) => {
 	        let typeRef = doc.data().userType;
 					Cookies.set('userType', typeRef);
+          cookieType = Cookies.get('userType');
+          console.log(cookieType);
 	    })
 	})
 
@@ -62,7 +64,7 @@ loginForm.addEventListener('submit', (e) => {
     .then(cred => {
       console.log('user logged in:', cred.user)
       //window.open("../customerView/homepage.html", "_self");
-				let cookieType = Cookies.get('userType');
+
 				if(cookieType == "customer"){
 				window.open("../customerView/homepage.html", "_self");
 				} else if (cookieType == "admin")

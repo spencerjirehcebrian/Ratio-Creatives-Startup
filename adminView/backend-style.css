@@ -110,3 +110,38 @@
 .containerInventory{
   position: relative;
 }
+
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  position: relative;
+  width: 1250px;
+  left: 350px;
+  top: 50px;
+
+}
+
+.stock-gallery img{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  margin: 10px;
+  opacity: 1;
+}
+
+.stock-gallery{
+  padding-bottom: 30px;
+}
+
+.inventory-title h2{
+  font-family: monumentr;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 67px;
+  color: #000000;
+  position: absolute;
+  top: -65px;
+  left: -40px;
+
+}

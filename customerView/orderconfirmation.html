@@ -8,6 +8,7 @@
     <link rel = "stylesheet" href = "./css/backend-css.css">
     <script type="module" src="../scripts/authentication.js"></script>
     <script type="module" src="../scripts/confirmCart.js"></script>
+    <script type="module" src="../scripts/checkout.js"></script>
     <title>Order Confirmation</title>
 </head>
 <header>
@@ -97,7 +98,7 @@
                                         <h1 class="ocshippingtext2" id="displayEmail">something@example.com</h1>
                                         <h1 class="ocshippingtext2" id="displayContact">123-456-7890</h1>
                                         <h1 class="ocshippingtext2" id="displayDate">mm-dd-yyyy</h1>
-                                        <h1 class="ocshippingtext2">1234 Bleeker Street New York City</h1>
+                                        <h1 class="ocshippingtext2" id="displayAddress">1234 Bleeker Street New York City</h1>
                                     </div>
                                 </div>
                                 <h1 class="ocpayment">Payment method:</h1>
@@ -135,7 +136,7 @@
                                 </div>
 
                                 <a href="product.html"><button class="cancelorderb">Cancel Order</button></a>
-                                <a href="confirmation.html"><button class="occonfirmorder">Confirm Order</button></a>
+                                <button class="occonfirmorder">Confirm Order</button>
                             </div>
                         </div>
                     </div>

@@ -16,8 +16,11 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 
 import { db } from "./firebaseConfig.js";
 
+import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs';
+
 const colRefOrder = collection(db, 'order') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
+let colRefVar = collection(db, 'globalVariables'); //document reference
 
 let details="";
 const cookieEmail = Cookies.get('userEmail');
@@ -26,39 +29,50 @@ const cookieAddress = Cookies.get('userAddress');
 const cookieContact = Cookies.get('userContact');
 
 let isCommissionBoolForm = false;
+let trackingNo = 0;
+
 
 const q = query(colRefCart, where("ucEmail", "==", cookieEmail))
 
-const occonfirmorder = document.querySelector('.occonfirmorder')
- occonfirmorder.addEventListener('click', (e) => {
+const occonfirmorder = document.querySelector('.occonfirmorder');
+
+//query fro tracking number
+
+const q2 = query(colRefVar)
+onSnapshot(q2, (snapshot) => {
+    snapshot.docs.forEach((doc) => {
+        trackingNo = parseInt(doc.data().currentTrackingNumber);
+    })
+})
+
+
+occonfirmorder.addEventListener('click', (e) => {
   e.preventDefault()
-
-
   //let isCommissionBoolForm = document.getElementById('isOrderCommissionCheckbox').checked;
-  let paymentValue = document.querySelector('#displayPayment')[0].innerHTML;
-  let paymentMethodValue = document.querySelector('#displayPaymentMethod')[0].innerHTML;
-  let paymentMethodValue = document.querySelector('#displayPaymentMethod')[0].innerHTML;
+  let paymentMethodValue = document.getElementById('displayPaymentMethod').innerHTML;
+  let dateValue = document.getElementById('displayDate').innerHTML;
+  let totalPrice = Cookies.get('totalPrice');
 
   onSnapshot(q, (snapshot) => {
-      let col = []
       snapshot.docs.forEach((doc) => {
         let type = doc.data().ucType;
-        let typeDecider = ;
+
+        trackingNo ++;
         if ((type == "Commission - Video Editing")||(type == "Commission - Layout")||(type == "Commission - Art Commissions"))
           {
             addDoc(colRefOrder, {
               orderAddress: cookieAddress,
               orderDetails: doc.data().ucDescription,
-              orderDate: ,
+              orderDate: dateValue,
               orderUsername: cookieName,
-              orderTrackingNumber: ,
+              orderTrackingNumber: trackingNo,
               orderType: doc.data().ucType,
               orderPaymentMethod: paymentMethodValue,
-              orderPayment: paymentValue,
+              orderPayment: totalPrice,
               isCommission: true
             })
             .then(() => {
-              alert("Commission Checkout Successful");
+              console.log("Commission Checkout Successful");
             })
             .catch(err =>{
               alert(err.message);
@@ -66,26 +80,27 @@ const occonfirmorder = document.querySelector('.occonfirmorder')
           }else
           {
             details += doc.data().ucName + doc.data().ucQuantity+"\n";
+            console.log(details);
           }
-      })
-  })
-    console.log(details);
+        })
 
-  addDoc(colRefOrder, {
-    orderAddress:,
-    orderDetails:details,
-    orderDate:,
-    orderUsername: cookieName,
-    orderTrackingNumber:,
-    orderType:,
-    orderPaymentMethod:,
-    orderPayment:,
-    isCommission: false
-  })
-  .then(() => {
-    alert("Merchandise Checkout Successful");
-  })
-  .catch(err =>{
-    alert(err.message);
-  })
+        addDoc(colRefOrder, {
+          orderAddress: cookieAddress,
+          orderDetails:details,
+          orderDate: dateValue,
+          orderUsername: cookieName,
+          orderTrackingNumber: trackingNo,
+          orderType: "Merchandise Order",
+          orderPaymentMethod: paymentMethodValue,
+          orderPayment: totalPrice,
+          isCommission: false
+        })
+        .then(() => {
+          console.log("Merchandise Checkout Successful");
+          window.open("confirmation.html", "_self")
+        })
+        .catch(err =>{
+          alert(err.message);
+        })
+    })
 })

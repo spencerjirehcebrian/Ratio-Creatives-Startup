@@ -116,6 +116,7 @@ function renderDocument(doc) {
     //NOT YET IMPLEMENTED
     let displayContact  = document.querySelector('#displayContact');
     let displayDate  = document.querySelector('#displayDate');
+    let displayAddress  = document.querySelector('#displayAddress');
 
     if ((type == "Commission - Video Editing")||(type == "Commission - Layout")||(type == "Commission - Art Commissions")){
       if (type == "Commission - Video Editing"){
@@ -142,13 +143,15 @@ function renderDocument(doc) {
       displayOrderPayment.textContent = "PHP "+ priceVar +".00";
       displayShippingPayment.textContent = "PHP "+ shippingFee +".00";
       displayQuantity.textContent = quantityVar + " items";
-      let priceTotal = priceVar + priceComm + shippingFee;
+      let priceTotal = parseInt(priceVar) + parseInt(priceComm) + parseInt(shippingFee);
+      Cookies.set('totalPrice', priceVar);
       displayPayment.textContent = "PHP "+ priceTotal +".00";
     }
     displayUsername.textContent = cookieName;
     displayEmail.textContent = cookieEmail;
     displayContact.textContent = cookieContact;
-    displayDate.textContent = 01-01-01; //NEEDS IMPLEMENTATUON 
+    displayDate.textContent = "01-01-01"; //NEEDS IMPLEMENTATION
+    displayAddress.textContent = cookieAddress; //NEEDS IMPLEMENTATION
 
 
 };

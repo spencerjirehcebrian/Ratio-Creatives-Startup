@@ -15,13 +15,13 @@ query,
 where,
 orderBy,
 getDoc,
-updateDoc,s
+updateDoc,
 limit,
 serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
 import { auth, db, storage  } from "./firebaseConfig.js";
 //import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
-import Cookies from "/node_modules/js-cookie/dist/js.cookie.sjs";
+import Cookies from "/node_modules/js-cookie/dist/js.cookie.js";
 
 const colRefUser = collection(db, 'userProfile') //collection reference
 

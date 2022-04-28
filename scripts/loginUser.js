@@ -22,14 +22,26 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 
 import { auth, db, storage  } from "./firebaseConfig.js";
 
+import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
+
 const colRefUser = collection(db, 'userProfile') //collection reference
 
-onAuthStateChanged(auth, user=> {
+//FOR AUOTMATIC LOGIN
+/*onAuthStateChanged(auth, user=> {
 	if (user != null){
-		alert("Already Logged In");
+		alert("Logged In");
+		let cookieType = Cookies.get('userType');
+		if(cookieType == "customer"){
+		window.open("../customerView/homepage.html", "_self");
+		} else if (cookieType == "admin")
+		{
+		window.open("../adminView/index.html", "_self");
+		}
+		else {
 		window.open("../customerView/homepage.html", "_self");
 	}
-});
+	}
+});*/
 
 //login
 const loginForm = document.querySelector('.userLogin')
@@ -38,13 +50,30 @@ loginForm.addEventListener('submit', (e) => {
   const email = loginForm.userEmail.value
 	const password = loginForm.userPassword.value
 
+	const q = query(colRefUser, where("userEmail", "==", email))
+	onSnapshot(q, (snapshot) => {
+	    snapshot.docs.forEach((doc) => {
+	        let typeRef = doc.data().userType;
+					Cookies.set('userType', typeRef);
+	    })
+	})
+
   signInWithEmailAndPassword(auth, email, password)
     .then(cred => {
       console.log('user logged in:', cred.user)
-      //loginForm.reset()
-      window.open("../customerView/homepage.html", "_self");
+      //window.open("../customerView/homepage.html", "_self");
+				let cookieType = Cookies.get('userType');
+				if(cookieType == "customer"){
+				window.open("../customerView/homepage.html", "_self");
+				} else if (cookieType == "admin")
+				{
+				window.open("../adminView/index.html", "_self");
+				}
+				else {
+				window.open("../customerView/homepage.html", "_self");
+			}
     })
     .catch(err => {
-      console.log(err.message)
+      alert(err.message);
     })
 })

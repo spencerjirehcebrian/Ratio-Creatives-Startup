@@ -42,7 +42,10 @@
         <label for="userName">userName:</label>
         <input  type="text" name="userName"><br>
         <label for="userType">userType:</label>
-        <input type="text" name="userType"><br>
+        <select name="userType" required>
+           <option value="actionbusts">admin</option>
+           <option value="bobbleheads">customer</option>
+        </select>
          <label for="userEmail">userEmail:</label>
          <input type="email"name="userEmail"><br>
          <label for="userPassword">userPassword:</label>
@@ -69,6 +72,7 @@
          <select name="itemType" required>
             <option value="actionbusts">actionbusts</option>
             <option value="bobbleheads">bobbleheads</option>
+            <option value="genshinemoteheads">genshinemoteheads</option>
             <option value="genshinpets">genshinpets</option>
             <option value="genshinphotocards">genshinphotocards</option>
          </select>

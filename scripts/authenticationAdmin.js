@@ -25,10 +25,9 @@ import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
 const colRefUser = collection(db, 'userProfile') //collection reference
 
 onAuthStateChanged(auth, user=> {
-	if (user != null){
+	if ((user != null)){
 		const emailRef = user.email;
 		const q = query(colRefUser, where("userEmail", "==", emailRef));
-
 			onSnapshot(q, (snapshot) => {
 		    snapshot.docs.forEach((doc) => {
 					let nameRef = doc.data().userName;
@@ -36,27 +35,28 @@ onAuthStateChanged(auth, user=> {
 					let contactRef = doc.data().userContact;
 					let typeRef = doc.data().userType;
 					//document.cookie = "+ userEmail="+emailRef+"+ userName="+nameRef;
-					Cookies.set('userEmail', user.email);
-					Cookies.set('userName', nameRef)
-					Cookies.set('userAddress', addressRef)
-					Cookies.set('userContact', contactRef)
-					Cookies.set('userType', typeRef)
+					if(typeRef != "admin")
+					{
+						signOut(auth)
+							.then(()=>{
+
+							})
+							.catch((err)=>{
+								console.log(err.message)
+							})
+					}
+					else{
+						Cookies.set('userEmail', user.email);
+						Cookies.set('userName', nameRef)
+						Cookies.set('userAddress', addressRef)
+						Cookies.set('userContact', contactRef)
+						Cookies.set('userType', typeRef)
+					}
 				})
 			})
 
-		//console.log(document.cookie);
-		/*const cookieEmail = document.cookie
-  	.split('+ ')
-  	.find(row => row.startsWith('userEmail='))
-  	.split('=')[1];
 
-		const cookieName = document.cookie
-		.split('+ ')
-		.find(row => row.startsWith('userName='))
-		.split('=')[1];
 
-		//window.close("../customerView/login.html", "_blank");*/
-		console.log('Logged in: ' + Cookies.get('userEmail') +" "+ Cookies.get('userName'));
 	} else {
 		//console.log('No user');
     window.open("../customerView/login.html", "_self");

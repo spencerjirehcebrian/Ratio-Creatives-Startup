@@ -11,9 +11,20 @@ Perez, Mark Francis <br>
 Queqquegan, Mikaela <br>
 
 Need to do;
+
 - password strength
 - forgot password
 - profile update
-- add authentication script to all html, except login and signup
+
 - profile add shipping address and contact
 - implement due date in cart/order/delivery
+- implement email confirm purchase
+
+- current tracking number updating on each order added
+- output
+  - order
+  - delivery
+  - product
+
+- input all products
+- add authentication script to all html, except login and signup

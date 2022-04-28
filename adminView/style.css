@@ -19,8 +19,8 @@ body{
   height: 100%;
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; 
-  
+  overflow-x: hidden;
+
 }
 
 
@@ -73,8 +73,8 @@ body{
   margin-bottom: 12px;
   margin-left: 100px;
   margin-top: 140px;
-  
- 
+
+
 }
 
 .userdisplay h4{
@@ -112,7 +112,7 @@ body{
   padding-left: 100px;
   box-sizing: border-box;
 
-  
+
 
 }
 
@@ -125,8 +125,8 @@ body{
 }
 
 .sidebar img{
-  
-  width: 90px;  
+
+  width: 90px;
   height: 80px;
   float: left;
 }
@@ -174,7 +174,7 @@ label #sidebar_btn{
   height: 60px;
   position: absolute;
   right: 180px;
- 
+
 }
 
 
@@ -182,7 +182,7 @@ label #sidebar_btn{
 
 
 .welcome-board h1 {
-  display: block; 
+  display: block;
   position: absolute;
   width: 368px;
   height: 58px;
@@ -195,8 +195,8 @@ label #sidebar_btn{
   right: 500px;
   left: 300px;
   top: 0px;
-  
- 
+
+
 
 }
 
@@ -206,7 +206,7 @@ label #sidebar_btn{
   display: block;
   position: absolute;
   width: 231px;
-  height: 29px; 
+  height: 29px;
   left: 280px;
   top: 55px;
   font-family:productsansr ;
@@ -214,8 +214,8 @@ label #sidebar_btn{
   font-weight: 400;
   font-size: 20px;
   line-height: 29px;
-  text-align: center; 
-  
+  text-align: center;
+
 
 }
 
@@ -331,7 +331,7 @@ label #sidebar_btn{
   left: 900px;
   top: 210px;
   background: #78c35b;
-  border-radius: 15px;  
+  border-radius: 15px;
 
 
 }
@@ -344,7 +344,7 @@ label #sidebar_btn{
   left: 900px;
   top: 360px;
   background: #E8E8E8;
-  border-radius: 15px;  
+  border-radius: 15px;
 
 
 }
@@ -357,7 +357,7 @@ label #sidebar_btn{
   left: 900px;
   top: 510px;
   background: #E8E8E8;
-  border-radius: 15px;  
+  border-radius: 15px;
 
 
 }
@@ -409,7 +409,7 @@ label #sidebar_btn{
   position: absolute;
   left: 120px;
   top: 10px;
-  
+
 
 }
 
@@ -421,7 +421,7 @@ label #sidebar_btn{
   font-weight: bolder;
   margin-top: 10px;
   color: #4A4A4A;
- 
+
 }
 
 .containers-2 h3{
@@ -552,7 +552,7 @@ label #sidebar_btn{
   height: 27.6px;
   left: 100px;
   top: 100px;
-  
+
 }
 
 .percentage-profit{
@@ -572,7 +572,7 @@ label #sidebar_btn{
   font-family: productsansb;
   font-weight: 700;
   font-size: 20px;
-  line-height: 22px;  
+  line-height: 22px;
   width: 68px;
   height: 22px;
   position: absolute;
@@ -741,157 +741,10 @@ label #sidebar_btn{
 
 }
 
-.content p{
-
-  font-size: 1.5rem;
-  text-align: center;
-  width:500px;
-  margin:1 rem auto 0 rem;
-  color: #222;
-  position: absolute;
-  top: 200px;
-  left: 400px;
-
-}
-
-.content{
-
-  position: absolute;
-  top:0;
-  left: 0;
-  display: none;
-  padding-bottom:750px;
- 
-}
-
-.content h3{
-
-  font-family: productsansb;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 49px;
-  text-align: center;
-  color: #000000;
-
-}
-
-.content h6{
-
-  font-family: productsansr;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 27px;
-  line-height: 33px;
-  text-align: center;
-  color: #000000;
-  position: absolute;
-  top: 40px;
-  left: 75px;
-
-}
-
-.c-content h3{
-  font-family: productsansb;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 49px;
-  text-align: center;
-  color: #000000;
-  position: absolute;
-  top: -10px;
-  left: 80px;
-
-}
-
-.c-content h6{
-
-  font-family: productsansr;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 27px;
-  line-height: 33px;
-  text-align: center;
-  color: #000000;
-  position: absolute;
-  top: 35px;
-  left: 85px;
-
-
-}
-
-
-
-.o-content{
-
-  display: block;
-  position: absolute;
-  width: 595px;
-  height: 157px;
-  left: 610px;
-  top: 30px;
-  background: #C4C4C4;
-  border-radius: 15px;
-
-}
-
-.o-content2{
-
-  display: block;
-  position: absolute;
-  width: 595px;
-  height: 157px;
-  left: 610px;
-  top: 210px;
-  background: #C4C4C4;
-  border-radius: 15px;
-
-}
-
-.o-content3{
-
-  display: block;
-  position: absolute;
-  width: 595px;
-  height: 157px;
-  left: 610px;
-  top: 390px;
-  background: #C4C4C4;
-  border-radius: 15px;
-
-}
-
-.o-content4{
-
-  display: block;
-  position: absolute;
-  width: 595px;
-  height: 157px;
-  left: 610px;
-  top: 570px;
-  background: #C4C4C4;
-  border-radius: 15px;
- 
-
-}
-
-
-.content.active{
-
-  display: block;
-  animation:fade 1s ease; 
-
-}
 
 
 
 
-
-.container{
-
-  position: relative;
-
-
-}
 
 
 
@@ -967,7 +820,7 @@ label #sidebar_btn{
   width: 1250px;
   left: 350px;
   top: 1850px;
-  
+
 
 }
 
@@ -1053,11 +906,11 @@ label #sidebar_btn{
   top: 400px;
   background: #C4C4C4;;
   border-radius: 15px;
- 
+
 
 }
 
- 
+
 .slot-container h5{
 
   font-family: productsansr;
@@ -1071,13 +924,13 @@ label #sidebar_btn{
   height: 36px;
   left: 750px;
   top: 600px;
-  
+
 
 }
 
 .btnyes{
 
- 
+
   cursor: pointer;
   position: absolute;
   width: 103px;
@@ -1089,7 +942,7 @@ label #sidebar_btn{
 }
 
 .btnno{
- 
+
   cursor: pointer;
   position: absolute;
   width: 103px;
@@ -1113,7 +966,7 @@ input[type="checkbox"]{
   width: 25px;
   cursor: pointer;
   align-content: center;
-  
+
 }
 
 
@@ -1125,7 +978,7 @@ input[type="checkbox"]{
   width: 1225px;
   border-spacing: 15px;
   height: 725px;
- 
+
 
 }
 
@@ -1143,7 +996,7 @@ input[type="checkbox"]{
   font-weight: 700px;
   text-align: center;
   font-size: 15px;
-  
+
 }
 
 .content-table thead tr{
@@ -1245,4 +1098,3 @@ input[type="checkbox"]{
 
 
 }
-  

@@ -1,0 +1,112 @@
+.content p{
+
+  font-size: 1.5rem;
+  text-align: center;
+  width:500px;
+  margin:1 rem auto 0 rem;
+  color: #222;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+
+}
+
+.content{
+
+  position: absolute;
+  top:0;
+  left:0;
+  display: none;
+  padding-bottom:750px;
+}
+
+.content h3{
+
+  font-family: productsansb;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: -10px;
+  left: 80px;
+}
+
+.content h6{
+
+  font-family: productsansr;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: 35px;
+  left: 85px;
+
+
+}
+
+.c-content h3{
+
+  font-family: productsansb;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: -10px;
+  left: 80px;
+
+}
+
+.c-content h6{
+
+  font-family: productsansr;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 33px;
+  text-align: center;
+  color: #000000;
+  position: absolute;
+  top: 35px;
+  left: 85px;
+
+
+}
+.o-content{
+
+  display: block;
+  position: relative;
+  width: 595px;
+  height: 157px;
+  background: #C4C4C4;
+  border-radius: 15px;
+  margin: 10px;
+
+}
+
+.content.active{
+
+  display: block;
+  animation:fade 1s ease;
+
+}
+
+.container{
+  position: relative;
+  left: 300px;
+  top: 10px;
+}
+
+.containerDelivery{
+  position: relative;
+}
+
+.containerInventory{
+  position: relative;
+}

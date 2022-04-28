@@ -30,7 +30,7 @@ onSnapshot(colRefOrder, (snapshot)=>{
 const colRefCart = collection(db, 'userCart') //collection reference
 let details="";
 
-const cookieEmail = document.cookie
+/*const cookieEmail = document.cookie
 .split('+ ')
 .find(row => row.startsWith('userEmail='))
 .split('=')[1];
@@ -46,7 +46,7 @@ onSnapshot(q, (snapshot) => {
     snapshot.docs.forEach((doc) => {
         details += doc.data().ucName + doc.data().ucQuantity+"\n";
     })
-})
+})*/
 
 
 // adding docs

@@ -20,7 +20,7 @@ import {
     storage
 } from "./firebaseConfig.js";
 
-//let cookieEmail = ;
+import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
 
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
@@ -86,8 +86,8 @@ function renderDocument(doc) {
     });
 
     division.addEventListener('click', function() {
-      const id = document.getElementById(doc.id);
-      window.open('selectedproductpage.html', id, 'width=1000vw,height=fixed');
+      Cookies.set('productId', id);
+      window.open('selectedproductpage.html', '_self', 'width=1000vw,height=fixed');
     });
 
 /*    division.addEventListener('mouseover', function(event) {

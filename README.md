@@ -12,6 +12,8 @@ Queqquegan, Mikaela <br>
 
 
 Backend yet to complete requirements;
+- fix broken frontend :(
+
 - add commission to cart
 - password strength
 - forgot password
@@ -21,7 +23,5 @@ Backend yet to complete requirements;
 - implement due date in cart/order/delivery
 - implement email confirm purchase
 
-- current tracking number updating on each order added
-- input all products
 - add authentication script to all html, except login and signup
 - commission slot management in adminView

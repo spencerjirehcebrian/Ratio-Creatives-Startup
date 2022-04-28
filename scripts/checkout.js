@@ -77,6 +77,13 @@ occonfirmorder.addEventListener('click', (e) => {
             .catch(err =>{
               alert(err.message);
             })
+            
+            updateDoc(colRefVar, {
+              currentTrackingNumber: trackingNo
+            })
+            .then(()=>{
+              updateInvForm.reset()
+            })
           }else
           {
             details += doc.data().ucName + doc.data().ucQuantity+"\n";

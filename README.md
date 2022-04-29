@@ -18,7 +18,7 @@ Queqquegan, Mikaela <br>
 <br>
 ### Pending Backend requirements;
 
-- w8 for frontend to finish/fix broken parts :(
+- w8 for frontend to finish/fix broken parts (resizing window disorganizes everything)
 
 - add commission to cart
 - password strength
@@ -29,9 +29,7 @@ Queqquegan, Mikaela <br>
 - implement due date in cart/order/delivery
 - implement email confirm purchase
 
-- activate profile and cart links on all tabs
 - commission slot management in adminView
 
 - fix quantity on checkout not working for multiple same item
 - move order to delivery - when the frontend is done
-- affect

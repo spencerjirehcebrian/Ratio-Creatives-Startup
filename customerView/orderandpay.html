@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "./css/css.css"> 
+    <link rel = "stylesheet" href = "./css/css.css">
     <title>Order & Pay</title>
 </head>
 <header>
@@ -15,10 +15,10 @@
         <div class="headright">
                 <h1>RATIO</h1>
                 <h2>CREATIVES</h1>
-                <div class="hide1">Profile</div>
-                <img src=".\assets\Icons\user.svg" class="usericon">
-                <div class="hide2">Cart</div>
-                <img src=".\assets\Icons\shopping-cart.svg" class="cart">
+                  <div class="hide1">Profile</div>
+                  <a href="profileinfo.html"><img src=".\assets\Icons\user.svg" class="usericon"></a>
+                  <div class="hide2">Cart</div>
+                  <a href="cart.html"><img src=".\assets\Icons\shopping-cart.svg" class="cart"></a>
                 <img src=".\assets\Icons\search.svg" class="searchicon">
                 <input type="search" name="search" class="search">
 
@@ -52,25 +52,25 @@
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE2 1.png" style="width:100%">
         </div>
-        
+
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE2 2.png" style="width:100%">
         </div>
-        
+
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE2 3.png" style="width:100%">
         </div>
-        
+
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
+
         <br>
         <div style="text-align:center;">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
-        
+
         </div>
     <div class="merchrec"></div>
     <div class="orderprocess">
@@ -104,18 +104,18 @@
       <div class="mySlides2 fade">
         <img src="./assets/Slide/SLIDE3 1.png" style="width:100%">
       </div>
-      
+
       <div class="mySlides2 fade">
         <img src="./assets/Slide/SLIDE3 2.png" style="width:100%">
       </div>
-      
+
       <div class="mySlides2 fade">
         <img src="./assets/Slide/SLIDE3 3.png" style="width:100%">
       </div>
-      
+
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      
+
       <br>
       <div style="text-align:center;">
           <span class="dot2" onclick="currentSlide(1)"></span>
@@ -165,15 +165,15 @@ function showSlides(n) {
 let i;
 let slides = document.getElementsByClassName("mySlides");
 let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}    
+if (n > slides.length) {slideIndex = 1}
 if (n < 1) {slideIndex = slides.length}
 for (i = 0; i < slides.length; i++) {
-slides[i].style.display = "none";  
+slides[i].style.display = "none";
 }
 for (i = 0; i < dots.length; i++) {
 dots[i].className = dots[i].className.replace(" active", "");
 }
-slides[slideIndex-1].style.display = "block";  
+slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
 </script>

@@ -84,11 +84,11 @@ function renderDocument(doc) {
             alert("Please Login First")
         }
     });
-    
+
     let id = doc.id;
     division.addEventListener('click', function() {
       Cookies.set('productId', id);
-      window.open('selectedproductpage.html', '_self', 'width=1000vw,height=fixed');
+      window.open('selectedproductpage.html', id, 'width=800,height=1000,location=0,status=0,menubar=0,toolbar=0,status=0,titlebar=0');
     });
 
 /*    division.addEventListener('mouseover', function(event) {

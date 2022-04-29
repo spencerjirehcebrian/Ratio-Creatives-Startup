@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "./css/css.css"> 
+    <link rel = "stylesheet" href = "./css/css.css">
     <title>Services</title>
 </head>
 <header>
@@ -15,10 +15,10 @@
         <div class="headright">
                 <h1>RATIO</h1>
                 <h2>CREATIVES</h1>
-                <div class="hide1">Profile</div>
-                <img src=".\assets\Icons\user.svg" class="usericon">
-                <div class="hide2">Cart</div>
-                <img src=".\assets\Icons\shopping-cart.svg" class="cart">
+                  <div class="hide1">Profile</div>
+                  <a href="profileinfo.html"><img src=".\assets\Icons\user.svg" class="usericon"></a>
+                  <div class="hide2">Cart</div>
+                  <a href="cart.html"><img src=".\assets\Icons\shopping-cart.svg" class="cart"></a>
                 <img src=".\assets\Icons\search.svg" class="searchicon">
                 <input type="search" name="search" class="search">
 
@@ -63,7 +63,7 @@
                     </div>
                     <h1 class="center boxtext">Layout</h1>
                     <h1 class="center boxtext2">Publicity Materials. Posters. Layouts</h1>
-            </div> 
+            </div>
         </div>
         <div class="seright setopmargin">
             <div class="sebox">
@@ -76,7 +76,7 @@
                     <h1 class="center boxtext2">Icons. Busts. Art.</h1>
             </div>
         </div>
-        
+
         <div class="thirdrow">
             <div class="thirdbackground">
                 <div class="thirdleft">
@@ -101,26 +101,26 @@
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE 1 1.png" style="width:100%">
         </div>
-        
+
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE 2 1.png" style="width:100%">
         </div>
-        
+
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE 3 1.png" style="width:100%">
         </div>
-        
+
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE 4 1.png" style="width:100%">
         </div>
-        
+
         <div class="mySlides fade">
           <img src="./assets/Slide/SLIDE 5 1.png" style="width:100%">
         </div>
-        
+
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
+
         <br>
         <div style="text-align:center;">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -195,15 +195,15 @@ function showSlides(n) {
 let i;
 let slides = document.getElementsByClassName("mySlides");
 let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}    
+if (n > slides.length) {slideIndex = 1}
 if (n < 1) {slideIndex = slides.length}
 for (i = 0; i < slides.length; i++) {
-  slides[i].style.display = "none";  
+  slides[i].style.display = "none";
 }
 for (i = 0; i < dots.length; i++) {
   dots[i].className = dots[i].className.replace(" active", "");
 }
-slides[slideIndex-1].style.display = "block";  
+slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
 </script>

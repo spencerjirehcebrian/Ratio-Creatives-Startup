@@ -84,7 +84,8 @@ function renderDocument(doc) {
             alert("Please Login First")
         }
     });
-
+    
+    let id = doc.id;
     division.addEventListener('click', function() {
       Cookies.set('productId', id);
       window.open('selectedproductpage.html', '_self', 'width=1000vw,height=fixed');

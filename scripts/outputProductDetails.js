@@ -23,6 +23,7 @@ import {
 import Cookies from "./js.cookie.mjs";
 
 let cookieProduct = Cookies.get('productId');
+let cookieEmail = Cookies.get('userEmail');
 console.log(cookieProduct);
 
 const colRefInventory = collection(db, 'inventory') //collection reference
@@ -70,14 +71,9 @@ function renderDocument(doc) {
         let itemPriceRef = doc.data().itemPrice;
 				let itemPictureRef = doc.data().itemPicture;
 
-        const cookieEmail = document.cookie
-            .split('; ')
-            .find(row => row.startsWith('userEmail='))
-            .split('=')[1];
-
+        console.log(cookieEmail);
         if (cookieEmail != null) {
             addDoc(colRefCart, {
-
                 ucType: itemTypeRef,
                 ucDescription: itemDescriptionRef,
                 ucEmail: cookieEmail,
@@ -86,7 +82,11 @@ function renderDocument(doc) {
                 ucPrice: itemPriceRef,
 								ucPicture: itemPictureRef
             })
-            alert("Cart Added")
+            .then(()=>{
+            alert("Cart Added");
+            window.open('product.html', '_self')
+            })
+
         } else {
             alert("Please Login First")
         }

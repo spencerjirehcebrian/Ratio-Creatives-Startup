@@ -22,8 +22,6 @@ import {
 
 import Cookies from "./js.cookie.mjs";
 
-//let cookieEmail = ;
-
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
 
@@ -87,6 +85,7 @@ function renderDocument(doc) {
         }
     });
 
+    let id = doc.id;
     division.addEventListener('click', function() {
       Cookies.set('productId', id);
       window.open('selectedproductpage.html', '_self', 'width=1000vw,height=fixed');

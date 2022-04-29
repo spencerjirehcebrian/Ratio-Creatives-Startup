@@ -22,5 +22,6 @@ const docRef = doc(db, 'userCart', p1)
 deleteDoc(docRef)
   .then(() => {
     alert("Delete Successful")
+    location.reload();
   })
 }

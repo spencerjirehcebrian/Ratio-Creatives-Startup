@@ -20,7 +20,8 @@ import Cookies from "./js.cookie.mjs";
 
 const colRefOrder = collection(db, 'order') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
-let colRefVar = collection(db, 'globalVariables'); //document reference
+let colRefVar = collection(db, 'globalVariables'); //collection reference
+let docRefVar = doc(db, 'globalVariables', 'mLbbsMiPtMrFFdHEkAPM'); //document reference
 
 let details="";
 const cookieEmail = Cookies.get('userEmail');
@@ -36,8 +37,7 @@ const q = query(colRefCart, where("ucEmail", "==", cookieEmail))
 
 const occonfirmorder = document.querySelector('.occonfirmorder');
 
-//query fro tracking number
-
+//query for tracking number
 const q2 = query(colRefVar)
 onSnapshot(q2, (snapshot) => {
     snapshot.docs.forEach((doc) => {
@@ -48,7 +48,6 @@ onSnapshot(q2, (snapshot) => {
 
 occonfirmorder.addEventListener('click', (e) => {
   e.preventDefault()
-  //let isCommissionBoolForm = document.getElementById('isOrderCommissionCheckbox').checked;
   let paymentMethodValue = document.getElementById('displayPaymentMethod').innerHTML;
   let dateValue = document.getElementById('displayDate').innerHTML;
   let totalPrice = Cookies.get('totalPrice');
@@ -58,6 +57,7 @@ occonfirmorder.addEventListener('click', (e) => {
         let type = doc.data().ucType;
 
         trackingNo ++;
+        console.log(trackingNo);
         if ((type == "Commission - Video Editing")||(type == "Commission - Layout")||(type == "Commission - Art Commissions"))
           {
             addDoc(colRefOrder, {
@@ -78,18 +78,16 @@ occonfirmorder.addEventListener('click', (e) => {
               alert(err.message);
             })
 
-            updateDoc(colRefVar, {
+            updateDoc(docRefVar, {
               currentTrackingNumber: trackingNo
-            })
-            .then(()=>{
-              updateInvForm.reset()
             })
           }else
           {
-            details += doc.data().ucName + doc.data().ucQuantity+"\n";
-            console.log(details);
+            details += doc.data().ucName +"-"+doc.data().ucType +"-"+ doc.data().ucQuantity+"\n";
           }
         })
+
+        console.log(details);
 
         addDoc(colRefOrder, {
           orderAddress: cookieAddress,
@@ -103,11 +101,27 @@ occonfirmorder.addEventListener('click', (e) => {
           isCommission: false
         })
         .then(() => {
-          console.log("Merchandise Checkout Successful");
-          window.open("confirmation.html", "_self")
+          deleteCart();
         })
         .catch(err =>{
-          alert(err.message);
+          console.log(err.message);
         })
     })
 })
+
+function deleteCart() {
+  onSnapshot(q, (snapshot) => {
+      snapshot.docs.forEach((docu) => {
+        let docRefCol = doc(db, 'userCart', docu.id); //document reference
+        deleteDoc(docRefCol)
+        .then(() => {
+          console.log("Cart Delete");
+        })
+        .catch(err =>{
+          console.log(err.message);
+        })
+      })
+    })
+    alert("Checkout Successful");
+    window.open("confirmation.html", "_self")
+}

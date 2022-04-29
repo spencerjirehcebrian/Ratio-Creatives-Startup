@@ -18,6 +18,7 @@ js-cookies <br>
 <br>
 <br>
 ## Backend yet to complete requirements;
+
 - fix broken frontend :(
 
 - add commission to cart
@@ -31,3 +32,6 @@ js-cookies <br>
 
 - add authentication script to all html, except login and signup
 - commission slot management in adminView
+
+- remove cart items on checkout
+- affect quantity on checkout

@@ -75,6 +75,7 @@ function renderDocument(doc) {
         if (cookieEmail != null) {
             addDoc(colRefCart, {
                 ucType: itemTypeRef,
+                ucInvRef: doc.id,
                 ucDescription: itemDescriptionRef,
                 ucEmail: cookieEmail,
                 ucName: itemNameRef,

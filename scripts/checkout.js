@@ -20,10 +20,10 @@ import Cookies from "./js.cookie.mjs";
 
 const colRefOrder = collection(db, 'order') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
+const colRefInv = collection(db, 'inventory') //collection reference
 let colRefVar = collection(db, 'globalVariables'); //collection reference
 let docRefVar = doc(db, 'globalVariables', 'mLbbsMiPtMrFFdHEkAPM'); //document reference
 
-let details="";
 const cookieEmail = Cookies.get('userEmail');
 const cookieName = Cookies.get('userName');
 const cookieAddress = Cookies.get('userAddress');
@@ -31,19 +31,23 @@ const cookieContact = Cookies.get('userContact');
 
 let isCommissionBoolForm = false;
 let trackingNo = 0;
+let stockQuantity;
 
+let details = "";
 
 const q = query(colRefCart, where("ucEmail", "==", cookieEmail))
 
 const occonfirmorder = document.querySelector('.occonfirmorder');
 
 //query for tracking number
-const q2 = query(colRefVar)
-onSnapshot(q2, (snapshot) => {
-    snapshot.docs.forEach((doc) => {
-        trackingNo = parseInt(doc.data().currentTrackingNumber);
-    })
-})
+const docSnap = await getDoc(docRefVar);
+if (docSnap.exists()) {
+  trackingNo = parseInt(docSnap.data().currentTrackingNumber);
+  console.log(trackingNo);
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+}
 
 
 occonfirmorder.addEventListener('click', (e) => {
@@ -51,22 +55,32 @@ occonfirmorder.addEventListener('click', (e) => {
   let paymentMethodValue = document.getElementById('displayPaymentMethod').innerHTML;
   let dateValue = document.getElementById('displayDate').innerHTML;
   let totalPrice = Cookies.get('totalPrice');
+  Cookies.set('productDetails', "");
 
   onSnapshot(q, (snapshot) => {
-      snapshot.docs.forEach((doc) => {
-        let type = doc.data().ucType;
+      snapshot.docs.forEach((docu) => {
+        let type = docu.data().ucType;
 
-        trackingNo ++;
-        console.log(trackingNo);
         if ((type == "Commission - Video Editing")||(type == "Commission - Layout")||(type == "Commission - Art Commissions"))
-          {
+        {
+        trackingNo ++;
+        updateDoc(docRefVar, {
+          currentTrackingNumber: trackingNo
+        })
+        .then(() => {
+          console.log(trackingNo);
+        })
+        .catch(err =>{
+          console.log(err.message);
+        })
+
             addDoc(colRefOrder, {
               orderAddress: cookieAddress,
-              orderDetails: doc.data().ucDescription,
+              orderDetails: docu.data().ucType + ": " + docu.data().ucDescription,
               orderDate: dateValue,
               orderUsername: cookieName,
               orderTrackingNumber: trackingNo,
-              orderType: doc.data().ucType,
+              orderType: docu.data().ucType,
               orderPaymentMethod: paymentMethodValue,
               orderPayment: totalPrice,
               isCommission: true
@@ -77,21 +91,43 @@ occonfirmorder.addEventListener('click', (e) => {
             .catch(err =>{
               alert(err.message);
             })
-
-            updateDoc(docRefVar, {
-              currentTrackingNumber: trackingNo
-            })
           }else
           {
-            details += doc.data().ucName +"-"+doc.data().ucType +"-"+ doc.data().ucQuantity+"\n";
+            details += docu.data().ucName +"-"+docu.data().ucType +"-"+ docu.data().ucQuantity+"\n";
+            //updateQuantity(docu.data().ucInvRef, docu.data().ucQuantity);
+            updateQuantity(docu.data().ucInvRef, docu.data().ucQuantity).then(
+              function(value) {
+                let docRefInv = doc(db, 'inventory', docu.data().ucInvRef);//document reference
+                updateDoc(docRefInv, {
+                  itemQuantity: stockQuantity
+                })
+                .then(() => {
+                  console.log(stockQuantity);
+                })
+                .catch(err =>{
+                  console.log(err.message);
+                })
+              },
+            );
           }
         })
-
         console.log(details);
+        //Cookies.set('productDetails', details);
+        //details = Cookies.get('productDetails');
+        trackingNo ++;
+        updateDoc(docRefVar, {
+          currentTrackingNumber: trackingNo
+        })
+        .then(() => {
+          console.log(trackingNo);
+        })
+        .catch(err =>{
+          console.log(err.message);
+        })
 
         addDoc(colRefOrder, {
           orderAddress: cookieAddress,
-          orderDetails:details,
+          orderDetails: details,
           orderDate: dateValue,
           orderUsername: cookieName,
           orderTrackingNumber: trackingNo,
@@ -101,7 +137,7 @@ occonfirmorder.addEventListener('click', (e) => {
           isCommission: false
         })
         .then(() => {
-          deleteCart();
+          //deleteCart();
         })
         .catch(err =>{
           console.log(err.message);
@@ -122,6 +158,15 @@ function deleteCart() {
         })
       })
     })
-    alert("Checkout Successful");
+    //alert("Checkout Successful");
     window.open("confirmation.html", "_self")
+}
+
+async function updateQuantity(x, y){
+  let docRefInv = doc(db, 'inventory', x);//document reference
+  let docSnap1 = await getDoc(docRefInv);
+  if (docSnap1.exists()) {
+    console.log(x +" = "+ parseInt(docSnap1.data().itemQuantity));
+    stockQuantity = parseInt(docSnap1.data().itemQuantity) - parseInt(y);
+  }
 }

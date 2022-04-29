@@ -3,23 +3,22 @@ In-development prototype website application for the Ratio Creatives Startup.
 <br><br>
 <a href = "https://flymetothesun.github.io/Ratio-Creatives-Startup/">Click Here For Testing Environment<a>
 
+## Current Dependencies
+firebase <br>
+js-cookies <br>
+
 ## Developed by
 Baje, Christian Ray <br>
 Cebrian, Spencer Jireh <br>
 Labrado, Joshua Reynald <br>
 Perez, Mark Francis <br>
 Queqquegan, Mikaela <br>
-
-## Current Dependencies
-firebase <br>
-js-cookies <br>
-
 <br>
 <br>
 <br>
-## Backend yet to complete requirements;
+### Pending Backend requirements;
 
-- fix broken frontend :(
+- w8 for frontend to finish/fix broken parts :(
 
 - add commission to cart
 - password strength
@@ -30,8 +29,9 @@ js-cookies <br>
 - implement due date in cart/order/delivery
 - implement email confirm purchase
 
-- add authentication script to all html, except login and signup
+- activate profile and cart links on all tabs
 - commission slot management in adminView
 
-- remove cart items on checkout
-- affect quantity on checkout
+- fix quantity on checkout not working for multiple same item
+- move order to delivery - when the frontend is done
+- affect

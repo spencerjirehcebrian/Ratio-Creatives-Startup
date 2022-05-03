@@ -33,3 +33,4 @@ Queqquegan, Mikaela <br>
 
 - fix quantity on checkout not working for multiple same item
 - move order to delivery - when the frontend is done
+- analysis per month add - order date add feauture.

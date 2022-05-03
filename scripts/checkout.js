@@ -133,7 +133,7 @@ occonfirmorder.addEventListener('click', (e) => {
           orderTrackingNumber: trackingNo,
           orderType: "Merchandise Order",
           orderPaymentMethod: paymentMethodValue,
-          orderPayment: totalPrice,
+          orderPayment: parseInt(totalPrice),
           isCommission: false
         })
         .then(() => {

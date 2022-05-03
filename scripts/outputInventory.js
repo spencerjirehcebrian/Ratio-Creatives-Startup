@@ -147,7 +147,7 @@ function renderDocument(doc) {
     } else if (type == "genshinphotocards") {
         productgenshinphotocardsList.appendChild(division);
     } else if (type == "genshinemoteheads") {
-        productgenshinemoteheads.appendChild(division);
+        productbobbleheadsList.appendChild(division);
     }
 
 };

@@ -71,9 +71,6 @@ loginForm.addEventListener('submit', (e) => {
 				{
 				window.open("../adminView/index.html", "_self");
 				}
-				else {
-				window.open("../customerView/homepage.html", "_self");
-			}
     })
     .catch(err => {
       alert(err.message);

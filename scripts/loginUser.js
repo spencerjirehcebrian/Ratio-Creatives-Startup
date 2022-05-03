@@ -65,7 +65,7 @@ loginForm.addEventListener('submit', (e) => {
       console.log('user logged in:', cred.user)
       //window.open("../customerView/homepage.html", "_self");
 
-				if(cookieType == "customer"){
+				if(cred.userType == "customer"){
 				window.open("../customerView/homepage.html", "_self");
 				} else if (cookieType == "admin")
 				{

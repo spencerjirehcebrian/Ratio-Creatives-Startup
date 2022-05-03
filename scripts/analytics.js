@@ -44,6 +44,11 @@ let revenueOutputNumber = 0;
 let customerOutputNumber = 0;
 let profitOutputNumber = 0;
 
+let revenuePercentageOutputRef = document.getElementById('revenuePercentageOutput');
+let customerPercentageOutputRef = document.getElementById('customerPercentageOutput');
+let revenuePercentageOutputNumber = 0
+let customerPercentageOutputNumber = 0
+
 const queryCommission = query(colRefOrder, where("isCommission", "==", true))
 onSnapshot(queryCommission, (snapshot) => {
     snapshot.docs.forEach((doc) => {
@@ -115,3 +120,11 @@ onSnapshot(colRefOrder, (snapshot) => {
     })
     console.log(customerOutputRef);
 })
+
+function getCurrentMonth(){
+
+}
+
+function getPreviousMonth(){
+  
+}

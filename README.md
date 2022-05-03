@@ -18,7 +18,7 @@ Queqquegan, Mikaela <br>
 <br>
 ### Pending Backend requirements;
 
-- w8 for frontend to finish/fix broken parts (resizing window disorganizes everything)
+- broken frontend
 
 - add commission to cart
 - password strength
@@ -33,4 +33,6 @@ Queqquegan, Mikaela <br>
 
 - fix quantity on checkout not working for multiple same item
 - move order to delivery - when the frontend is done
-- analysis per month add - order date add feauture.
+- analysis per month add
+  - checkout date-timestamp
+  - get last month - get current month analysis

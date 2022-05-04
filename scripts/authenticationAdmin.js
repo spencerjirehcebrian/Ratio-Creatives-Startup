@@ -55,10 +55,14 @@ onAuthStateChanged(auth, user=> {
 				})
 			})
 
-
-
 	} else {
 		//console.log('No user');
     window.open("../customerView/login.html", "_self");
 	}
+});
+
+let profileImage = document.querySelector(".profile_image");
+profileImage.addEventListener("click",
+function() {
+	window.open("../customerView/homepage.html","_self")
 });

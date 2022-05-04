@@ -1,9 +1,17 @@
 const searchicon = document.querySelector('.searchicon');
-let cookieSearch = Cookies.get('cookieSearch');
+
+let cookieSearch;
+cookieSearch = Cookies.get('cookieSearch');
 document.getElementById("mySearch").value = cookieSearch;
+if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "" || cookieSearch == "null" || cookieSearch == "undefined"){
+  Cookies.set('cookieSearch', "");
+  Cookies.set('cookieSearchActive', "false");
+  //document.getElementById("mySearch").value = " ";
+}
+
+
 
 import Cookies from "./js.cookie.mjs";
-console.log(cookieSearch);
 
 searchicon.addEventListener('click', (e) => {
   e.preventDefault()
@@ -12,12 +20,14 @@ searchicon.addEventListener('click', (e) => {
   let cookieSearch = Cookies.get('cookieSearch');
 
   console.log(searchRef);
-  if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "" ||cookieSearch == "null" || cookieSearch == "undefined"){
-    Cookies.set('cookieSearch', " ")
+  if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "" || cookieSearch == "null" || cookieSearch == "undefined"){
+    Cookies.set('cookieSearch', "")
+    Cookies.set('cookieSearchActive', "false");
   }
   else{
     Cookies.set('cookieSearch', searchRef)
     console.log(cookieSearch);
+    Cookies.set('cookieSearchActive', "true");
   }
 
   window.open("../customerView/product.html", "_self");

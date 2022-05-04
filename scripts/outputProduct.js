@@ -25,8 +25,8 @@ import Cookies from "./js.cookie.mjs";
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
 let cookieSearch = Cookies.get('cookieSearch');
-
-if(cookieSearch == "empty" ||cookieSearch == " "  )
+let cookieSearchActive = Cookies.get('cookieSearchActive');
+if(cookieSearchActive == "true")
 {
   console.log(cookieSearch);
   const q = query(colRefInventory, where ("itemName", "==", cookieSearch))

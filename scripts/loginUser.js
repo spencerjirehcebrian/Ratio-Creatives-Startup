@@ -67,9 +67,11 @@ loginForm.addEventListener('submit', (e) => {
 
         cookieType = Cookies.get('userType');
 				if(cookieType == "customer"){
+          alert("Customer Logged In")
 				window.open("../customerView/homepage.html", "_self");
 				} else if (cookieType == "admin")
 				{
+          alert("Admin Logged In")
 				window.open("../adminView/index.html", "_self");
 				}
     })

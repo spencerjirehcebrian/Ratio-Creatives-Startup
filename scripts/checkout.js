@@ -137,7 +137,7 @@ occonfirmorder.addEventListener('click', (e) => {
           isCommission: false
         })
         .then(() => {
-          //deleteCart();
+          deleteCart();
         })
         .catch(err =>{
           console.log(err.message);
@@ -158,7 +158,6 @@ function deleteCart() {
         })
       })
     })
-    //alert("Checkout Successful");
     window.open("confirmation.html", "_self")
 }
 

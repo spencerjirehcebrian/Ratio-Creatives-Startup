@@ -403,23 +403,23 @@ z-index: 9;
 
 .headlogo{
     position: absolute;
-    width: 14.973958333333334vw;
-    height: 28.41823056300268vh;
-    left: -1.171875vw;
+    width: 11.97vw;
+    height: 22.728vh;
+    left: 0.171875vw;
     top: 4.1554959785522785vh;
 }
 .headright h1{
     position: absolute;
-width: 15.690104166666666vw;
-height: 10.32171581769437vh;
-left: 14.453125vw;
-top: 4.1554959785522785vh;
+width: 12.552vw;
+height: 8.256vh;
+left: 11.56vw;
+top: 4.32vh;
 
 font-family: Monument;
 font-style: normal;
 font-weight: 400;
-font-size: 4.166666666666667vw;
-line-height: 10.32171581769437vh;
+font-size: 3.32vw;
+line-height: 8.25vh;
 /* identical to box height */
 
 
@@ -427,16 +427,16 @@ color: #000000;
 }
 .headright h2{
     position: absolute;
-width: 30.598958333333332vw;
-height: 10.32171581769437vh;
-left: 14.453125vw;
-top: 11.26005361930295vh;
+width: 24.47vw;
+height: 8.256vh;
+left: 11.56vw;
+top: 10.008vh;
 
 font-family: Monument;
 font-style: normal;
 font-weight: 400;
-font-size: 4.166666666666667vw;
-line-height: 10.32171581769437vh;
+font-size: 3.32vw;
+line-height: 8.25vh;
 /* identical to box height */
 
 
@@ -444,47 +444,47 @@ color: #000000;
 }
 .headright .usericon{
     position: absolute;
-    width: 2.8645833333333335vw;
-    height: 5.898123324396783vh;
-    right:10.611979166666666vw;
-    top: 7.640750670241287vh;
+    width: 2.28vw;
+    height: 4.712vh;
+    right: 8.48vw;
+    top: 6.112vh;
 }
 .headright .cart{
     position: absolute;
-    width: 2.8645833333333335vw;
-    height: 5.898123324396783vh;
-right: 6.640625vw;
-top: 7.640750670241287vh;
+    width: 2.28vw;
+    height: 4.712vh;
+right: 5.312vw;
+top: 6.112vh;
 }
 .hide1{
     visibility: visible;
     position: absolute;
-    width: 2.5390625vw;
-    height: 2.278820375335121vh;
-    right: 10.677083333333334vw;
-    top: 4.825737265415549vh;
+    width: 2vw;
+    height: 1.81vh;
+    right: 8.54vw;
+    top: 3.86vh;
 
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.9114583333333334vw;
-    line-height: 2.278820375335121vh;
+    font-size: 0.7288vw;
+    line-height: 1.816vh;
 
 
     color: #000000;
 }
 .hide2{
     position: absolute;
-    width: 1.8229166666666667vw;
-    height: 2.278820375335121vh;
-   right: 7.096354166666667vw;
-    top: 4.825737265415549vh;
+    width: 1.45vw;
+    height: 1.81vh;
+   right: 5.67vw;
+    top: 3.85vh;
 
     font-family: Prodsans;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.9114583333333334vw;
-    line-height: 2.278820375335121vh;
+    font-size: 0.7288vw;
+    line-height: 1.816vh;
     /* identical to box height */
 
 
@@ -493,14 +493,14 @@ top: 7.640750670241287vh;
 }
 input[type="search"]{
     position: absolute;
-width: 12.044270833333334vw;
-height: 3.8873994638069704vh;
-right: 1.4322916666666667vw;
-top: 15.683646112600536vh;
+width: 9.6vw;
+height: 3.104vh;
+right: 1.144vw;
+top: 12.54vh;
 border: none;
-text-indent: 1.6276041666666667vw;
+text-indent: 1.3vw;
 background-color: #837F7F;
-border-radius: 1.3404825737265416vh;
+border-radius: 1.072vh;
 color: white;
 outline: none;
 }
@@ -510,64 +510,64 @@ outline: none;
 }
 .searchicon{
     position: absolute;
-height: 1.742627345844504vh;
-right: 12.044270833333334vw;
-top: 16.75603217158177vh;
+height: 1.392vh;
+right: 9.63vw;
+top: 13.4vh;
 filter: invert(80%);
 z-index: 1;
 }
 .headright .rectangle{
     position: absolute;
-height: 0.2680965147453083vh;
-left: 14.453125vw;
-right:1.4322916666666667vw;
-top: 21.84986595174263vh;
+height: 0.208vh;
+left: 11.56vw;
+right:1.144vw;
+top: 17vh;
 
 background: #010101;
 }
 
 .tab{
     position: absolute;
-left: 14.453125vw;
-top: 23.994638069705093vh;
+left: 11.56vw;
+top: 18.292vh;
 
 }
 .tab h3{
     font-family: Prodsans;
     color: white;
-    font-size: 1.5625vw;
+    font-size: 1.24vw;
 }
 .homeb{
-    height:7.372654155495979vh;
-    width:13.606770833333334vw;
+    height:5.8981232vh;
+    width:12.392vw;
     border-radius: 1.3404825737265416vh 0vh 0vh 1.3404825737265416vh;
     background: #3A375C;
     border: none;
 }
 .servicesb{
-    height:7.372654155495979vh;
-    width:15.494791666666666vw;
+    height:5.8981232vh;
+    width:12.392vw;
     background: #853645;
     border: none;
 }
 .orderandpayb{
-    height:7.372654155495979vh;
-    width:17.96875vw;
+    height:5.8981232vh;
+    width:12.392vw;
     background: #DB513A;
     border: none;
 
 }
 .aboutusb{
-    height:7.372654155495979vh;
-    width:17.1875vw;
+    height:5.8981232vh;
+    width:12.392vw;
     background: #DD672E;
     border: none;
 
 }
 .contactusb{
-    height:7.372654155495979vh;
-    width:18.5546875vw;
-    border-radius: 0vh 1.3404825737265416vh 1.3404825737265416vh 0vh;
+    height:5.8981232vh;
+    width:12.392vw;
+    border-radius: 0vh 1.072vh 1.072vh 0vh;
     background: #EA9924;
     border: none;
 }

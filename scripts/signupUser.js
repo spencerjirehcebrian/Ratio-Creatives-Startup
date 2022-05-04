@@ -62,7 +62,9 @@ signupForm.addEventListener('submit', (e)=>{
 		addDoc(colRefUser, {
 			userName: signupForm.userName.value,
 			userType: "customer",
-			userEmail: email
+			userEmail: email,
+			userAddress: signupForm.userAddress.value,
+			userContact: signupForm.userContact.value
 			})
 		.then(()=>{
 			signupForm.reset()

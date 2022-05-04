@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "./css/css.css">
     <script type="module" src="../scripts/search.js"></script>
+      <script type="module" src="../scripts/authentication.js"></script>
+    <script type="module" src="../scripts/outputProfile.js"></script>
     <title>Profile Info</title>
 </head>
 <header>
@@ -47,8 +49,8 @@
         <h1>Username</h1>
 
         <button class="profinfob bactive"><p1>Profile Information</p1></button>
-        <button class="purchhistoryb "><p2>Purchase History</p2></button>
-        <button class="cartb"><p3>Cart</p3></button>
+        <!--<button class="purchhistoryb "><p2>Purchase History</p2></button>
+        <button class="cartb"><p3>Cart</p3></button>-->
 
         <div class="profilebox">
             <h3>Customer Information</h3>
@@ -66,10 +68,10 @@
             </div>
 
             <div class="profileboxuser">
-                <p1>Stephen Strange</p1>
-                <p2>strange@example.com</p2>
-                <p3>123-456-7890</p3>
-                <p4>1234 Bleeker Street New York City</p4>
+                <p1 id="userNameOutput">Stephen Strange</p1>
+                <p2 id="userEmailOutput">strange@example.com</p2>
+                <p3 id="userContactOutput">123-456-7890</p3>
+                <p4 id="userAddressOutput">1234 Bleeker Street New York City</p4>
             </div>
 
 
@@ -84,7 +86,7 @@
                 <p2>***-***-4567</p2>
             </div>
 
-            <button class="deleteacc"><img src=".\assets\Icons\trash.svg" class="trashicon"> Delete Account</button>
+            <button class="deleteacc"><!--<img src=".\assets\Icons\trash.svg" class="trashicon">-->Log Out</button>
         </div>
 </div>
 </body>

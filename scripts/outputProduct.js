@@ -26,8 +26,10 @@ const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
 let cookieSearch = Cookies.get('cookieSearch');
 
-if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "null" || cookieSearch == "undefined"){
-  const q = query(colRefInventory)
+if(cookieSearch == "empty" ||cookieSearch == " "  )
+{
+  console.log(cookieSearch);
+  const q = query(colRefInventory, where ("itemName", "==", cookieSearch))
   onSnapshot(q, (snapshot) => {
       let delivery = []
       snapshot.docs.forEach((doc) => {
@@ -37,7 +39,7 @@ if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "null" 
 
 }
 else {
-  const q = query(colRefInventory, where ("itemName", "==", cookieSearch))
+  const q = query(colRefInventory)
   onSnapshot(q, (snapshot) => {
       let delivery = []
       snapshot.docs.forEach((doc) => {

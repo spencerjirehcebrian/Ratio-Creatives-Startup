@@ -35,6 +35,16 @@ let stockQuantity;
 
 let details = "";
 
+//Date
+let currentDate = new Date();
+let cDay = currentDate.getDate()
+let cMonth = currentDate.getMonth() + 1
+let cYear = currentDate.getFullYear()
+let cDate = cDay + "/" + cMonth + "/" + cYear;
+Cookies.get('currentDate', cDate);
+
+document.getElementById('displayDate').textContent = cDate;
+
 const q = query(colRefCart, where("ucEmail", "==", cookieEmail))
 
 const occonfirmorder = document.querySelector('.occonfirmorder');
@@ -53,7 +63,7 @@ if (docSnap.exists()) {
 occonfirmorder.addEventListener('click', (e) => {
   e.preventDefault()
   let paymentMethodValue = document.getElementById('displayPaymentMethod').innerHTML;
-  let dateValue = document.getElementById('displayDate').innerHTML;
+
   let totalPrice = Cookies.get('totalPrice');
   Cookies.set('productDetails', "");
 
@@ -77,7 +87,7 @@ occonfirmorder.addEventListener('click', (e) => {
             addDoc(colRefOrder, {
               orderAddress: cookieAddress,
               orderDetails: docu.data().ucType + ": " + docu.data().ucDescription,
-              orderDate: dateValue,
+              orderDate: cDate,
               orderUsername: cookieName,
               orderTrackingNumber: trackingNo,
               orderType: docu.data().ucType,
@@ -128,7 +138,7 @@ occonfirmorder.addEventListener('click', (e) => {
         addDoc(colRefOrder, {
           orderAddress: cookieAddress,
           orderDetails: details,
-          orderDate: dateValue,
+          orderDate: cDate,
           orderUsername: cookieName,
           orderTrackingNumber: trackingNo,
           orderType: "Merchandise Order",

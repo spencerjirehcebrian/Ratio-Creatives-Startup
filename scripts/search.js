@@ -3,6 +3,7 @@ let cookieSearch = Cookies.get('cookieSearch');
 document.getElementById("mySearch").value = cookieSearch;
 
 import Cookies from "./js.cookie.mjs";
+console.log(cookieSearch);
 
 searchicon.addEventListener('click', (e) => {
   e.preventDefault()
@@ -11,8 +12,8 @@ searchicon.addEventListener('click', (e) => {
   let cookieSearch = Cookies.get('cookieSearch');
 
   console.log(searchRef);
-  if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "null" || cookieSearch == "undefined"){
-        Cookies.set('cookieSearch', '')
+  if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "" ||cookieSearch == "null" || cookieSearch == "undefined"){
+    Cookies.set('cookieSearch', " ")
   }
   else{
     Cookies.set('cookieSearch', searchRef)

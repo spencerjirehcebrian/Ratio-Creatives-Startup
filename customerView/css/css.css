@@ -5875,6 +5875,7 @@ filter: brightness(70%);
 .ocright {
     width: 40%;
     float: left;
+    position: static;
 }
 
 .octitle {

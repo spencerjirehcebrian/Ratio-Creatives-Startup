@@ -85,7 +85,7 @@ function renderDocument(doc) {
             })
             .then(()=>{
             alert("Cart Added");
-            window.open('product.html', '_self')
+            window.close();
             })
 
         } else {

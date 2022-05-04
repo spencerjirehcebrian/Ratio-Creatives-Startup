@@ -143,3 +143,119 @@
       </div>
    </div>
 </div>
+
+
+
+.cartList{
+  position: absolute;
+  top: 500px;
+  left: 30px;
+  display: inline;
+
+
+}
+
+.cartListItem{
+    padding: 10px;
+    position: relative;
+}
+
+.cartitem {
+    width: 134px;
+    height: 129px;
+    left: 74px;
+    top: 527px;
+    position: sticky;
+}
+
+.cartname {
+    width: 79px;
+    height: 29px;
+    left: 225px;
+    top: 544px;
+
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+
+    color: #000000;
+    position: sticky;
+}
+
+.cartdesc {
+    width: 212px;
+    height: 19px;
+    left: 231px;
+    top: 592px;
+
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+    position: sticky;
+}
+
+.cartprice {
+    width: 180px;
+    height: 45px;
+    left: 731px;
+    top: 580px;
+
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    position: sticky;
+}
+
+.carttrash {
+    left: 1000px;
+    top: 570px;
+    width: 4vw;
+    position: sticky;
+}
+
+.cartsubtotal {
+    position: absolute;
+width: 145px;
+height: 51px;
+left: 74px;
+top: 1045px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 29.75px;
+line-height: 36px;
+}
+
+.cartsubtotalvalue {
+    position: absolute;
+width: 221px;
+height: 51px;
+left: 223px;
+top: 1039px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 49px;
+text-decoration-line: underline;
+
+color: #000000;
+}
+
+.oclDiv {
+  width: 33.3%;
+  padding-top: 1vw;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px;
+}

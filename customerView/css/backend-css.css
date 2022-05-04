@@ -2,8 +2,10 @@
   position: relative;
   top: 15px;
   left: 300px;
+  flex-basis: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .product{
@@ -41,26 +43,27 @@
   top: 500px;
   left: 30px;
   display: inline;
-
 }
 
 .cartListItem{
-    padding: 10px;
-    display: block;
+    padding-bottom: 150px;
+    padding-top: 20px;
+    position: relative;
 }
 
 .cartitem {
     width: 134px;
     height: 129px;
     left: 74px;
-    top: 527px;
+    position: absolute;
 }
 
 .cartname {
     width: 79px;
     height: 29px;
     left: 225px;
-    top: 544px;
+    top: 60px;
+
 
     font-family: Prodsans;
     font-style: normal;
@@ -69,13 +72,15 @@
     line-height: 49px;
 
     color: #000000;
+    position: absolute;
 }
 
 .cartdesc {
     width: 212px;
     height: 19px;
     left: 231px;
-    top: 592px;
+    top: 100px;
+
 
     font-family: Prodsans;
     font-style: normal;
@@ -84,33 +89,40 @@
     line-height: 24px;
 
     color: #000000;
+    position: absolute;
 }
 
+.cartTotalOutput{
+  position: relative;
+  padding: 50px;
+}
 .cartprice {
     width: 180px;
     height: 45px;
     left: 731px;
-    top: 580px;
+    top: 60px;
 
     font-family: Prodsans;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
+    position: absolute;
 }
 
 .carttrash {
     left: 1000px;
-    top: 570px;
+    top: 60px;
     width: 4vw;
+    position: absolute;
 }
 
 .cartsubtotal {
-    position: absolute;
+        position: relative;
 width: 145px;
 height: 51px;
 left: 74px;
-top: 1045px;
+
 
 font-family: Prodsans;
 font-style: normal;
@@ -120,11 +132,11 @@ line-height: 36px;
 }
 
 .cartsubtotalvalue {
-    position: absolute;
+        position: relative;
 width: 221px;
 height: 51px;
 left: 223px;
-top: 1039px;
+
 
 font-family: Prodsans;
 font-style: normal;
@@ -135,6 +147,54 @@ text-decoration-line: underline;
 
 color: #000000;
 }
+
+.backtoshoppingb{
+    position: relative;
+width: 297px;
+height: 62px;
+left: 225px;
+
+border: 1px solid #EA9924;
+box-sizing: border-box;
+border-radius: 15px;
+
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-indent: 30px;
+
+color: #000000;
+
+}
+.backtoshoppingicon{
+    width: 34px;
+    top: 14px;
+    left: 27px;
+    position: absolute;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.checkoutb{
+    position: relative;
+width: 297px;
+height: 62px;
+left: 556px;
+border: none;
+outline: none;
+background: #EA9924;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
 
 .oclDiv {
   width: 33.3%;

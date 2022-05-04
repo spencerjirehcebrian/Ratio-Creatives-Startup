@@ -89,7 +89,7 @@ function renderDocument(doc) {
     el_ucQuantityUpBtn.textContent = "QuantityUpBtn";
     el_ucQuantityDownBtn.textContent = "QuantityDownBtn";
 
-    el_ucCommissionType.textContent = doc.data().ucCommissionType;
+    el_ucCommissionType.textContent = doc.data().ucType;
     el_ucDescription.textContent = doc.data().ucDescription;
     el_ucEmail.textContent = doc.data().ucEmail;
     el_ucName.textContent = doc.data().ucName;

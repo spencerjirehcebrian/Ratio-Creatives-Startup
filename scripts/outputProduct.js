@@ -24,14 +24,29 @@ import Cookies from "./js.cookie.mjs";
 
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefCart = collection(db, 'userCart') //collection reference
+let cookieSearch = Cookies.get('cookieSearch');
 
-const q = query(colRefInventory)
-onSnapshot(q, (snapshot) => {
-    let delivery = []
-    snapshot.docs.forEach((doc) => {
-        renderDocument(doc);
-    })
-})
+if (cookieSearch == null || cookieSearch == undefined || cookieSearch == "null" || cookieSearch == "undefined"){
+  const q = query(colRefInventory)
+  onSnapshot(q, (snapshot) => {
+      let delivery = []
+      snapshot.docs.forEach((doc) => {
+          renderDocument(doc);
+      })
+  })
+
+}
+else {
+  const q = query(colRefInventory, where ("itemName", "==", cookieSearch))
+  onSnapshot(q, (snapshot) => {
+      let delivery = []
+      snapshot.docs.forEach((doc) => {
+          renderDocument(doc);
+      })
+  })
+
+}
+
 
 const productactionbustsList = document.querySelector('#productList');
 
@@ -74,7 +89,7 @@ function renderDocument(doc) {
     //el_addToCartBtn.textContent = "Add To Cart";
     el_itemName.textContent = doc.data().itemName;
     el_itemName.setAttribute("class", "stickername");
-    el_itemPrice.textContent = doc.data().itemPrice;
+    el_itemPrice.textContent = "PHP "+doc.data().itemPrice+".00";
     el_itemPrice.setAttribute("class", "stickerprice");
     //el_itemQuantity.textContent = doc.data().itemName;
     //el_itemDescription.textContent = doc.data().itemName;

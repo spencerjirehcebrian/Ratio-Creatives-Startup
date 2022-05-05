@@ -22,8 +22,7 @@ import {
 
 import Cookies from "./js.cookie.mjs";
 
-let cookieProduct = Cookies.get('productId');
-let cookieEmail = Cookies.get('userEmail');
+let cookieProduct = Cookies.get('inventoryId');
 console.log(cookieProduct);
 
 const colRefInventory = collection(db, 'inventory') //collection reference
@@ -42,7 +41,7 @@ const productDetails = document.querySelector('#selectedproducttop');
 const productImages = document.querySelector('.mySlides');
 
 function renderDocument(doc) {
-    let el_itemName = document.createElement('h1');
+    /*let el_itemName = document.createElement('h1');
     let el_itemPrice = document.createElement('p2');
     let el_itemQuantity = document.createElement('p1');
 
@@ -60,38 +59,31 @@ function renderDocument(doc) {
 
     let el_addToCartBtn = document.createElement('button');
 
-    el_addToCartBtn.setAttribute("class", "addtocartb");
-    el_addToCartBtn.addEventListener('click', function() {
+    el_addToCartBtn.setAttribute("class", "addtocartb");*/
+    const el_SaveBtn = document.querySelector('.button-yes');
+    const el_CancelBtn = document.querySelector('.button-no');
+    document.querySelector('.prod-title').textContent = doc.data().itemType;
+    document.querySelector('.description-title').textContent = doc.data().itemName;
+    document.querySelector('.description1').textContent = doc.data().itemDescription;
+    document.querySelector('.stocknum').textContent = "STOCK: " +doc.data().itemQuantity;
 
-        const details = document.getElementById(doc.id);
-        let itemTypeRef = doc.data().itemType;
-        let itemDescriptionRef = doc.data().itemDescription;
-        let itemNameRef = doc.data().itemName;
-        let itemQuantityRef = "1";
-        let itemPriceRef = doc.data().itemPrice;
-				let itemPictureRef = doc.data().itemPicture;
-
-        console.log(cookieEmail);
-        if (cookieEmail != null) {
-            addDoc(colRefCart, {
-                ucType: itemTypeRef,
-                ucInvRef: doc.id,
-                ucDescription: itemDescriptionRef,
-                ucEmail: cookieEmail,
-                ucName: itemNameRef,
-                ucQuantity: itemQuantityRef,
-                ucPrice: itemPriceRef,
-								ucPicture: itemPictureRef
-            })
-            .then(()=>{
-            alert("Cart Added");
-            window.close();
-            })
-
-        } else {
-            alert("Please Login First")
-        }
+    el_CancelBtn.addEventListener('click', function() {
+      window.open("inventory.html","_self")
     });
+
+    /*
+
+        el_SaveBtn.addEventListener('click', function() {
+            console.log(cookieEmail);
+              updateDoc(colRefInventory, {
+                })
+                .then(()=>{
+                alert("Cart Added");
+                window.close();
+                })
+
+        });
+
 
 
     el_addToCartBtn.textContent = "Add To Cart";
@@ -172,7 +164,7 @@ function renderDocument(doc) {
 
     //division.appendChild(el_itemPicture);
 
-    productImages.appendChild(el_itemPicture);
+    //productImages.appendChild(el_itemPicture);
 
     //productImages.appendChild(el_arrowleft);
     //productImages.appendChild(el_arrowRight);

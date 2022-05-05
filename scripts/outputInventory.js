@@ -65,8 +65,11 @@ function renderDocument(doc) {
     el_itemDescription.textContent = doc.data().itemDescription;
     el_itemType.textContent = doc.data().itemType;
 
+    let id1 = doc.id;
+
     division.addEventListener('click', function() {
-      Cookies.get('inventoryId', doc.id)
+      Cookies.set('inventoryId', id1)
+          alert(id1);
       window.open("viewProductDetails.html","_self");
     });
     //division.appendChild(el_itemPrice);
@@ -87,7 +90,7 @@ function renderDocument(doc) {
     } else if (type == "genshinphotocards") {
         productgenshinphotocardsList.appendChild(division);
     } else if (type == "genshinemoteheads") {
-        productbobbleheadsList.appendChild(division);
+        productemoteheadsList.appendChild(division);
     }
 
 };

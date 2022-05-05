@@ -5906,7 +5906,7 @@ filter: brightness(70%);
 .ocright {
     width: 40%;
     float: left;
-    position: static;
+    
 }
 
 .octitle {
@@ -5983,6 +5983,7 @@ filter: brightness(70%);
     font-size: 36px;
     line-height: 43px;
     padding-top: 16vw;
+    padding-left: 32px;
 }
 
 .oclefttitlebackground {

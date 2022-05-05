@@ -51,16 +51,22 @@ function renderMerchandiseList(doc){
     let status = document.createElement('div'); // is a node
     let statusRetrieved = doc.data().dmStatus;
     if(statusRetrieved == "Preparing"){
+      status.innerHTML = "Preparing";
       status.setAttribute("class","status-preparing");
     } else if (statusRetrieved == "To ship") {
+      status.innerHTML = "To ship";
       status.setAttribute("class","status-ship");
     }else if (statusRetrieved == "Canceled") {
+      status.innerHTML = "Canceled";
       status.setAttribute("class","status-canceled");
     }else if (statusRetrieved == "Delivered") {
+      status.innerHTML = "Delivered";
       status.setAttribute("class","status-delivered");
     }else if (statusRetrieved == "Received") {
+      status.innerHTML = "Received";
       status.setAttribute("class","status-recieved");
     } else {
+      status.innerHTML = "No Status";
       status.setAttribute("class","status-error");
     };
 
@@ -76,7 +82,7 @@ function renderMerchandiseList(doc){
     td_dmOrderDetails.textContent =  doc.data().dmOrderDetails;
     //td_dmPaymentMethod.textContent =  ;
     td_dmPayment.textContent =  doc.data().dmPaymentMethod + "\r\n";
-    td_dmPayment.textContent += doc.data().dmPayment;
+    td_dmPayment.textContent += "Php "+doc.data().dmPayment+".00";
     td_dmStartDate.textContent =  doc.data().dmStartDate;
     td_dmDueDate.textContent =  doc.data().dmDueDate;
 
@@ -126,16 +132,22 @@ function renderCommissionList(doc){
     let status = document.createElement('div'); // is a node
     let statusRetrieved = doc.data().dmStatus;
     if(statusRetrieved == "Preparing"){
+      status.innerHTML = "Preparing";
       status.setAttribute("class","status-preparing");
     } else if (statusRetrieved == "To ship") {
+      status.innerHTML = "To ship";
       status.setAttribute("class","status-ship");
     }else if (statusRetrieved == "Canceled") {
+      status.innerHTML = "Canceled";
       status.setAttribute("class","status-canceled");
     }else if (statusRetrieved == "Delivered") {
+      status.innerHTML = "Delivered";
       status.setAttribute("class","status-delivered");
     }else if (statusRetrieved == "Received") {
+      status.innerHTML = "Received";
       status.setAttribute("class","status-recieved");
     } else {
+      status.innerHTML = "No Status";
       status.setAttribute("class","status-error");
     };
 

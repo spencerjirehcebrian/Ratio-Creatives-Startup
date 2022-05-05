@@ -62,7 +62,7 @@ function renderCommission(doc){
           isDmCommission: doc.data().isCommission
         })
         .then(() => {
-          alert("Deliver Process Started Successfully")
+          deleteOrderQ(doc.id);
         })
         .catch((e)=> {
           alert("Delivery Add Failed" + e)
@@ -122,7 +122,8 @@ function renderMerchandise(doc){
           isDmCommission: doc.data().isCommission
         })
         .then(() => {
-          alert("Deliver Process Started Successfully")
+          deleteOrderQ2(doc.id);
+
         })
         .catch((e)=> {
           alert("Delivery Add Failed" + e)
@@ -136,3 +137,37 @@ function renderMerchandise(doc){
     div.appendChild(td_orderTrackingNumber);
     orderMerchandiseList.appendChild(div);
 };
+
+function deleteOrderQ(x) {
+let docRefCol = doc(db, 'order', x);//document reference
+  onSnapshot(q, (snapshot) => {
+      snapshot.docs.forEach((docu) => {
+        deleteDoc(docRefCol)
+        .then(() => {
+          console.log("Cart Delete");
+        })
+        .catch(err =>{
+          console.log(err.message);
+        })
+      })
+    })
+    alert("Deliver Process Started Successfully")
+    location.reload();
+}
+
+function deleteOrderQ2(x) {
+let docRefCol = doc(db, 'order', x);//document reference
+  onSnapshot(q2, (snapshot) => {
+      snapshot.docs.forEach((docu) => {
+        deleteDoc(docRefCol)
+        .then(() => {
+          console.log("Cart Delete");
+        })
+        .catch(err =>{
+          console.log(err.message);
+        })
+      })
+    })
+    alert("Deliver Process Started Successfully")
+    location.reload();
+}

@@ -14,6 +14,11 @@ import {
     limit,
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+import { getAuth,
+createUserWithEmailAndPassword,
+signOut,
+signInWithEmailAndPassword,
+onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
 import { auth } from "./firebaseConfig.js";
 
@@ -25,6 +30,7 @@ import {
 import Cookies from "./js.cookie.mjs";
 let cookieEmail = Cookies.get('userEmail')
 let cookieType = Cookies.get('userType')
+
 
 if (cookieType == "admin"){
   window.open("../adminView/index.html", "_self")
@@ -49,6 +55,8 @@ deleteaccRef.addEventListener('click',()=>{
 	signOut(auth)
 		.then(()=>{
 			console.log('Logged Out')
+      Cookies.remove('userEmail')
+      Cookies.remove('userType')
 		})
 		.catch((err)=>{
 			console.log(err.message)

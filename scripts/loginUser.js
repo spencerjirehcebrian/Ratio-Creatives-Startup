@@ -23,25 +23,34 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 import { auth, db, storage  } from "./firebaseConfig.js";
 
 import Cookies from "./js.cookie.mjs";
+Cookies.remove('userType');
 
 const colRefUser = collection(db, 'userProfile') //collection reference
 
-//FOR AUOTMATIC LOGIN
-/*onAuthStateChanged(auth, user=> {
+onAuthStateChanged(auth, user=> {
 	if (user != null){
-		alert("Logged In");
-		let cookieType = Cookies.get('userType');
-		if(cookieType == "customer"){
-		window.open("../customerView/homepage.html", "_self");
-		} else if (cookieType == "admin")
-		{
-		window.open("../adminView/index.html", "_self");
-		}
-		else {
-		window.open("../customerView/homepage.html", "_self");
-	}
-	}
-});*/
+		const emailRef = user.email;
+		const q = query(colRefUser, where("userEmail", "==", emailRef));
+
+			onSnapshot(q, (snapshot) => {
+		    snapshot.docs.forEach((doc) => {
+					let nameRef = doc.data().userName;
+					let addressRef = doc.data().userAddress;
+					let contactRef = doc.data().userContact;
+					let typeRef = doc.data().userType;
+					//document.cookie = "+ userEmail="+emailRef+"+ userName="+nameRef;
+					Cookies.set('userEmail', user.email);
+					Cookies.set('userName', nameRef)
+					Cookies.set('userAddress', addressRef)
+					Cookies.set('userContact', contactRef)
+					Cookies.set('userType', typeRef)
+          console.log(user.email + "/" + typeRef);
+				})
+			})
+    }
+
+});
+
 
 //login
 const loginForm = document.querySelector('.userLogin')
@@ -63,15 +72,13 @@ loginForm.addEventListener('submit', (e) => {
   signInWithEmailAndPassword(auth, email, password)
     .then(cred => {
       console.log('user logged in:', cred.user)
-      //window.open("../customerView/homepage.html", "_self");
-
         cookieType = Cookies.get('userType');
 				if(cookieType == "customer"){
-          alert("Customer Logged In")
-				window.open("../customerView/homepage.html", "_self");
+        alert("Customer Logged In")
+			  window.open("../customerView/homepage.html", "_self");
 				} else if (cookieType == "admin")
 				{
-          alert("Admin Logged In")
+        alert("Admin Logged In")
 				window.open("../adminView/index.html", "_self");
 				}
     })

@@ -17,6 +17,7 @@ serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-fires
 import { db } from "./firebaseConfig.js";
 
 const colRefOrder = collection(db, 'order') //collection reference
+const colRefDelivery = collection(db, 'deliveryMerchandise') //collection reference
 
 const q = query(colRefOrder, where("isCommission", "==", true))
 onSnapshot(q, (snapshot)=>{
@@ -35,7 +36,42 @@ function renderCommission(doc){
     div.setAttribute('data-id', doc.id);
     div.setAttribute("class", "o-content");
     td_orderDate.textContent  =  doc.data().orderDate;
-    td_orderTrackingNumber.textContent =  "# " +doc.data().orderTrackingNumber;
+    td_orderTrackingNumber.textContent =  "# " + doc.data().orderTrackingNumber;
+
+    let id = doc.id;
+    div.addEventListener('click', function() {
+      if (confirm("Start Deliver Process?")) {
+        let currentDate = new Date();
+        let cDay = currentDate.getDate()
+        let cMonth = currentDate.getMonth() + 1
+        let cYear = currentDate.getFullYear()
+        let cDate = cDay + "/" + cMonth + "/" + cYear;
+        let cDayDue = cDay + 7;
+        let cDateDue = cDayDue + "/" + cMonth + "/" + cYear;
+
+        addDoc(colRefDelivery, {
+          dmAddress: doc.data().orderAddress,
+          dmDueDate: cDateDue,
+          dmName: doc.data().orderUsername,
+          dmOrderDetails: doc.data().orderDetails,
+          dmPayment: doc.data().orderPayment,
+          dmPaymentMethod: doc.data().orderPaymentMethod,
+          dmStartDate: cDate,
+          dmStatus: "Preparing",
+          dmTrackingNumber: doc.data().orderTrackingNumber,
+          isDmCommission: doc.data().isCommission
+        })
+        .then(() => {
+          alert("Deliver Process Started Successfully")
+        })
+        .catch((e)=> {
+          alert("Delivery Add Failed" + e)
+        })
+      } else {
+        alert("Cancelled!");
+      }
+    });
+
 
     div.appendChild(td_orderDate);
     div.appendChild(td_orderTrackingNumber);
@@ -61,6 +97,40 @@ function renderMerchandise(doc){
     div.setAttribute("class", "o-content");
     td_orderDate.textContent  =  doc.data().orderDate;
     td_orderTrackingNumber.textContent =  "# " +doc.data().orderTrackingNumber;
+
+    let id = doc.id;
+    div.addEventListener('click', function() {
+      if (confirm("Start Deliver Process?")) {
+        let currentDate = new Date();
+        let cDay = currentDate.getDate()
+        let cMonth = currentDate.getMonth() + 1
+        let cYear = currentDate.getFullYear()
+        let cDate = cDay + "/" + cMonth + "/" + cYear;
+        let cDayDue = cDay + 7;
+        let cDateDue = cDayDue + "/" + cMonth + "/" + cYear;
+
+        addDoc(colRefDelivery, {
+          dmAddress: doc.data().orderAddress,
+          dmDueDate: cDateDue,
+          dmName: doc.data().orderUsername,
+          dmOrderDetails: doc.data().orderDetails,
+          dmPayment: doc.data().orderPayment,
+          dmPaymentMethod: doc.data().orderPaymentMethod,
+          dmStartDate: cDate,
+          dmStatus: "Preparing",
+          dmTrackingNumber: doc.data().orderTrackingNumber,
+          isDmCommission: doc.data().isCommission
+        })
+        .then(() => {
+          alert("Deliver Process Started Successfully")
+        })
+        .catch((e)=> {
+          alert("Delivery Add Failed" + e)
+        })
+      } else {
+        alert("Cancelled!");
+      }
+    });
 
     div.appendChild(td_orderDate);
     div.appendChild(td_orderTrackingNumber);

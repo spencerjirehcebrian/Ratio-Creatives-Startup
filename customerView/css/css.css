@@ -6519,3 +6519,1238 @@ text-align: center;
 color: #FFFFFF;
 }
 /*end of forgot password2 */
+
+/*commission intro*/
+
+
+.commintro h1{
+    position: absolute;
+    width: 782px;
+    height: 43px;
+    left: 111px;
+    top: 61px;
+    
+    font-family: Monument;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    
+    color: #000000;
+    
+}
+
+.commintro .circle1{
+    position: absolute;
+width: 188px;
+height: 188px;
+left: 111px;
+top: 158px;
+}
+.commintro .filmicon{
+    position: absolute;
+    height: 84px;
+    width: 84px;
+    position: absolute;
+left: 163px;
+top: 210px;
+filter: invert(100%);
+}
+.commintro .circle2{
+    position: absolute;
+width: 188px;
+height: 188px;
+left: 408px;
+top: 158px;
+}
+.commintro .layouticon{
+    position: absolute;
+    height: 84px;
+    width: 84px;
+    position: absolute;
+left: 458px;
+top: 210px;
+}
+.commintro .circle3{
+    position: absolute;
+width: 188px;
+height: 188px;
+left: 705px;
+top: 158px;
+}
+.commintro .brushicon{
+    position: absolute;
+    height: 84px;
+    width: 84px;
+    position: absolute;
+left: 757px;
+top: 210px;
+filter: invert(100%);
+}
+.commintro p1{
+    position: absolute;
+width: 96px;
+height: 44px;
+left: 152px;
+top: 357px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: black;
+
+}
+.commintro p2{
+    position: absolute;
+width: 114px;
+height: 44px;
+left: 445px;
+top: 357px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+.commintro p3{
+    position: absolute;
+width: 56px;
+height: 44px;
+left: 771px;
+top: 357px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+
+/*form1*/
+.form1 h1{
+    position: absolute;
+height: 43px;
+left: 81px;
+top: 46px;
+
+font-family: Monument;
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 43px;
+
+color: #000000;
+}
+.form1 h2{
+    position: absolute;
+width: 868px;
+height: 48px;
+left: 81px;
+top: 89px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+}
+.form1 .form1text{
+    position: absolute;
+width: 583px;
+height: 265px;
+left: 81px;
+top: 157px;
+
+background: #E2E2E2;
+border: 3px solid #837F7F;
+border-radius: 15px;
+font-family: Prodsans;
+text-indent: 1.3020833333333333vw;
+}
+.form1 .uploadfiles{
+    box-sizing: border-box;
+
+position: absolute;
+width: 240px;
+height: 60px;
+left: 709px;
+top: 197px;
+
+border: 3px solid #DB513A;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #DB513A;
+
+}
+.form1 .proceednext{
+    position: absolute;
+width: 240px;
+height: 60px;
+left: 709px;
+top: 297px;
+outline: none;
+border: 0px;
+background: #DB513A;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.form1 .terms{
+    position: absolute;
+width: 20px;
+height: 20px;
+left: 709px;
+top: 375px;
+}
+.form1 p{
+    position: absolute;
+width: 159px;
+height: 30px;
+left: 738px;
+top: 373px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+
+}
+
+.form2 h1{
+    position: absolute;
+height: 43px;
+left: 81px;
+top: 46px;
+
+font-family: Monument;
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 43px;
+
+color: #000000;
+
+}
+.form2 h2{
+    position: absolute;
+width: 313px;
+height: 24px;
+left: 81px;
+top: 91px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+}
+.messengercard{
+    
+    position: absolute;
+    width: 196px;
+    height: 223px;
+    left: 81px;
+    top: 139px;
+    
+    background: rgba(196, 196, 196, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.messengercard p{
+    position: absolute;
+    left: 35px;
+    top: 176px;
+    font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+}
+.messengerinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .messengercard:hover .messengerinner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipfront1, .flipback1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  } 
+  
+  .flipback1   {
+
+    transform: rotateY(180deg);
+  }
+  .flipback1 h3{
+      top: 24px;
+      left: 14px;
+    position: absolute;
+    width: 116.59px;
+    height: 22.69px;
+    
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #000000;
+  }
+  .flipback1 .accountbox{
+    box-sizing: border-box;
+    top: 48.9px;
+    left: 13.69px;
+    position: absolute;
+    width: 153.56px;
+    height: 20.54px;
+    
+    border: 1px solid #837F7F;
+    border-radius: 5px;
+  }
+  .flipback1 .submitbutton{
+    box-sizing: border-box;
+    left: 51.64px;
+    position: absolute;
+    width: 92.33px;
+    height: 28.17px;
+    top: 97.81px;
+    background: #FFFFFF;
+    border: 3px solid #DB513A;
+    border-radius: 15px;
+    font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #DB513A;
+
+  }
+  .messengercard .circle1{
+    position: absolute;
+width: 139px;
+height: 136px;
+left: 28px;
+top: 24px;
+}
+.messengercard .messengericon{
+    position: absolute;
+left: 61px;
+top: 54px;
+}
+
+
+.emailcard{
+    
+    position: absolute;
+    width: 196px;
+    height: 223px;
+    left: 308px;
+    top: 139px;
+    
+    background: rgba(196, 196, 196, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.emailcard p{
+    position: absolute;
+    left: 63.34px;
+    top: 176px;
+    font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+}
+.emailinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .emailcard:hover .emailinner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipfront2, .flipback2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  } 
+  
+  .flipback2   {
+
+    transform: rotateY(180deg);
+  }
+  .flipback2 h3{
+      top: 24px;
+      left: 14px;
+      position: absolute;
+      width: 137px;
+      height: 23px;
+      
+      font-family: Prodsans;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      
+      color: #000000;
+  }
+  .flipback2 .accountbox{
+    box-sizing: border-box;
+    top: 48.9px;
+    left: 13.69px;
+    position: absolute;
+    width: 153.56px;
+    height: 20.54px;
+    
+    border: 1px solid #837F7F;
+    border-radius: 5px;
+  }
+  .flipback2 .submitbutton{
+    box-sizing: border-box;
+    left: 51.64px;
+    position: absolute;
+    width: 92.33px;
+    height: 28.17px;
+    top: 97.81px;
+    background: #FFFFFF;
+    border: 3px solid #DB513A;
+    border-radius: 15px;
+    font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #DB513A;
+
+  }
+  .emailcard .circle1{
+    position: absolute;
+width: 139px;
+height: 136px;
+left: 28px;
+top: 24px;
+}
+.emailcard .emailicon{
+    position: absolute;
+left: 61px;
+top: 54px;
+}
+
+
+.instacard{
+    
+    position: absolute;
+    width: 196px;
+    height: 223px;
+    left: 535px;
+    top: 139px;
+    
+    background: rgba(196, 196, 196, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.instacard p{
+    font-family: Prodsans;
+    position: absolute;
+    width: 131.45px;
+    height: 34.43px;
+    left: 33.6px;
+    top: 176px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    
+    color: #000000;
+
+}
+.instainner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .instacard:hover .instainner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipfront3, .flipback3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  } 
+  
+  .flipback3   {
+
+    transform: rotateY(180deg);
+  }
+  .flipback3 h3{
+      top: 24px;
+      left: 14px;
+      position: absolute;
+      width: 137px;
+      height: 23px;
+      
+      font-family: Prodsans;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      
+      color: #000000;
+  }
+  .flipback3 .accountbox{
+    box-sizing: border-box;
+    top: 48.9px;
+    left: 13.69px;
+    position: absolute;
+    width: 153.56px;
+    height: 20.54px;
+    
+    border: 1px solid #837F7F;
+    border-radius: 5px;
+  }
+  .flipback3 .submitbutton{
+    box-sizing: border-box;
+    left: 51.64px;
+    position: absolute;
+    width: 92.33px;
+    height: 28.17px;
+    top: 97.81px;
+    background: #FFFFFF;
+    border: 3px solid #DB513A;
+    border-radius: 15px;
+    font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #DB513A;
+
+  }
+  .instacard .circle1{
+    position: absolute;
+width: 139px;
+height: 136px;
+left: 28px;
+top: 24px;
+}
+.instacard .instaicon{
+    position: absolute;
+    height: 78px;
+left: 61px;
+top: 54px;
+filter: invert(100%);
+}
+
+.contactcard{
+    
+    position: absolute;
+    width: 196px;
+    height: 223px;
+    left: 762px;
+    top: 139px;
+    
+    background: rgba(196, 196, 196, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.contactcard p{
+    position: absolute;
+    width: 154px;
+    height: 34px;
+    left: 21.66px;
+    top: 179px;
+    
+    font-family: Prodsans ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    
+    color: #000000;
+
+}
+.contactinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .contactcard:hover .contactinner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipfront4, .flipback4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  } 
+  
+  .flipback4   {
+
+    transform: rotateY(180deg);
+  }
+  .flipback4 h3{
+      top: 24px;
+      left: 14px;
+      position: absolute;
+      height: 23px;
+      
+      
+      font-family: Prodsans;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      
+      color: #000000;
+  }
+  .flipback4 .accountbox{
+    box-sizing: border-box;
+    top: 48.9px;
+    left: 13.69px;
+    position: absolute;
+    width: 153.56px;
+    height: 20.54px;
+    
+    border: 1px solid #837F7F;
+    border-radius: 5px;
+  }
+  .flipback4 .submitbutton{
+    box-sizing: border-box;
+    left: 51.64px;
+    position: absolute;
+    width: 92.33px;
+    height: 28.17px;
+    top: 97.81px;
+    background: #FFFFFF;
+    border: 3px solid #DB513A;
+    border-radius: 15px;
+    font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #DB513A;
+
+  }
+  .contactcard .circle1{
+    position: absolute;
+width: 139px;
+height: 136px;
+left: 28px;
+top: 24px;
+}
+.contactcard .contacticon{
+    position: absolute;
+    height: 61px;
+left: 53.66px;
+top: 62px;
+}
+
+.specform h1{
+    position: absolute;
+height: 43px;
+left: 81px;
+top: 46px;
+
+font-family: Monument;
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 43px;
+
+color: #000000;
+
+}
+.specform h2{
+    position: absolute;
+height: 24px;
+left: 81px;
+top: 89px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+}
+.sweetcard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 238px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.sweetcard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.sweetcard .lightningicon{
+    position: absolute;
+    left: 98.08px;
+    top:70px;
+}
+.sweetcard p{
+    position: absolute;
+height: 29px;
+left: 48px;
+top: 198px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.sweetcard p2{
+    position: absolute;
+width: 149px;
+height: 18px;
+left: 48px;
+top: 235px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+}
+
+.longcard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 502px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.longcard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.longcard .staricon{
+    position: absolute;
+    height: 64.85px;
+    left: 89.21px;
+    top:70px;
+    filter: invert(100%);
+}
+.longcard p{
+    position: absolute;
+height: 29px;
+left: 53px;
+top: 198px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.longcard p2{
+    position: absolute;
+height: 18px;
+left: 46px;
+top: 235px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+}
+.form3 h1{
+    position: absolute;
+height: 43px;
+left: 81px;
+top: 46px;
+
+font-family: Monument;
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 43px;
+
+color: #000000;
+
+}
+.form3 h2{
+    position: absolute;
+width: 473px;
+height: 24px;
+left: 81px;
+top: 89px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+}
+.form3 .form3text{
+    box-sizing: border-box;
+    font-family: Prodsans;
+position: absolute;
+width: 583px;
+height: 265px;
+left: 81px;
+top: 139px;
+text-indent:1.3020833333333333vw;
+background: #E2E2E2;
+border: 3px solid #837F7F;
+border-radius: 15px;
+}
+.form3 .uploadedfiles{
+    box-sizing: border-box;
+
+position: absolute;
+width: 214px;
+height: 53.5px;
+left: 729px;
+top: 267.25px;
+
+background: #FFFFFF;
+border: 3px solid #DB513A;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #DB513A;
+}
+.form3 .reserve{
+    position: absolute;
+width: 214px;
+height: 53.5px;
+left: 729px;
+top: 350px;
+outline: none;
+border: 0px;
+background: #DB513A;
+border-radius: 15px;
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.specrec{
+    position: absolute;
+width: 92px;
+height: 105px;
+left: 726px;
+top: 139px;
+
+background: #EDEDED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.contactrec{
+    position: absolute;
+width: 92px;
+height: 105px;
+left: 844px;
+top: 139px;
+
+background: #EDEDED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+
+.publicitycard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 238px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.publicitycard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.publicitycard .layouticon{
+    position: absolute;
+    left: 86.08px;
+    top:70px;
+}
+.publicitycard p{
+    position: absolute;
+height: 29px;
+left: 78px;
+top: 198px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.publicitycard p2{
+    position: absolute;
+height: 34px;
+left: 38px;
+top: 235px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+}
+
+.socialcard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 502px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.socialcard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.socialcard .globeicon{
+    position: absolute;
+    height: 64.85px;
+    left: 89.21px;
+    top:70px;
+    filter: invert(100%);
+}
+.socialcard p{
+    position: absolute;
+height: 29px;
+left: 53px;
+top: 198px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.socialcard p2{
+    position: absolute;
+height: 18px;
+left: 28px;
+top: 235px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+
+color: #000000;
+}
+
+
+
+.iconscard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 113px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.iconscard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.iconscard .headicon{
+    position: absolute;
+    left: 104.67px;
+    top:70px;
+}
+.iconscard p{
+    position: absolute;
+height: 29px;
+left: 93px;
+top: 198px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.iconscard p2{
+    position: absolute;
+height: 34px;
+left: 14px;
+top: 230px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+color: #000000;
+}
+
+.bustcard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 377px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.bustcard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.bustcard .busticon{
+    position: absolute;
+    height: 59px;
+    left: 92px;
+    top:70px;
+}
+.bustcard p{
+    position: absolute;
+height: 29px;
+left: 92px;
+top: 198px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.bustcard p2{
+    position: absolute;
+    position: absolute;
+    width: 207px;
+    height: 51px;
+left: 22px;
+top: 230px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+color: #000000;
+}
+
+.fullrendercard{
+    position: absolute;
+width: 250px;
+height: 285px;
+left: 641px;
+top: 126px;
+
+background: rgba(196, 196, 196, 0.3);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+}
+.fullrendercard .circle1{
+    position: absolute;
+width: 131px;
+height: 131px;
+left: 57px;
+top: 37px;
+}
+.fullrendercard .fullbodyicon{
+    position: absolute;
+    height: 93px;
+    left: 75px;
+    top:56px;
+}
+.fullrendercard p{
+    position: absolute;
+height: 29px;
+left: 65px;
+top: 185px;
+
+font-family: Prodsans;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+.fullrendercard p2{
+    position: absolute;
+    width: 234px;
+    height: 51px;
+    left: 10px;
+    top: 223px;
+    
+    font-family: Prodsans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    
+    color: #000000;
+    
+}

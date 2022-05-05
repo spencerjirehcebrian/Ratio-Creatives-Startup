@@ -12,7 +12,6 @@
 }
 
 .content{
-
   position: absolute;
   top:0;
   left:0;
@@ -148,4 +147,20 @@
 
 .tab-start{
   position: static;
+}
+
+.userdisplay{
+  align-self: center;
+  display: flex;
+  padding-left: 80px;
+  padding-top: 150px;
+}
+
+.profile_image {
+  left: 10px;
+}
+
+.userdisplay h4{
+  padding-top: 80px;
+  font-family: monumentr;
 }

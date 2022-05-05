@@ -52,13 +52,13 @@ body{
 }
 
 
+<<<<<<< HEAD
+=======
 .userdisplay{
 
   display: block;
   max-width: 100%;
-  margin-top: 20px;
-
-
+  margin-top: 1px;
 }
 
 
@@ -72,8 +72,6 @@ body{
   border-radius: 100px;
   margin-bottom: 12px;
   margin-left: 100px;
-  margin-top: 140px;
-
 
 }
 
@@ -87,14 +85,14 @@ body{
 
 
 }
+>>>>>>> 9b531c291de730f3d732ade6e2f9450f013a949e
 
 
 .sidebar-menu{
-
   position: static;
   top: 0x;
   right: 0px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 

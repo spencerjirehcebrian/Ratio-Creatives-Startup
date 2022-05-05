@@ -23,6 +23,7 @@ import {
 
 const colRefInv = collection(db, 'inventory') //collection reference
 const colRefOrder = collection(db, 'order') //collection reference
+const colRefDel = collection(db, 'deliveryMerchandise') //collection reference
 
 let stickerNumberRef = document.getElementById('stickerNumber');
 let photocardNumberRef = document.getElementById('photocardNumber');
@@ -97,23 +98,23 @@ onSnapshot(queryPhotoCardNumber, (snapshot) => {
     console.log(photocardNumberCount);
 })
 
-onSnapshot(colRefOrder, (snapshot) => {
+onSnapshot(colRefDel, (snapshot) => {
     snapshot.docs.forEach((doc) => {
-      profitOutputNumber += parseFloat(doc.data().orderPayment);
+      profitOutputNumber += parseFloat(doc.data().dmPayment);
       profitOutputRef.textContent = "Php " + profitOutputNumber+".00";
     })
     console.log(profitOutputNumber);
 })
 
-onSnapshot(colRefOrder, (snapshot) => {
+onSnapshot(colRefDel, (snapshot) => {
     snapshot.docs.forEach((doc) => {
-      revenueOutputNumber += parseFloat(doc.data().orderPayment);
+      revenueOutputNumber += parseFloat(doc.data().dmPayment);
       revenueOutputRef.textContent = "Php " + revenueOutputNumber+".00";
     })
     console.log(revenueOutputNumber);
 })
 
-onSnapshot(colRefOrder, (snapshot) => {
+onSnapshot(colRefDel, (snapshot) => {
     snapshot.docs.forEach((doc) => {
       customerOutputNumber ++;
       customerOutputRef.textContent = customerOutputNumber;
@@ -126,5 +127,5 @@ function getCurrentMonth(){
 }
 
 function getPreviousMonth(){
-  
+
 }

@@ -103,7 +103,7 @@ function renderDocument(doc) {
     //el_addToCartBtn.textContent = "Add To Cart";
     el_itemName.textContent = doc.data().itemName;
     el_itemName.setAttribute("class", "stickername");
-    el_itemPrice.textContent = doc.data().itemPrice;
+    el_itemPrice.textContent = "Php "+doc.data().itemPrice+".00";
     el_itemPrice.setAttribute("class", "stickerprice");
     //el_itemQuantity.textContent = doc.data().itemName;
     //el_itemDescription.textContent = doc.data().itemName;

@@ -96,17 +96,58 @@ function renderDocument(doc) {
 
     el_addToCartBtn.textContent = "Add To Cart";
     el_itemName.textContent = doc.data().itemName;
-    el_itemPrice.textContent = "P "+doc.data().itemPrice;
+    el_itemPrice.textContent = "Php "+doc.data().itemPrice+".00";
     el_itemQuantity.textContent = "Stock: "+doc.data().itemQuantity;
     el_itemDescription.textContent = doc.data().itemDescription;
     el_itemType.textContent = doc.data().itemType;
 
     let type = doc.data().itemType;
 
+
+
     productDetails.appendChild(el_itemType);
     productDetails.appendChild(el_itemName);
     productDetails.appendChild(el_itemDescription);
     productDetails.appendChild(el_itemProductDescLabel);
+
+    let el_divLeft = document.createElement('div');
+    let el_divRight = document.createElement('div');
+    el_divLeft.setAttribute("class","detailsright");
+    el_divRight.setAttribute("class","detailsleft");
+
+    let el_ulLeft = document.createElement('ul');
+    let el_ulRight = document.createElement('ul');
+
+    let el_liLeft1 = document.createElement('li');
+    let el_liLeft2 = document.createElement('li');
+    let el_liLeft3 = document.createElement('li');
+
+    let el_liRight1 = document.createElement('li');
+    let el_liRight2 = document.createElement('li');
+    let el_liRight3 = document.createElement('li');
+
+    el_liLeft1.textContent = "Sold per Piece";
+    el_liLeft2.textContent = "2.5x2.5 inches";
+    el_liLeft3.textContent = "Sticker Type: Vinyl";
+
+    el_liRight1.textContent = "Glossy Laminated";
+    el_liRight2.textContent = "Non-fading";
+    el_liRight3.innerHTML = "Color may vary per <br> device lighting";
+
+    el_ulLeft.appendChild(el_liLeft1);
+    el_ulLeft.appendChild(el_liLeft2);
+    el_ulLeft.appendChild(el_liLeft3);
+
+    el_ulRight.appendChild(el_liRight1);
+    el_ulRight.appendChild(el_liRight2);
+    el_ulRight.appendChild(el_liRight3);
+
+    el_divLeft.appendChild(el_ulLeft);
+    el_divRight.appendChild(el_ulRight);
+
+    productDetails.appendChild(el_divLeft);
+    productDetails.appendChild(el_divRight);
+
     productDetails.appendChild(el_itemQuantity);
     productDetails.appendChild(el_itemPrice);
     productDetails.appendChild(el_addToCartBtn);

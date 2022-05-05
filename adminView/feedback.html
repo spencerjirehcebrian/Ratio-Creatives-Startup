@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="backend-style.css">
+      <script type="module" src="../scripts/authenticationAdmin.js"></script>
+      <script type="module" src="../scripts/outputOrder.js"></script>
+      <title>Management: Orders</title>
+   </head>
+   <body>
+      <!-- /****************** SIDE BAR START *******************/ -->
+      <div class="sidebar">
+         <div class="logo">
+            <img src="icons/rclogo.png">
+            <h3>RATIO CREATIVES</h3>
+         </div>
+         <div class="sidebar-menu">
+            <a href="index.html"> <img src="icons/home.svg"><span>Dashboard</span></a>
+            <a href="orders.html"> <img src="icons/apps-sort.svg"><span>Orders</span></a>
+            <a href="delivery.html"> <img src="icons/rv.svg"><span>Delivery</span></a>
+            <a href="inventory.html"> <img src="icons/list-check.svg"><span>Inventory</span></a>
+            <a href="feedback.html"> <img src="icons/list-check.svg"><span>Feedback</span></a>
+         </div>
+         <div class="userdisplay">
+            <center>
+               <img src="icons/1.png" class="profile_image" alt="user icon">
+               <h4>Super Admin User</h4>
+            </center>
+         </div>
+      </div>
+      <!-- /****************** SIDE BAR END *******************/ -->
+      <!-- /******************* Feedback category tab start ******************/ -->
+      <div class="tab-title">
+         <h2>Orders</h2>
+      </div>
+      <section>
+         <ul class="tabs">
+            <li >Merchandise</li>
+            <li>Commissions</li>
+         </ul>
+         <div class="horizontal-line3"></div>
+         <div class="container">
+            <div class="content orderMerchandiseList">
+                <div class="o-content">
+                     <h3>[Feedback Number]</h3>
+                     <h6>[Date]</h6>
+                  </div>
+
+            </div>
+
+            <div class="c-content">
+               <div class="content orderCommissionList">
+                  <div class="o-content">
+                     <h3>[Feedback Number]</h3>
+                     <h6>[Date]</h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- <!- /******************* Feedback category tab end ******************/ -->
+      <script src="script.js" ></script>
+   </body>
+</html>

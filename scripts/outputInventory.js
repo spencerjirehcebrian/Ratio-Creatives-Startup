@@ -24,69 +24,6 @@ import {
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefOrder = collection(db, 'order') //collection reference
 
-
-
-let slotsRef = document.querySelector('.slot-commission1');
-let slotCtr = 0;
-const q2 = query(colRefOrder, where("isDmCommission", "==", true))
-onSnapshot(q2, (snapshot) => {
-    snapshot.docs.forEach((doc) => {
-        slotCtr ++;
-        renderCommissions(doc);
-    })
-})
-
-function renderCommissions(doc) {
-  let division = document.createElement('div');
-  let td_dmCheck = document.createElement('p');
-  let td_dmAddress = document.createElement('p');
-  let td_dmDueDate = document.createElement('p');
-  let td_dmName = document.createElement('p');
-  let td_dmOrderDetails = document.createElement('p');
-  let td_dmPaymentMethod = document.createElement('p');
-  let td_dmPayment = document.createElement('p');
-  let td_dmStartDate = document.createElement('p');
-  let td_dmStatus = document.createElement('p');
-  let td_dmTrackingNumber = document.createElement('p');
-
-  division.setAttribute('data-id', doc.id);
-
-  //td_dmCheck = ('<input type="checkbox" id="checkbox" value="check">');
-  td_dmPayment.setAttribute('style', 'white-space: pre;');
-  td_dmTrackingNumber.textContent =  "#" +doc.data().dmTrackingNumber;
-
-  td_dmName.textContent =  doc.data().dmName;
-  td_dmAddress.textContent =  doc.data().dmAddress;
-  td_dmOrderDetails.textContent =  doc.data().dmOrderDetails;
-  //td_dmPaymentMethod.textContent =  ;
-  td_dmPayment.textContent =  doc.data().dmPaymentMethod + "\r\n";
-  td_dmPayment.textContent += doc.data().dmPayment;
-  td_dmStartDate.textContent =  doc.data().dmStartDate;
-  td_dmDueDate.textContent =  doc.data().dmDueDate;
-
-  if (slotCtr == 1){
-    slotsRef = document.querySelector('.slot-commission1');
-  } else if (slotCtr == 2) {
-    slotsRef = document.querySelector('.slot-commission2');
-  }else if (slotCtr == 3) {
-    slotsRef = document.querySelector('.slot-commission3');
-  }else if (slotCtr == 4) {
-    slotsRef = document.querySelector('.slot-commission4');
-  }else if (slotCtr == 5) {
-    slotsRef = document.querySelector('.slot-commission5');
-  }
-
-  slotsRef.appendChild(td_dmTrackingNumber);
-  slotsRef.appendChild(td_dmStatus);
-  slotsRef.appendChild(td_dmName);
-  slotsRef.appendChild(td_dmAddress);
-  slotsRef.appendChild(td_dmOrderDetails);
-  //tr.appendChild(td_dmPaymentMethod);
-  slotsRef.appendChild(td_dmPayment);
-  slotsRef.appendChild(td_dmStartDate);
-  slotsRef.appendChild(td_dmDueDate);
-};
-
 const q = query(colRefInventory)
 onSnapshot(q, (snapshot) => {
     let delivery = []
@@ -151,3 +88,130 @@ function renderDocument(doc) {
     }
 
 };
+
+
+const q2 = query(colRefOrder, where("isDmCommission", "==", true))
+onSnapshot(q2, (snapshot) => {
+    snapshot.docs.forEach((doc) => {
+        renderCommissions(doc);
+    })
+})
+
+function renderCommissions(doc) {
+  let division = document.createElement('div');
+  let td_dmCheck = document.createElement('p');
+  let td_dmAddress = document.createElement('p');
+  let td_dmDueDate = document.createElement('p');
+  let td_dmName = document.createElement('p');
+  let td_dmOrderDetails = document.createElement('p');
+  let td_dmPaymentMethod = document.createElement('p');
+  let td_dmPayment = document.createElement('p');
+  let td_dmStartDate = document.createElement('p');
+  let td_dmStatus = document.createElement('p');
+  let td_dmTrackingNumber = document.createElement('p');
+
+  division.setAttribute('data-id', doc.id);
+
+
+  //td_dmCheck = ('<input type="checkbox" id="checkbox" value="check">');
+  td_dmPayment.setAttribute('style', 'white-space: pre;');
+  td_dmTrackingNumber.textContent =  "#" +doc.data().dmTrackingNumber;
+
+  td_dmName.textContent =  doc.data().dmName;
+  td_dmAddress.textContent =  doc.data().dmAddress;
+  td_dmOrderDetails.textContent =  doc.data().dmOrderDetails;
+  //td_dmPaymentMethod.textContent =  ;
+  td_dmPayment.textContent =  doc.data().dmPaymentMethod + "\r\n";
+  td_dmPayment.textContent += doc.data().dmPayment;
+  td_dmStartDate.textContent =  doc.data().dmStartDate;
+  td_dmDueDate.textContent =  doc.data().dmDueDate;
+
+  /*if (slotCtr == 1){
+    slotsRef = document.querySelector('.slot-commission1');
+  } else if (slotCtr == 2) {
+    slotsRef = document.querySelector('.slot-commission2');
+  }else if (slotCtr == 3) {
+    slotsRef = document.querySelector('.slot-commission3');
+  }else if (slotCtr == 4) {
+    slotsRef = document.querySelector('.slot-commission4');
+  }else if (slotCtr == 5) {
+    slotsRef = document.querySelector('.slot-commission5');
+  }*/
+
+  slotsRef.appendChild(td_dmTrackingNumber);
+  slotsRef.appendChild(td_dmStatus);
+  slotsRef.appendChild(td_dmName);
+  slotsRef.appendChild(td_dmAddress);
+  slotsRef.appendChild(td_dmOrderDetails);
+  //tr.appendChild(td_dmPaymentMethod);
+  slotsRef.appendChild(td_dmPayment);
+  slotsRef.appendChild(td_dmStartDate);
+  slotsRef.appendChild(td_dmDueDate);
+};
+
+let btnYes = document.querySelector('.btnyes');
+let btnNo = document.querySelector('.btnno');
+btnYes.addEventListener('click', function() {
+
+});
+
+btnNo.addEventListener('click', function() {
+
+});
+
+
+
+let docRefVar = doc(db, 'globalVariables', 'mLbbsMiPtMrFFdHEkAPM'); //document reference
+let slotsFree;
+const docSnap = await getDoc(docRefVar);
+if (docSnap.exists()) {
+  slotsFree = parseInt(docSnap.data().currentSlotsFree);
+  console.log(slotsFree);
+} else {
+  // doc.data() will be undefined in this case
+  console.log("No such document!");
+}
+
+let slotsRef1 = document.querySelector('.slot-commission1');
+let slotsRef2 = document.querySelector('.slot-commission2');
+let slotsRef3 = document.querySelector('.slot-commission3');
+let slotsRef4 = document.querySelector('.slot-commission4');
+let slotsRef5 = document.querySelector('.slot-commission5');
+
+switch (slotsFree) {
+  case 0:
+    break;
+  case 1:
+    slotsRef1.style.background = "#6ECA57";
+    break;
+  case 2:
+    slotsRef1.style.background = "#6ECA57";
+    slotsRef2.style.background = "#6ECA57";
+    break;
+  case 3:
+    slotsRef1.style.background = "#6ECA57";
+    slotsRef2.style.background = "#6ECA57";
+    slotsRef3.style.background = "#6ECA57";
+    break;
+  case 4:
+    slotsRef1.style.background = "#6ECA57";
+    slotsRef2.style.background = "#6ECA57";
+    slotsRef3.style.background = "#6ECA57";
+    slotsRef4.style.background = "#6ECA57";
+    break;
+  case 5:
+  slotsRef1.style.background = "#6ECA57";
+  slotsRef2.style.background = "#6ECA57";
+  slotsRef3.style.background = "#6ECA57";
+  slotsRef4.style.background = "#6ECA57";
+  slotsRef5.style.background = "#6ECA57";
+    break;
+  default:
+    text = "No value found";
+}
+
+/*if (confirm("Start Deliver Process?")) {
+
+} else {
+  alert("Cancelled!");
+}*/

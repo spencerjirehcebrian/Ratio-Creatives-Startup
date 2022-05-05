@@ -75,7 +75,7 @@ function renderCommission(doc){
 
     div.appendChild(td_orderDate);
     div.appendChild(td_orderTrackingNumber);
-     orderCommissionList.appendChild(div);
+    orderCommissionList.appendChild(div);
 };
 
 const q2 = query(colRefOrder, where("isCommission", "==", false))

@@ -46,6 +46,9 @@ onAuthStateChanged(auth, user=> {
 							})
 					}
 					else{
+						document.querySelector(".profileName").innerHTML = nameRef;
+						//document.querySelector(".profileNameWelcome").innerHTML = "Welcome back, User: "+nameRef+"!";
+
 						Cookies.set('userEmail', user.email);
 						Cookies.set('userName', nameRef)
 						Cookies.set('userAddress', addressRef)

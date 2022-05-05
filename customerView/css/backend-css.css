@@ -6,13 +6,16 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding: 1px;
+  width: 66.6%;
+  float: center;
 }
 
 .product{
   display: block;
   flex-wrap: wrap;
   align-content: center;
-  padding: 10px;
+  padding: 30px;
 }
 
 .sticker {
@@ -27,8 +30,7 @@
 .stickername {
     position: relative;
     border-radius: 0.9765625vw;
-        text-align: center;
-
+    text-align: center;
 }
 
 .stickerprice {

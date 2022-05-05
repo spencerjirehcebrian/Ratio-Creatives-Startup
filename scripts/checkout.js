@@ -41,7 +41,7 @@ let cDay = currentDate.getDate()
 let cMonth = currentDate.getMonth() + 1
 let cYear = currentDate.getFullYear()
 let cDate = cDay + "/" + cMonth + "/" + cYear;
-Cookies.get('currentDate', cDate);
+Cookies.set('currentDate', cDate);
 
 document.getElementById('displayDate').textContent = cDate;
 

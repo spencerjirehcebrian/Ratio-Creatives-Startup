@@ -14,6 +14,9 @@ import {
     limit,
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+
+import { auth } from "./firebaseConfig.js";
+
 import {
     db,
     storage
@@ -38,4 +41,16 @@ onSnapshot(q, (snapshot) => {
         document.getElementById('userContactOutput').innerHTML = doc.data().userContact;
         document.getElementById('userAddressOutput').innerHTML  = doc.data().userAddress;
     })
+})
+
+const deleteaccRef = document.querySelector(".deleteacc");
+
+deleteaccRef.addEventListener('click',()=>{
+	signOut(auth)
+		.then(()=>{
+			console.log('Logged Out')
+		})
+		.catch((err)=>{
+			console.log(err.message)
+		})
 })

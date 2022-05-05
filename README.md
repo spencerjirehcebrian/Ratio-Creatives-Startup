@@ -21,11 +21,7 @@ Queqquegan, Mikaela <br>
 - broken frontend
 
 - add commission to cart
-- password strength
-- forgot password
-- profile update
 
-- profile add shipping address and contact
 - implement due date in cart/order/delivery
 - implement email confirm purchase
 
@@ -34,5 +30,4 @@ Queqquegan, Mikaela <br>
 - fix quantity on checkout not working for multiple same item
 - move order to delivery - when the frontend is done
 - analysis per month add
-  - checkout date-timestamp
   - get last month - get current month analysis

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "./css/css.css">
+    <script type="module" src="../scripts/authentication.js"></script>
     <script type="module" src="../scripts/search.js"></script>
     <title>Contact Us</title>
 </head>
@@ -68,8 +69,8 @@
     <img src=".\assets\Icons\mail.svg" alt="mail" class="cmail">
     <p1>Name</p1>
     <p2>Email</p2>
-    <input type="text" class="cnamebox" placeholder="Name">
-    <input type="text" class="cemailbox" placeholder="Email">
+    <input type="text" class="cnamebox" name="nameInput" placeholder="Name">
+    <input type="text" class="cemailbox" name="emailInput" placeholder="Email">
     <p3>What is your message about?</p3>
     <select class="feedbackabout">
         <option>Customer Service</option>
@@ -79,7 +80,7 @@
         <option></option>
       </select>
       <p4>Message Text</p4>
-      <textarea class="feedbacktext"></textarea>
+      <textarea class="feedbacktext" name="feedbackInput"></textarea>
 
       <button class="csubmitb">Submit</button>
 

@@ -150,7 +150,7 @@ function renderDocument(doc) {
     displayUsername.textContent = cookieName;
     displayEmail.textContent = cookieEmail;
     displayContact.textContent = cookieContact;
-    displayDate.textContent = "01-01-01"; //NEEDS IMPLEMENTATION
+    displayDate.textContent = Cookies.get('currentDate'); //NEEDS IMPLEMENTATION
     displayAddress.textContent = cookieAddress; //NEEDS IMPLEMENTATION
 
 

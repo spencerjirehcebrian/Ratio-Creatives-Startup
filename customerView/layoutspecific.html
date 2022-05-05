@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "./css/css.css">
+        <script type="module" src="../scripts/search.js"></script>
+        <title>Layout Form</title>
+    </head>
+<body>
+    <div class="specform">
+        <h1>Layout Commission</h1>
+        <h2>What type of layout commission do you want to see?</h2>
+        <a href="#" onclick="accessLayoutcomm3()"> <div class="publicitycard">
+            <img src=".\assets\Icons\orange circle.svg" class="circle1">
+            <img src=".\assets\Icons\layout.svg" class="layouticon">
+            <p>Publicity</p>
+            <p2>Posters. Magazines. Anything with the public in betweens.</p2>
+        </div></a>
+        <a href="#" onclick="accessLayoutcomm3()"> <div class="socialcard">
+            <img src=".\assets\Icons\orange circle.svg" class="circle1">
+            <img src=".\assets\Icons\globe.svg" class="globeicon">
+            <p>Social Media</p>
+            <p2>Icons. Headers. For your page? you want it, we got it!</p2>
+        </div></a>
+    </div>
+</body>
+<script>
+    function accessLayoutcomm3() {
+      var newWin = window.open('layoutform3.html', 'Layout Commission Form 2', 'width=1003,height=457');
+    }
+  </script>
+</html>

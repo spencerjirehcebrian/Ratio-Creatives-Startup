@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "./css/css.css">
+        <script type="module" src="../scripts/search.js"></script>
+        <title>Video Form</title>
+    </head>
+<body>
+    <div class="specform">
+        <h1>Video Commission</h1>
+        <h2>How long is your video commission?</h2>
+        <a href="#" onclick="accessVidcomm3()"> <div class="sweetcard">
+            <img src=".\assets\Icons\orange circle.svg" class="circle1">
+            <img src=".\assets\Icons\lightning.svg" class="lightningicon">
+            <p>Sweet n’ quick!</p>
+            <p2>Maximum of 5 minutes</p2>
+        </div></a>
+        <a href="#" onclick="accessVidcomm3()"> <div class="longcard">
+            <img src=".\assets\Icons\orange circle.svg" class="circle1">
+            <img src=".\assets\Icons\star.svg" class="staricon">
+            <p>Long but fun</p>
+            <p2>Maximum of 30 minutes</p2>
+        </div></a>
+    </div>
+</body>
+<script>
+    function accessVidcomm3() {
+      var newWin = window.open('videoform3.html', 'Video Commission Form 2', 'width=1003,height=457');
+    }
+  </script>
+</html>

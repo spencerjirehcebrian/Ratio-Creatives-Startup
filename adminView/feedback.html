@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="backend-style.css">
       <script type="module" src="../scripts/authenticationAdmin.js"></script>
-      <script type="module" src="../scripts/outputOrder.js"></script>
+      <script type="module" src="../scripts/outputFeedback.js"></script>
       <title>Management: Orders</title>
    </head>
    <body>
@@ -28,41 +28,33 @@
          <div class="userdisplay">
             <center>
                <img src="icons/1.png" class="profile_image" alt="user icon">
-               <h4>Super Admin User</h4>
+               <h4 class="profileName"></h4>
             </center>
          </div>
       </div>
       <!-- /****************** SIDE BAR END *******************/ -->
       <!-- /******************* Feedback category tab start ******************/ -->
+        <div class="tab-start">
       <div class="tab-title">
          <h2>Feedback</h2>
       </div>
       <section>
-         <ul class="tabs">
-            <li >Merchandise</li>
-            <li>Commissions</li>
-         </ul>
+        <ul class="tabs">
+           <li></li>
+           <li></li>
+        </ul>
          <div class="horizontal-line3"></div>
          <div class="container">
             <div class="content orderMerchandiseList">
-                <div class="o-content">
+                <!--<div class="o-content">
                      <h3>[Feedback Number]</h3>
                      <h6>[Date]</h6>
-                  </div>
-
+                  </div>-->
             </div>
 
-            <div class="c-content">
-               <div class="content orderCommissionList">
-                  <div class="o-content">
-                     <h3>[Feedback Number]</h3>
-                     <h6>[Date]</h6>
-                  </div>
-               </div>
-            </div>
          </div>
-      </section>
+      </section></div>
       <!-- <!- /******************* Feedback category tab end ******************/ -->
-      <script src="script.js" ></script>
+    <script src="script.js" ></script>
    </body>
 </html>

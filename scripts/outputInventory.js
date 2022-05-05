@@ -69,7 +69,6 @@ function renderDocument(doc) {
 
     division.addEventListener('click', function() {
       Cookies.set('inventoryId', id1)
-          alert(id1);
       window.open("viewProductDetails.html","_self");
     });
     //division.appendChild(el_itemPrice);

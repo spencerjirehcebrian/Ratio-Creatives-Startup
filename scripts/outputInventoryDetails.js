@@ -62,6 +62,8 @@ function renderDocument(doc) {
     el_addToCartBtn.setAttribute("class", "addtocartb");*/
     const el_SaveBtn = document.querySelector('.button-yes');
     const el_CancelBtn = document.querySelector('.button-no');
+    const imageofProduct = document.querySelector('.imageofProduct');
+    imageofProduct.setAttribute("src", doc.data().itemPicture);
     document.querySelector('.prod-title').textContent = doc.data().itemType;
     document.querySelector('.description-title').textContent = doc.data().itemName;
     document.querySelector('.description1').textContent = doc.data().itemDescription;

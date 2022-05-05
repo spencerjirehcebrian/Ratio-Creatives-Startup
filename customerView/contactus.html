@@ -7,6 +7,7 @@
     <link rel = "stylesheet" href = "./css/css.css">
     <script type="module" src="../scripts/authentication.js"></script>
     <script type="module" src="../scripts/search.js"></script>
+    <script type="module" src="../scripts/addFeedback.js"></script>
     <title>Contact Us</title>
 </head>
 <header>
@@ -72,12 +73,10 @@
     <input type="text" class="cnamebox" name="nameInput" placeholder="Name">
     <input type="text" class="cemailbox" name="emailInput" placeholder="Email">
     <p3>What is your message about?</p3>
-    <select class="feedbackabout">
+    <select class="feedbackabout" name="feedbackType">
         <option>Customer Service</option>
         <option>Refunds</option>
         <option>Delivery</option>
-        <option></option>
-        <option></option>
       </select>
       <p4>Message Text</p4>
       <textarea class="feedbacktext" name="feedbackInput"></textarea>

@@ -22,8 +22,9 @@ import Cookies from "./js.cookie.mjs";
 
 const colRefFeedback = collection(db, 'userFeedback') //collection reference
 const feedbackformRef = document.querySelector('.feedbackform');
+const feedbackformSubRef = document.querySelector('.csubmitb');
 
-feedbackformRef.addEventListener('submit', (e) => {
+feedbackformSubRef.addEventListener('click', (e) => {
   e.preventDefault()
   let cookieEmail = Cookies.get('userEmail')
   let cookieName = Cookies.get('userName')
@@ -38,16 +39,18 @@ feedbackformRef.addEventListener('submit', (e) => {
     if (cookieEmail != null) {
         addDoc(colRefFeedback, {
             feedDate: cDate,
-            feedDetails: feedbackformRef.feedbackInput.value,
-            feedEmail: feedbackformRef.emailInput.value,
-            feedName: feedbackformRef.nameInput.value,
+            feedType: document.querySelector('.feedbackabout').value,
+            feedDetails: document.querySelector('.feedbacktext').value,
+            feedEmail: document.querySelector('.cemailbox').value,
+            feedName: document.querySelector('.cnamebox').value,
             feedTime: time
         })
         .then(()=>{
-        alert("Feedback Sent Added");
+        alert("Thank You For The Feedbacks");
+        feedbackformRef.reset();
         })
 
     } else {
-        alert("Please Login First")
+        alert("Error")
     }
 });

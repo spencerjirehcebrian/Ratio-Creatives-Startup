@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "./css/css.css">
+        <script type="module" src="../scripts/search.js"></script>
+        <title>Art Form</title>
+    </head>
+<body>
+    <div class="form2">
+        <h1>Art Commission</h1>
+        <h2>How do you want us to contact you?</h2>
+        <div class="messengercard">
+            <div class="messengerinner">
+            <div class="flipfront1">
+                    <img src=".\assets\Icons\orange circle.svg" class="circle1">
+                    <img src=".\assets\Icons\messenger.svg" class="messengericon">
+                    <p>Messenger</p>
+                </div>
+
+            <div class="flipback1">
+                <h3>Account URL:</h3>
+                <input type="text" class="accountbox">
+                <a href="#" onclick="accessArtspec()"><button class="submitbutton"> Submit</button></a>
+            </div>
+        </div>
+        </div>
+        <div class="emailcard">
+            <div class="emailinner">
+                <div class="flipfront2">
+                    <img src=".\assets\Icons\orange circle.svg" class="circle1">
+                    <img src=".\assets\Icons\email.svg" class="emailicon">
+                    <p>E-mail</p>
+                </div>
+                <div class="flipback2">
+                    <h3>Enter e-mail here:</h3>
+                    <input type="text" class="accountbox">
+                    <a href="#" onclick="accessArtspec()"><button class="submitbutton"> Submit</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="instacard">
+            <div class="instainner">
+                <div class="flipfront3">
+                    <img src=".\assets\Icons\orange circle.svg" class="circle1">
+                    <img src=".\assets\Icons\instagram.svg" class="instaicon">
+                    <p>Instagram</p>
+                </div>
+                <div class="flipback3">
+                    <h3>Account URL:</h3>
+                    <input type="text" class="accountbox">
+                    <a href="#" onclick="accessArtspec()"><button class="submitbutton"> Submit</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="contactcard">
+            <div class="contactinner">
+                <div class="flipfront4">
+                    <img src=".\assets\Icons\orange circle.svg" class="circle1">
+                    <img src=".\assets\Icons\mail 2.svg" class="contacticon">
+                    <p>Contact Number</p>
+                </div>
+                <div class="flipback4">
+                    <h3>Enter contact number:</h3>
+                    <input type="text" class="accountbox">
+                    <a href="#" onclick="accessArtspec()"><button class="submitbutton"> Submit</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function accessArtspec() {
+      var newWin = window.open('artspecific.html', 'Layout Commission Specific', 'width=1003,height=457');
+    }
+  </script>
+</html>

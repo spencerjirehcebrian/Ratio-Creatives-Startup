@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "./css/css.css">
+        <script type="module" src="../scripts/search.js"></script>
+        <title>Layout Form</title>
+    </head>
+<body>
+    <div class="form1">
+        <h1>Layout Commission</h1>
+        <h2>Remember to read the <a href="termsofservice.html">Terms and Services</a>. Place your prompt in the text box on the left. If you would like to provide visual references, upload a maximum of two [2] files.</h2>
+        <textarea class="form1text" placeholder="Place prompt here"></textarea>
+        <button class="uploadfiles">Upload Files Here</button>
+        <a href="#" onclick="accessLayoutcomm2()"><button class="proceednext">Proceed to next step ></button></a>
+        <input type="checkbox" class="terms">
+        <p>I have read and agree with the <a href="termsofservice.html">Terms and Services</a>.</p>
+    </div>
+</body>
+<script>
+    function accessLayoutcomm2() {
+      var newWin = window.open('layoutform2.html', 'Layout Commission Form 2', 'width=1003,height=457');
+    }
+  </script>
+</html>

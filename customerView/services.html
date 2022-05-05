@@ -149,7 +149,7 @@
                     <img src="./assets/Types of Services/tos1.png" style="border-radius:1vw; float:right; width:60%;">
                     </div>
                 </div>
-                <button class="commissionhere1">Commission Here ></button>
+                <a href="#" onclick="accessVidcomm()"><button class="commissionhere1">Commission Here ></button></a>
           </div>
           <div class="layout">
                 <div class="tosleft2">
@@ -161,7 +161,7 @@
                     <h1 class="tosttext3">Layout</h1>
                     <p class="tosttext4"><br>Want that perfect layout for a publication? Can’t<br>seem to get the right ratio for text-to-picture?<br>Graphic design is our prison passion too!<br><br>Read Terms of Service for more info..</p>
                 </div>
-                <button class="commissionhere2">Commission Here ></button>
+                <a href="#" onclick="accessLayoutcomm()"><button class="commissionhere2">Commission Here ></button></a>
           </div>
           <div class="artcommissions">
             <div class="tosleft">
@@ -173,7 +173,7 @@
                 <img src="./assets/Types of Services/tos3.png" style="border-radius:1vw; float:right; width:60%;">
                 </div>
             </div>
-            <button class="commissionhere3">Commission Here ></button>
+            <a href="#" onclick="accessArtcomm()"><button class="commissionhere3">Commission Here ></button></a>
           </div>
           </div>
 
@@ -208,6 +208,17 @@ slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
 </script>
+<script>
+    function accessVidcomm() {
+      var newWin = window.open('videoform1.html', 'Video Commission Form 1', 'width=1003,height=457');
+    }
+    function accessLayoutcomm() {
+      var newWin = window.open('layoutform1.html', 'Layout Commission Form 1', 'width=1003,height=457');
+    }
+    function accessArtcomm() {
+      var newWin = window.open('artform1.html', 'Art Commission Form 1', 'width=1003,height=457');
+    }
+  </script>
 <footer>
     <img src=".\assets\Icons\RC.svg" alt="logo" class="footlogo">
     <h1>RATIO CREATIVES</h1>

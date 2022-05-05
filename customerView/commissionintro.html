@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "./css/css.css">
+        <script type="module" src="../scripts/search.js"></script>
+        <title>Commission Intro</title>
+    </head>
+<body>
+    <div class="commintro">
+        <h1>Choose your commission type</h1>
+        <a href="#" onclick="accessVidcomm()"><img src=".\assets\Icons\orange circle.svg" class="circle1"><img src=".\assets\Icons\film.svg" class="filmicon"></a>
+        <a href="#" onclick="accessLayoutcomm()"><img src=".\assets\Icons\orange circle.svg" class="circle2"><img src=".\assets\Icons\dashboard 2.svg" class="layouticon"></a>
+        <a href="#" onclick="accessArtcomm()"><img src=".\assets\Icons\orange circle.svg" class="circle3"><img src=".\assets\Icons\paint-brush.svg" class="brushicon"></a>
+
+        <p1>Video</p1>
+        <p2>Layout</p2>
+        <p3>Art</p3>
+    </div>
+    
+</body>
+<script>
+    function accessVidcomm() {
+      var newWin = window.open('videoform1.html', 'Video Commission Form 1', 'width=1003,height=457');
+    }
+    function accessLayoutcomm() {
+      var newWin = window.open('layoutform1.html', 'Layout Commission Form 1', 'width=1003,height=457');
+    }
+    function accessArtcomm() {
+      var newWin = window.open('artform1.html', 'Art Commission Form 1', 'width=1003,height=457');
+    }
+  </script>
+</html>

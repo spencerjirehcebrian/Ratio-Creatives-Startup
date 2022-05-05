@@ -98,7 +98,7 @@
   <div class="commissionsmargin">
     <h1 class="commissionstext boxcommissions rightcommissions">Commissions</h1>
     <p class="commissionstexttwo">Videos to layouts to even art commissions, Ratio Creatives is<br>here to deliver on all your visual arts ideas! Three artists, flexible<br>with six creative programs, are here to deliver only the best<br>quality to your liking!<br><br>Make sure to read through our Terms of Service for our yesses<br>and no-no’s to certain commissions.</p>
-    <button class="accessformhereb">Access the form here ></button>
+    <a href="#" onclick="accessFormhere()"><button class="accessformhereb">Access the form here ></button></a>
     <!--
     <div class="slideshow-container3">
 
@@ -177,6 +177,10 @@ dots[i].className = dots[i].className.replace(" active", "");
 slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
+
+function accessFormhere() {
+    var newWin = window.open('commissionintro.html', 'Commission Intro', 'width=1003,height=457');
+  }
 </script>
 <footer>
   <img src=".\assets\Icons\RC.svg" alt="logo" class="footlogo">

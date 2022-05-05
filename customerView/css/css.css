@@ -5977,13 +5977,15 @@ filter: brightness(70%);
 }
 
 .occomtext {
+    position: absolute;
+    top: 740px;
+    left: 32px;
     font-family: Monument;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 43px;
-    padding-top: 16vw;
-    padding-left: 32px;
+    
 }
 
 .oclefttitlebackground {

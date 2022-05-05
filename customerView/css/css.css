@@ -5895,7 +5895,7 @@ filter: brightness(70%);
 }
 
 .ocleft {
-    width: 60%;
+    width: 50%;
     float: left;
 }
 
@@ -5904,7 +5904,7 @@ filter: brightness(70%);
 }
 
 .ocright {
-    width: 40%;
+    width: 50%;
     float: left;
     
 }

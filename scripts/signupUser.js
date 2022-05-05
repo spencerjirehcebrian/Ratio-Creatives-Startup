@@ -47,10 +47,20 @@ signupForm.addEventListener('submit', (e)=>{
 	e.preventDefault()
 
 	const email = signupForm.userEmail.value
-	const password = signupForm.userPassword.value
+	const password = signupForm.userPassword1.value
 	createUserWithEmailAndPassword(auth, email, password)
 		.then((cred)=>{
 			console.log('User Created:', cred.user);
+			addDoc(colRefUser, {
+				userName: signupForm.userName.value,
+				userType: "customer",
+				userEmail: email,
+				userAddress: signupForm.userAddress.value,
+				userContact: signupForm.userContact.value
+				})
+			.then(()=>{
+				signupForm.reset()
+				})
       alert('Account Created');
       window.open("../customerView/login.html", "_self");
 		})
@@ -59,14 +69,5 @@ signupForm.addEventListener('submit', (e)=>{
       alert(err.message);
 		})
 
-		addDoc(colRefUser, {
-			userName: signupForm.userName.value,
-			userType: "customer",
-			userEmail: email,
-			userAddress: signupForm.userAddress.value,
-			userContact: signupForm.userContact.value
-			})
-		.then(()=>{
-			signupForm.reset()
-			})
+
 })

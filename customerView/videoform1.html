@@ -5,23 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href = "./css/css.css">
-        <script type="module" src="../scripts/search.js"></script>
+        <script type="module" src="../scripts/videoform1Script.js"></script>
         <title>Video Form</title>
     </head>
 <body>
     <div class="form1">
         <h1>Video Commission</h1>
         <h2>Remember to read the <a href="termsofservice.html">Terms and Services</a>. Place your prompt in the text box on the left. If you would like to provide visual references, upload a maximum of two [2] files.</h2>
-        <textarea class="form1text" placeholder="Place prompt here"></textarea>
+        <textarea class="form1text" id="form1text" placeholder="Place prompt here"></textarea>
         <button class="uploadfiles">Upload Files Here</button>
-        <a href="#" onclick="accessVidcomm2()"><button class="proceednext">Proceed to next step ></button></a>
+        <button class="proceednext">Proceed to next step ></button>
         <input type="checkbox" class="terms">
         <p>I have read and agree with the <a href="termsofservice.html">Terms and Services</a>.</p>
     </div>
 </body>
 <script>
-    function accessVidcomm2() {
-      var newWin = window.open('videoform2.html', 'Video Commission Form 2', 'width=1003,height=457');
-    }
+
   </script>
 </html>

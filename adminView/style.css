@@ -62,7 +62,6 @@ body{
 }
 
 
-
 .sidebar-menu a{
   font-family: productsansb;
   font-size: 24px;
@@ -75,9 +74,6 @@ body{
   text-decoration: none;
   padding-left: 100px;
   box-sizing: border-box;
-
-
-
 }
 
 .sidebar a:hover{

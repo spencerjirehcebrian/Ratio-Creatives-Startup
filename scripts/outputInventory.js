@@ -90,12 +90,6 @@ function renderDocument(doc) {
 };
 
 
-const q2 = query(colRefOrder, where("isDmCommission", "==", true))
-onSnapshot(q2, (snapshot) => {
-    snapshot.docs.forEach((doc) => {
-        renderCommissions(doc);
-    })
-})
 
 function renderCommissions(doc) {
   let division = document.createElement('div');
@@ -126,18 +120,7 @@ function renderCommissions(doc) {
   td_dmStartDate.textContent =  doc.data().dmStartDate;
   td_dmDueDate.textContent =  doc.data().dmDueDate;
 
-  /*if (slotCtr == 1){
-    slotsRef = document.querySelector('.slot-commission1');
-  } else if (slotCtr == 2) {
-    slotsRef = document.querySelector('.slot-commission2');
-  }else if (slotCtr == 3) {
-    slotsRef = document.querySelector('.slot-commission3');
-  }else if (slotCtr == 4) {
-    slotsRef = document.querySelector('.slot-commission4');
-  }else if (slotCtr == 5) {
-    slotsRef = document.querySelector('.slot-commission5');
-  }*/
-
+/*
   slotsRef.appendChild(td_dmTrackingNumber);
   slotsRef.appendChild(td_dmStatus);
   slotsRef.appendChild(td_dmName);
@@ -146,19 +129,8 @@ function renderCommissions(doc) {
   //tr.appendChild(td_dmPaymentMethod);
   slotsRef.appendChild(td_dmPayment);
   slotsRef.appendChild(td_dmStartDate);
-  slotsRef.appendChild(td_dmDueDate);
+  slotsRef.appendChild(td_dmDueDate);*/
 };
-
-let btnYes = document.querySelector('.btnyes');
-let btnNo = document.querySelector('.btnno');
-btnYes.addEventListener('click', function() {
-
-});
-
-btnNo.addEventListener('click', function() {
-
-});
-
 
 
 let docRefVar = doc(db, 'globalVariables', 'mLbbsMiPtMrFFdHEkAPM'); //document reference
@@ -207,8 +179,88 @@ switch (slotsFree) {
   slotsRef5.style.background = "#6ECA57";
     break;
   default:
-    text = "No value found";
+     console.log("No value found");
 }
+
+let slotCtr = 0;
+const q2 = query(colRefOrder, where("isCommission", "==", true))
+onSnapshot(q2, (snapshot) => {
+    snapshot.docs.forEach((doc) => {
+        slotCtr++;
+        let slotsRef1 = document.querySelector('.slot-commission1');
+        let slotsRef2 = document.querySelector('.slot-commission2');
+        let slotsRef3 = document.querySelector('.slot-commission3');
+        let slotsRef4 = document.querySelector('.slot-commission4');
+        let slotsRef5 = document.querySelector('.slot-commission5');
+        switch (slotCtr) {
+          case 0:
+            break;
+          case 1:
+            slotsRef1.style.background = "#b5493a";
+            break;
+          case 2:
+            slotsRef1.style.background = "#b5493a";
+            slotsRef2.style.background = "#b5493a";
+            break;
+          case 3:
+            slotsRef1.style.background = "#b5493a";
+            slotsRef2.style.background = "#b5493a";
+            slotsRef3.style.background = "#b5493a";
+            break;
+          case 4:
+            slotsRef1.style.background = "#b5493a";
+            slotsRef2.style.background = "#b5493a";
+            slotsRef3.style.background = "#b5493a";
+            slotsRef4.style.background = "#b5493a";
+            break;
+          case 5:
+          slotsRef1.style.background = "#b5493a";
+          slotsRef2.style.background = "#b5493a";
+          slotsRef3.style.background = "#b5493a";
+          slotsRef4.style.background = "#b5493a";
+          slotsRef5.style.background = "#b5493a";
+            break;
+          default:
+             console.log("No value found");
+        }
+        renderCommissions(doc);
+    })
+
+})
+
+let btnYes = document.querySelector('.btnyes');
+let btnNo = document.querySelector('.btnno');
+btnYes.addEventListener('click', function() {
+  console.log(slotCtr);
+  let docRefInv = doc(db, 'globalVariables', 'mLbbsMiPtMrFFdHEkAPM');//document reference
+  slotsFree+=1;
+  updateDoc(docRefInv, {
+    currentSlotsFree: slotsFree
+  })
+  .then(() => {
+    console.log(slotsFree);
+    location.reload();
+  })
+  .catch(err =>{
+    console.log(err.message);
+  })
+});
+
+btnNo.addEventListener('click', function() {
+  let docRefInv = doc(db, 'globalVariables', 'mLbbsMiPtMrFFdHEkAPM');//document reference
+  slotsFree -= 1;
+  updateDoc(docRefInv, {
+    currentSlotsFree: slotsFree
+  })
+  .then(() => {
+    console.log(slotsFree);
+  location.reload();
+  })
+  .catch(err =>{
+    console.log(err.message);
+  })
+});
+
 
 /*if (confirm("Start Deliver Process?")) {
 

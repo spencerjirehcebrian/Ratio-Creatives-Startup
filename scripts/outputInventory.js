@@ -19,7 +19,7 @@ import {
     storage
 } from "./firebaseConfig.js";
 
-//let cookieEmail = ;
+import Cookies from "./js.cookie.mjs";
 
 const colRefInventory = collection(db, 'inventory') //collection reference
 const colRefOrder = collection(db, 'order') //collection reference
@@ -65,7 +65,10 @@ function renderDocument(doc) {
     el_itemDescription.textContent = doc.data().itemDescription;
     el_itemType.textContent = doc.data().itemType;
 
-
+    division.addEventListener('click', function() {
+      Cookies.get('inventoryId', doc.id)
+      window.open("viewProductDetails.html","_self");
+    });
     //division.appendChild(el_itemPrice);
 
     //division.appendChild(el_itemDescription);
